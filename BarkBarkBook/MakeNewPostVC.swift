@@ -135,6 +135,20 @@ class MakeNewPostViewController: UIViewController {
         
         avatarOfAnimalImage.image = SharingManager.sharedInstance.photoOfAnimal
     }
+    
+    func alert(code: Int, content: String) {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+            let alertController = UIAlertController(title: "Error: \(code)", message: "\(content)", preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+                print("You've pressed OK button");
+            }
+            
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        }
+    }
 }
 
 

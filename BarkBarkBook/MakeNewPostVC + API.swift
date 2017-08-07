@@ -170,6 +170,9 @@ extension MakeNewPostViewController {
     
     //MARK: - Send data to server - API
     func api_CreateNewPost() {
+        var codeJSON = 0
+        var contentJSON = ""
+        
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
         
@@ -259,16 +262,14 @@ extension MakeNewPostViewController {
                                 self.moveToPostVCFunc()
                             }
                         } else {                            
-                            DispatchQueue.main.async {
-                                self.activityIndicator.stopAnimating()
-                                let alertController = UIAlertController(title: "Error", message: "\(parseJSON.value(forKey: "code")!)", preferredStyle: .alert)
-                                
-                                let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
-                                    print("You've pressed OK button");
+                            codeJSON = parseJSON.value(forKey: "code") as! Int
+                        }
+                        
+                        if let data = parseJSON.value(forKey: "data") as? [String: Any] {
+                            if let content = data["content"] as? [String] {
+                                for cont in 0..<content.count {
+                                    contentJSON += content[cont] + "\n"
                                 }
-                                
-                                alertController.addAction(OKAction)
-                                self.present(alertController, animated: true, completion:nil)
                             }
                         }
                         print("-----REG DATA")
@@ -290,12 +291,15 @@ extension MakeNewPostViewController {
             
             let responseString = String(data: data, encoding: .utf8)
             print("responseString = \(String(describing: responseString))")
+            
+            if codeJSON != 0 {
+                self.alert(code: codeJSON, content: contentJSON)
+            }
         }
         task.resume()
         photosFromUserInPostArray = []
         textInPostTextView.text = ""
         photosOfAnimalInCollectionView.reloadData()
-        
     }
     
     func moveToPostVCFunc() {

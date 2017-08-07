@@ -297,46 +297,158 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BarkBarkBook/AllPostsOfUserVC + API.swift"
-            timestampString = "523803717.364918"
+            filePath = "BarkBarkBook/MakeNewPostVC + API.swift"
+            timestampString = "523805771.674836"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "apiAllPostsOfUser()"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
+            landmarkName = "api_CreateNewPost()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/MakeNewPostVC + API.swift"
+            timestampString = "523805772.234693"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
+            landmarkName = "api_CreateNewPost()"
             landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BarkBarkBook.AllPostsOfUserViewController.apiAllPostsOfUser () -&gt; ()"
+                  symbolName = "BarkBarkBook.MakeNewPostViewController.(api_CreateNewPost () -&gt; ()).(closure #1)"
                   moduleName = "BarkBarkBook"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/AllPostsOfUserVC%20+%20API.swift"
-                  timestampString = "523803797.944919"
+                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/MakeNewPostVC%20+%20API.swift"
+                  timestampString = "523806234.607489"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "46"
-                  endingLineNumber = "46"
-                  offsetFromSymbolStart = "3202">
+                  startingLineNumber = "269"
+                  endingLineNumber = "269"
+                  offsetFromSymbolStart = "3414">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "BarkBarkBook.AllPostsOfUserViewController.(apiAllPostsOfUser () -&gt; ()).(closure #1)"
+                  symbolName = "BarkBarkBook.MakeNewPostViewController.(api_CreateNewPost () -&gt; ()).(closure #1)"
                   moduleName = "BarkBarkBook"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/AllPostsOfUserVC%20+%20API.swift"
-                  timestampString = "523803797.947291"
+                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/MakeNewPostVC%20+%20API.swift"
+                  timestampString = "523806234.609205"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "112">
+                  startingLineNumber = "269"
+                  endingLineNumber = "269"
+                  offsetFromSymbolStart = "3703">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/MakeNewPostVC + API.swift"
+            timestampString = "523805772.691686"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "268"
+            endingLineNumber = "268"
+            landmarkName = "api_CreateNewPost()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarkBarkBook.MakeNewPostViewController.(api_CreateNewPost () -&gt; ()).(closure #1)"
+                  moduleName = "BarkBarkBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/MakeNewPostVC%20+%20API.swift"
+                  timestampString = "523806234.614409"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "268"
+                  endingLineNumber = "268"
+                  offsetFromSymbolStart = "2699">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarkBarkBook.MakeNewPostViewController.(api_CreateNewPost () -&gt; ()).(closure #1)"
+                  moduleName = "BarkBarkBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/MakeNewPostVC%20+%20API.swift"
+                  timestampString = "523806234.618065"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "268"
+                  endingLineNumber = "268"
+                  offsetFromSymbolStart = "3376">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/MakeNewPostVC + API.swift"
+            timestampString = "523806201.684017"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "265"
+            endingLineNumber = "265"
+            landmarkName = "api_CreateNewPost()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/MakeNewPostVC + API.swift"
+            timestampString = "523806204.008799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "259"
+            endingLineNumber = "259"
+            landmarkName = "api_CreateNewPost()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/MakeNewPostVC + API.swift"
+            timestampString = "523806925.712693"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
+            landmarkName = "api_CreateNewPost()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
