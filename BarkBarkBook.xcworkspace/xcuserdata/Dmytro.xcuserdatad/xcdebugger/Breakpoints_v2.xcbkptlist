@@ -291,5 +291,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/AllPostsOfUserVC + API.swift"
+            timestampString = "523803717.364918"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "apiAllPostsOfUser()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarkBarkBook.AllPostsOfUserViewController.apiAllPostsOfUser () -&gt; ()"
+                  moduleName = "BarkBarkBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/AllPostsOfUserVC%20+%20API.swift"
+                  timestampString = "523803797.944919"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "3202">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarkBarkBook.AllPostsOfUserViewController.(apiAllPostsOfUser () -&gt; ()).(closure #1)"
+                  moduleName = "BarkBarkBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/AllPostsOfUserVC%20+%20API.swift"
+                  timestampString = "523803797.947291"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

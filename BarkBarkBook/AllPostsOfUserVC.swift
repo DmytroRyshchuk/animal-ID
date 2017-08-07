@@ -32,7 +32,7 @@ class AllPostsOfUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        apiAllPostsOfUser()
+//        apiAllPostsOfUser()
         //        self.automaticallyAdjustsScrollViewInsets = false
         
         NotificationCenter.default.addObserver(self, selector: #selector(AllPostsOfUserViewController.deleteMessage), name: NSNotification.Name(rawValue: "notificationName"), object: nil)
