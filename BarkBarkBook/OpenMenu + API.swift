@@ -31,78 +31,74 @@ extension OpenMenu {
         }
     }
     
-    func openListOfAnimals(view: UIViewController) {
-        
-        userAnimalsDetailsArray = []
-        
-        let auth_key_user = "\(String(describing: UserDefaults.standard.object(forKey: "auth_key_user")!))"
-        
-        let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(auth_key_user)"
-        ]
-        
-        Alamofire.request("\(api_animalID)/owner/animals", method: .get, headers: headers).responseJSON { response in
-            print("\n========api_UserAnimals========")
-            debugPrint("RESPONSE: ", response.result)
-            
-            guard let jsonAsDictionary = response.result.value as? [String: Any] else {
-                print("Error: (response.result.error)")
-                return }
-            let jsonAsSwiftyJSON = JSON(jsonAsDictionary)
-            
-            
-            if let data = jsonAsSwiftyJSON["data"].array {
-                
-                for json in data {
-                    if let photo = json["photo"].string {
-                        self.photoOfAnimalFromJson = photo
-                        print(photo)
-                    } else {
-                        self.photoOfAnimalFromJson = ""
-                    }
-                    if let nickname = json["nickname"].string {
-                        self.nicknameOfAnimalFromJson = nickname
-                    }
-                    if let species = json["species"].string {
-                        self.speciesOfAnimalFromJson = species
-                    }
-                    if let sex = json["sex"].int {
-                        self.sexOfAnimalFromJson = sex
-                    }
-                    if let id = json["id"].int {
-                        self.idOfAnimalFromJson = id
-                    }
-                    if let transponder = json["transponder"].string {
-                        self.transponderOfAnimalFromJson = transponder
-                    }
-                    
-                    let uad = UserAnimalsDetails(photo: self.photoOfAnimalFromJson,
-                                                 nickname: self.nicknameOfAnimalFromJson,
-                                                 species: self.speciesOfAnimalFromJson,
-                                                 sex: self.sexOfAnimalFromJson,
-                                                 id: self.idOfAnimalFromJson,
-                                                 transponder: self.transponderOfAnimalFromJson)
-                    
-                    self.userAnimalsDetailsArray.append(uad)
-                }
-                
-                DispatchQueue.main.async {
-                    moveToUserAnimalsList(view: view)
-                }
-            }
-        }
-        
-        
-        func moveToUserAnimalsList (view: UIViewController) {
-            let myVC = view.storyboard?.instantiateViewController(withIdentifier: "MenuVC") as! MenuVC
-            //                myVC.userAnimalsArray.removeAll()
-            //        if uaVC.userAnimalsArray.count < userAnimalsDetailsArray.count {
-            myVC.userAnimalsArray = userAnimalsDetailsArray
-            //        }
-            view.navigationController?.pushViewController(myVC, animated: true)
-        }
-    }
+//    func openListOfAnimals(view: UIViewController) {
+//        
+//        userAnimalsDetailsArray = []
+//        
+//        let auth_key_user = "\(String(describing: UserDefaults.standard.object(forKey: "auth_key_user")!))"
+//        
+//        let headers: HTTPHeaders = [
+//            "Authorization": "Bearer \(auth_key_user)"
+//        ]
+//        
+//        Alamofire.request("\(api_animalID)/owner/animals", method: .get, headers: headers).responseJSON { response in
+//            print("\n========api_UserAnimals========")
+//            debugPrint("RESPONSE: ", response.result)
+//            
+//            guard let jsonAsDictionary = response.result.value as? [String: Any] else {
+//                print("Error: (response.result.error)")
+//                return }
+//            let jsonAsSwiftyJSON = JSON(jsonAsDictionary)
+//            
+//            
+//            if let data = jsonAsSwiftyJSON["data"].array {
+//                
+//                for json in data {
+//                    if let photo = json["photo"].string {
+//                        self.photoOfAnimalFromJson = photo
+//                        print(photo)
+//                    } else {
+//                        self.photoOfAnimalFromJson = ""
+//                    }
+//                    if let nickname = json["nickname"].string {
+//                        self.nicknameOfAnimalFromJson = nickname
+//                    }
+//                    if let species = json["species"].string {
+//                        self.speciesOfAnimalFromJson = species
+//                    }
+//                    if let sex = json["sex"].int {
+//                        self.sexOfAnimalFromJson = sex
+//                    }
+//                    if let id = json["id"].int {
+//                        self.idOfAnimalFromJson = id
+//                    }
+//                    if let transponder = json["transponder"].string {
+//                        self.transponderOfAnimalFromJson = transponder
+//                    }
+//                    
+//                    let uad = UserAnimalsDetails(photo: self.photoOfAnimalFromJson,
+//                                                 nickname: self.nicknameOfAnimalFromJson,
+//                                                 species: self.speciesOfAnimalFromJson,
+//                                                 sex: self.sexOfAnimalFromJson,
+//                                                 id: self.idOfAnimalFromJson,
+//                                                 transponder: self.transponderOfAnimalFromJson)
+//                    
+//                    self.userAnimalsDetailsArray.append(uad)
+//                }
+//                
+//                DispatchQueue.main.async {
+//                    moveToUserAnimalsList(view: view)
+//                }
+//            }
+//        }
+//      }
     
+    func openListOfAnimals (view: UIViewController) {
+        let myVC = view.storyboard?.instantiateViewController(withIdentifier: "MenuVC") as! MenuVC
+        
+        view.navigationController?.pushViewController(myVC, animated: true)
+    }
+
     
     func api_ProfileOfUser(view: UIViewController) {
         

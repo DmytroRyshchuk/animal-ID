@@ -120,4 +120,25 @@ class RegisterNewAnimalViewController: UIViewController {
     @IBAction func ba_ChooseSpecies(_ sender: Any) {
         api_getAllSpeciesOfAnimal()
     }
+    
+    
+    
+    func openListOfAnimalPage() {
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newAnimalOpenPage"), object: nil)
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+

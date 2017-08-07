@@ -181,10 +181,14 @@ extension RegisterNewAnimalViewController {
                         print("\n\nREG DATA-----")
                         print(parseJSON)
                         
-                        if let x =  parseJSON.value(forKey: "data") {
-                            print("registration is okay")
-                        } else {
-                            print("registration false")
+                        if let x = parseJSON.value(forKey: "code") {
+                            if x as? Int == 200 {
+                                print("registration is okay")
+                                                    
+                                self.openListOfAnimalPage()
+                            } else {
+                                print("registration false")
+                            }
                         }
                         DispatchQueue.main.async {                                                    
                             self.activityIndicator.isHidden = true

@@ -22,6 +22,7 @@ class MenuVC: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         
         activityIndicator.isHidden = true
+        NotificationCenter.default.addObserver(self, selector: "newAnimalOpenPage", name: NSNotification.Name(rawValue: "newAnimalOpenPage"), object: nil)
 //        self.automaticallyAdjustsScrollViewInsets = false
     }
     
@@ -29,6 +30,7 @@ class MenuVC: UIViewController, UITextViewDelegate {
         self.navigationController?.isNavigationBarHidden = false
         postsArray = []
         addNavBarImage()
+        openListOfAnimals(view: self)
     }
     
     func addNavBarImage() {
