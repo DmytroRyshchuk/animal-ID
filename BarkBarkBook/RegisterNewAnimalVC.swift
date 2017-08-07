@@ -121,11 +121,8 @@ class RegisterNewAnimalViewController: UIViewController {
         api_getAllSpeciesOfAnimal()
     }
     
-    
-    
     func openListOfAnimalPage() {
         DispatchQueue.main.async {
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "newAnimalOpenPage"), object: nil)
             self.navigationController?.popViewController(animated: true)
         }
     }

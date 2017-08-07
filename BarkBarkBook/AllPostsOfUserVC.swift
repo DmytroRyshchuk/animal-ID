@@ -38,11 +38,6 @@ class AllPostsOfUserViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(AllPostsOfUserViewController.deleteMessage), name: NSNotification.Name(rawValue: "notificationName"), object: nil)
     }
     
-    func deleteMessage() {
-        //This function will be called when you post the notification
-        apiAllPostsOfUser()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         apiAllPostsOfUser()
@@ -98,6 +93,10 @@ class AllPostsOfUserViewController: UIViewController {
         return text
     }
     
+    func deleteMessage() {
+        //This function will be called when you post the notification
+        apiAllPostsOfUser()
+    }
     
     //MARK: - Alerts
     func callAlertSheet(postId: Int, statusOfPost: Int) {

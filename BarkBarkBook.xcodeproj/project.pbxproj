@@ -317,8 +317,8 @@
 			isa = PBXGroup;
 			children = (
 				663954F61F307CE600F2299A /* View Controller */,
-				663954F51F307CCD00F2299A /* Collection View */,
 				663954F41F307CC600F2299A /* Table View */,
+				663954F51F307CCD00F2299A /* Collection View */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

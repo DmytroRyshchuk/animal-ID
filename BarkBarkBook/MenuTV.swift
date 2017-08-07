@@ -14,20 +14,18 @@ extension MenuVC: UITableViewDataSource {
         return userAnimalsArray.count
     }
 
-    func checkNumberOfSection() {
-        func numberOfSections(in tableView: UITableView) -> Int {
-            if userAnimalsArray.count > 0 {
-                self.tableView.backgroundView = nil
-                self.tableView.separatorStyle = .singleLine
-                return 1
-            }
-            
-            self.tableView.separatorStyle = .none
-            
-            ifTableViewIsEmpty()
-            return 0
-        }
-    }
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        if userAnimalsArray.count > 0 {
+//            self.tableView.backgroundView = nil
+//            self.tableView.separatorStyle = .singleLine
+//            return 1
+//        }
+//        
+//        self.tableView.separatorStyle = .none
+//        
+//        ifTableViewIsEmpty()
+//        return 0
+//    }
     
     func tableView(_ tableView: UITableView, didSelectRowAtIndexPath indexPath: IndexPath) {
         //CODE TO BE RUN ON CELL TOUCH

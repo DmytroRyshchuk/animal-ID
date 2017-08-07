@@ -55,13 +55,6 @@ extension AllPostsOfUserViewController {
             if let data = jsonAsSwiftyJSON["data"].array {
                 for json in data {
                     
-                    //                    print("\n\n\n")
-                    //                    print("name: ", json["_author"]["name"].string!)
-                    //                    print("surname: ", json["_author"]["surname"].string!)
-                    //
-                    //                    print("count_comments_posts: ", json["count_comments_posts"].int!)
-                    //                    print("count_likes: ", json["count_likes"].int!)
-                    
                     if let animal = json["_animal"]["nickname"].string {
                         animalName = animal
                     }
@@ -71,12 +64,10 @@ extension AllPostsOfUserViewController {
                     
                     if let contentMessage = json["content"].string {
                         content = contentMessage
-                        //                        print("content: ", json["content"].string!)
                     }
                     
                     if let createdAtMessage = json["created_at"].int {
                         createdAt = createdAtMessage
-                        //                        print("created_at: ", json["created_at"].int!)
                     }
                     
                     countCommentsPosts = json["count_comments_posts"].int!
@@ -88,7 +79,6 @@ extension AllPostsOfUserViewController {
                     
                     if let imagesAll = json["_images"].array {
                         for image in imagesAll {
-                            //                            print("links: ", image["link"].string!)
                             let img = UserImages(imageLink: image["link"].string!)
                             imagesLink.append(img)                                          //TODO: cheak images
                         }
@@ -96,19 +86,12 @@ extension AllPostsOfUserViewController {
                     
                     if let commentsAll = json["_comments"].array {
                         for comment in commentsAll {
-                            //                            print("author name: ", comment["_author"]["name"].string!)
-                            //                            print("author surname: ", comment["_author"]["surname"].string!)
-                            
                             if let imagesAll = comment["_author"]["_images"].array {
                                 for image in imagesAll {
-                                    //                                    print("links: ", image["link"].string!)
                                     let img = UserImages(imageLink: image["link"].string!)
                                     imagesLinkInComments.append(img)                        //TODO: cheak images
                                 }
                             }
-                            
-                            //                            print("author content: ", comment["content"].string!)
-                            //                            print("author created_at: ", comment["created_at"].int!)
                             
                             authorName = comment["_author"]["name"].string!
                             authorSurname = comment["_author"]["surname"].string!
@@ -123,7 +106,7 @@ extension AllPostsOfUserViewController {
                     }
                     
                     let posts = UserContent(animalName: animalName, name: name, surname: surname, content: content, countCommentsPosts: countCommentsPosts, countLikes: countLikes, createdAt: createdAt, statusOfPost: statusOfPost, id: id, userComments: userComments, imageLinks: imagesLink)
-                    //                    print(content)
+                    
                     self.allPostsOfUserArray.append(posts)
                     imagesLink = []
                     userComments = []
@@ -137,12 +120,11 @@ extension AllPostsOfUserViewController {
                     self.tableView.isScrollEnabled = true
                     print("TableView was reloaded")
                     
-                    if UserDefaults.standard.value(forKey: "RegistrationOfNewUse") as? String == "true"  {
+                    if UserDefaults.standard.value(forKey: "RegistrationOfNewUse") as? String == "true" || self.allPostsOfUserArray.isEmpty {
                         UserDefaults.standard.set("false", forKey: "RegistrationOfNewUse")
                         let myVC = self.storyboard?.instantiateViewController(withIdentifier: "MenuVC") as! MenuVC
                         
                         self.navigationController?.pushViewController(myVC, animated: true)
-                        
                     }
                 }
             }

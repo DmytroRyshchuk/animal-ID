@@ -22,7 +22,6 @@ class MenuVC: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         
         activityIndicator.isHidden = true
-        NotificationCenter.default.addObserver(self, selector: "newAnimalOpenPage", name: NSNotification.Name(rawValue: "newAnimalOpenPage"), object: nil)
 //        self.automaticallyAdjustsScrollViewInsets = false
     }
     
@@ -52,16 +51,23 @@ class MenuVC: UIViewController, UITextViewDelegate {
         navigationItem.titleView = imageView
     }
     
-    func ifTableViewIsEmpty() {
+    func ifTableViewIsEmpty(status: Bool) {
         self.view.addSubview(bo_addViewPop)
         bo_addViewPop.center = self.view.center
         
         bo_addViewPop.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
         bo_addViewPop.alpha = 0
         
-        UIView.animate(withDuration: 0.4) {
-            self.bo_addViewPop.alpha = 1
-            self.bo_addViewPop.transform = CGAffineTransform.identity
+        if !status {
+            UIView.animate(withDuration: 0.4) {
+                self.bo_addViewPop.alpha = 0
+                self.bo_addViewPop.transform = CGAffineTransform.identity
+            }
+        } else {
+            UIView.animate(withDuration: 0.4) {
+                self.bo_addViewPop.alpha = 1
+                self.bo_addViewPop.transform = CGAffineTransform.identity
+            }
         }
     }
 }

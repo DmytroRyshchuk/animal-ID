@@ -99,7 +99,7 @@ extension MenuVC {
                 DispatchQueue.main.async {
                     self.userAnimalsArray.reverse()
                     self.tableView.reloadData()
-                    self.checkNumberOfSection()
+                    self.userAnimalsArray.isEmpty ? self.ifTableViewIsEmpty(status: true) : self.ifTableViewIsEmpty(status: false)
                     
                     self.activityIndicator.isHidden = true
                     self.activityIndicator.stopAnimating()
