@@ -1,0 +1,39 @@
+PODS:
+  - AFViewShaker (0.0.4)
+  - Alamofire (4.5.0)
+  - ImagePicker (2.1.1)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - SwiftValidator (4.0.0)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - AFViewShaker (~> 0.0.4)
+  - Alamofire
+  - ImagePicker
+  - SDWebImage
+  - SwiftValidator (from `https://github.com/jpotts18/SwiftValidator.git`, branch `master`)
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  SwiftValidator:
+    :branch: master
+    :git: https://github.com/jpotts18/SwiftValidator.git
+
+CHECKOUT OPTIONS:
+  SwiftValidator:
+    :commit: 6cff6cac3e02a617f7cf11323e18526a117d5673
+    :git: https://github.com/jpotts18/SwiftValidator.git
+
+SPEC CHECKSUMS:
+  AFViewShaker: 4296c638c24a037e02727b40d89d8f178df3b3f4
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  ImagePicker: fe4c699abb56ff03994fa98d8b02e3883ee118be
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: c3441c406fb9c4a526aabf7b493e87d2c87f0a8d
+
+COCOAPODS: 1.2.0
