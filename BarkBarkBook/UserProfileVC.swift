@@ -21,11 +21,26 @@ class UserProfileVC: UIViewController {
     
     var up = [UserProfile]()
     var img: Data?
+    var getCountryISO = [GetCountryISO]()
+    var countryWasChanged = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         fillProfile()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if countryWasChanged {
+            self.api_ProfileChange( userName: "",
+                                    userSurname: "",
+                                    userPhone: "",
+                                    userCountry: Int(SharingManager.sharedInstance.isoOfCountry),
+                                    userZipcode: "",
+                                    userAddress: "",
+                                    whatToChange: 4)
+            print("iso = ", SharingManager.sharedInstance.isoOfCountry)
+        }
     }
     
     //MARK: - Actions
@@ -42,7 +57,8 @@ class UserProfileVC: UIViewController {
     }
     
     @IBAction func ba_edit_Country(_ sender: Any) {
-        fillEditAlert(title: "Country", placeholder: "ex. Ukraine", whatToChange: 4)
+        self.api_getISOOfCountry()
+        countryWasChanged = true
     }
     
     @IBAction func ba_edit_Zipcode(_ sender: Any) {
