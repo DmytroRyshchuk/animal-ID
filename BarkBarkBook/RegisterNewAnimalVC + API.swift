@@ -41,12 +41,6 @@ extension RegisterNewAnimalViewController {
                 }
 
                 
-                /*
-                let spe = species.values
-                print(spe)
-                let spec = SpeciesClass(speciesDict: species)
-                self.speciesTypeDict.append(spec)
-                */
                 DispatchQueue.main.async {
                     self.moveToListOfAnimalPage()
                 }
@@ -58,10 +52,7 @@ extension RegisterNewAnimalViewController {
     
     func moveToListOfAnimalPage () {
         let myVC = self.storyboard?.instantiateViewController(withIdentifier: "ChooseSpeciesViewController") as! ChooseSpeciesViewController
-//        if isInternetAvailible {
-//            myVC.animalListCheck = self.animalList
-//        }
-//        myVC.speciesTypeDict = speciesTypeDict
+
         myVC.speciesTypeDict = speciesTypeDict
         self.navigationController?.pushViewController(myVC, animated: true)
     }

@@ -95,15 +95,29 @@ class RegisterNewAnimalViewController: UIViewController {
             }
         }
 
+        print(SharingManager.sharedInstance.date)
         
-        registerNewAnimalOnServer(microchip: micro,
-                                  transponder: trans,
-                                  species: Int(SharingManager.sharedInstance.key),
-                                  breed: tf_breed.text!,
-                                  sex: sc_sex.selectedSegmentIndex,
-                                  nickname: tf_nickname.text!,
-                                  birthday: SharingManager.sharedInstance.date,
-                                  photo: img)
+        if tf_breed.text! == "" || SharingManager.sharedInstance.key == "" || tf_nickname.text! == "" || SharingManager.sharedInstance.date == "" {
+            activityIndicator.stopAnimating()
+            activityIndicator.isHidden = true
+            let alertController = UIAlertController(title: "Error", message: "Please fill all fields", preferredStyle: .alert)
+            
+            let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+                print("You've pressed OK button");
+            }
+            
+            alertController.addAction(OKAction)
+            self.present(alertController, animated: true, completion:nil)
+        } else {
+            registerNewAnimalOnServer(microchip: micro,
+                                      transponder: trans,
+                                      species: Int(SharingManager.sharedInstance.key),
+                                      breed: tf_breed.text!,
+                                      sex: sc_sex.selectedSegmentIndex,
+                                      nickname: tf_nickname.text!,
+                                      birthday: SharingManager.sharedInstance.date,
+                                      photo: img)
+        }
     }
     
     @IBAction func ba_addAvatar(_ sender: Any) {

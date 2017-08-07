@@ -137,38 +137,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BarkBarkBook/AnimalDetailsClass.swift"
-            timestampString = "523799911.256632"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "openListOfAnimals(view:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarkBarkBook/AnimalDetailsClass.swift"
-            timestampString = "523799914.246841"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "openListOfAnimals(view:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "BarkBarkBook/UserProfileVC + API.swift"
             timestampString = "523801778.153511"
             startingColumnNumber = "9223372036854775807"
@@ -224,38 +192,6 @@
             startingLineNumber = "60"
             endingLineNumber = "60"
             landmarkName = "ba_edit_Country(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarkBarkBook/UserProfileVC.swift"
-            timestampString = "523802708.725015"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarkBarkBook/UserProfileVC.swift"
-            timestampString = "523802683.81272"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -330,12 +266,12 @@
                   moduleName = "BarkBarkBook"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/MakeNewPostVC%20+%20API.swift"
-                  timestampString = "523806234.607489"
+                  timestampString = "523810237.14049"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "269"
                   endingLineNumber = "269"
-                  offsetFromSymbolStart = "3414">
+                  offsetFromSymbolStart = "3412">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -345,12 +281,12 @@
                   moduleName = "BarkBarkBook"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/MakeNewPostVC%20+%20API.swift"
-                  timestampString = "523806234.609205"
+                  timestampString = "523810237.143362"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "269"
                   endingLineNumber = "269"
-                  offsetFromSymbolStart = "3703">
+                  offsetFromSymbolStart = "3701">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -378,12 +314,12 @@
                   moduleName = "BarkBarkBook"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/MakeNewPostVC%20+%20API.swift"
-                  timestampString = "523806234.614409"
+                  timestampString = "523810237.153735"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "268"
                   endingLineNumber = "268"
-                  offsetFromSymbolStart = "2699">
+                  offsetFromSymbolStart = "2697">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -393,12 +329,12 @@
                   moduleName = "BarkBarkBook"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/MakeNewPostVC%20+%20API.swift"
-                  timestampString = "523806234.618065"
+                  timestampString = "523810237.157059"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "268"
                   endingLineNumber = "268"
-                  offsetFromSymbolStart = "3376">
+                  offsetFromSymbolStart = "3374">
                </Location>
             </Locations>
          </BreakpointContent>
