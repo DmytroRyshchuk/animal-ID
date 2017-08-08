@@ -96,8 +96,12 @@ class MakeNewPostViewController: UIViewController {
         self.tabBarController?.selectedIndex = 0
     }
     
-    @IBAction func makeNewPostBarButton(_ sender: Any) {        
-        self.api_CreateNewPost()
+    @IBAction func makeNewPostBarButton(_ sender: Any) {
+        if !textInPostTextView.text.isEmpty {
+            self.api_CreateNewPost()
+        } else {
+            alert(code: 1000, content: "")
+        }
     }
     
     @IBAction func showMenu(_ sender: Any) {
@@ -139,7 +143,12 @@ class MakeNewPostViewController: UIViewController {
     func alert(code: Int, content: String) {
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
-            let alertController = UIAlertController(title: "Error: \(code)", message: "\(content)", preferredStyle: .alert)
+            var alertController = UIAlertController()
+            if code == 1000 {
+                alertController = UIAlertController(title: "Error!", message: "Please fill text field.", preferredStyle: .alert)
+            } else {
+                alertController = UIAlertController(title: "Error: \(code)", message: "\(content)", preferredStyle: .alert)
+            }
             
             let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
                 print("You've pressed OK button");
