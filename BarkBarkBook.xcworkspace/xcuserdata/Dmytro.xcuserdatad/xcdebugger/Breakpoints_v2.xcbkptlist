@@ -73,70 +73,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BarkBarkBook/MenuTV.swift"
-            timestampString = "523799925.657758"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "MenuVC"
-            landmarkType = "4">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarkBarkBook/MenuTV.swift"
-            timestampString = "523799925.657758"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "MenuVC"
-            landmarkType = "4">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarkBarkBook/MenuTV.swift"
-            timestampString = "523799925.657758"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "MenuVC"
-            landmarkType = "4">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BarkBarkBook/MenuTV.swift"
-            timestampString = "523799925.657758"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "MenuVC"
-            landmarkType = "4">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "BarkBarkBook/UserProfileVC + API.swift"
             timestampString = "523801778.153511"
             startingColumnNumber = "9223372036854775807"
@@ -266,7 +202,7 @@
                   moduleName = "BarkBarkBook"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/MakeNewPostVC%20+%20API.swift"
-                  timestampString = "523810237.14049"
+                  timestampString = "523890522.578594"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "269"
@@ -281,7 +217,7 @@
                   moduleName = "BarkBarkBook"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/MakeNewPostVC%20+%20API.swift"
-                  timestampString = "523810237.143362"
+                  timestampString = "523890522.581243"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "269"
@@ -314,7 +250,7 @@
                   moduleName = "BarkBarkBook"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/MakeNewPostVC%20+%20API.swift"
-                  timestampString = "523810237.153735"
+                  timestampString = "523890522.588668"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "268"
@@ -329,7 +265,7 @@
                   moduleName = "BarkBarkBook"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/MakeNewPostVC%20+%20API.swift"
-                  timestampString = "523810237.157059"
+                  timestampString = "523890522.590774"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "268"

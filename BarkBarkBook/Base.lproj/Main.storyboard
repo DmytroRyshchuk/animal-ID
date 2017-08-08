@@ -757,13 +757,13 @@
                                                         <rect key="frame" x="0.0" y="1" width="271" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ім'я" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yd-r6-cHC">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Olexii" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Akt-Te-YjC">
-                                                                <rect key="frame" x="107" y="0.0" width="99" height="30"/>
+                                                                <rect key="frame" x="106.5" y="0.0" width="99.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -803,13 +803,13 @@
                                                         <rect key="frame" x="0.0" y="1" width="271" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прізвище" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFF-g3-0eX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pyvovarov" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHz-N3-w2F">
-                                                                <rect key="frame" x="107" y="0.0" width="99" height="30"/>
+                                                                <rect key="frame" x="106.5" y="0.0" width="99.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -849,13 +849,13 @@
                                                         <rect key="frame" x="0.0" y="1" width="271" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ED-CE-nH0">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="test@test.ua" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oe9-ZW-pKm">
-                                                                <rect key="frame" x="107" y="0.0" width="99" height="30"/>
+                                                                <rect key="frame" x="106.5" y="0.0" width="99.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -887,13 +887,13 @@
                                                         <rect key="frame" x="0.0" y="1" width="271" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер телефону" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kkp-lz-LUb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+380968040826" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tn-Ya-ywE">
-                                                                <rect key="frame" x="107" y="0.0" width="99" height="30"/>
+                                                                <rect key="frame" x="106.5" y="0.0" width="99.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -929,13 +929,13 @@
                                                         <rect key="frame" x="0.0" y="1" width="271" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Країна" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXY-g2-G7A">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Україна" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iia-xp-dJM">
-                                                                <rect key="frame" x="107" y="0.0" width="99" height="30"/>
+                                                                <rect key="frame" x="106.5" y="0.0" width="99.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -971,13 +971,13 @@
                                                         <rect key="frame" x="0.0" y="1" width="271" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поштовий індекс" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsV-Xl-eCF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="49125" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6d-G2-rNq">
-                                                                <rect key="frame" x="107" y="0.0" width="99" height="30"/>
+                                                                <rect key="frame" x="106.5" y="0.0" width="99.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1013,13 +1013,13 @@
                                                         <rect key="frame" x="0.0" y="1" width="271" height="30"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Адреса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nx6-gn-tMR">
-                                                                <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="101.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="м.Хмельницький" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdp-kD-T4E">
-                                                                <rect key="frame" x="107" y="0.0" width="99" height="30"/>
+                                                                <rect key="frame" x="106.5" y="0.0" width="99.5" height="30"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -1445,7 +1445,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yW1-iY-0Sr">
                                                 <rect key="frame" x="0.0" y="0.0" width="290" height="100"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dof-for-ios2" translatesAutoresizingMaskIntoConstraints="NO" id="m3Z-zZ-fNY">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="m3Z-zZ-fNY">
                                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="100" id="Rfl-rj-fak"/>
@@ -2585,7 +2585,6 @@
         <image name="Asset 4" width="41" height="42"/>
         <image name="Asset 5" width="41" height="49"/>
         <image name="Dof-for-ios" width="300" height="300"/>
-        <image name="Dof-for-ios2" width="75" height="75"/>
         <image name="Heart_Icon_Deselected" width="800" height="750"/>
         <image name="White_V_logo" width="1000" height="419"/>
         <image name="avatar.jpg" width="301" height="351"/>
