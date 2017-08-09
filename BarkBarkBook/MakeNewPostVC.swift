@@ -97,7 +97,7 @@ class MakeNewPostViewController: UIViewController {
     }
     
     @IBAction func makeNewPostBarButton(_ sender: Any) {
-        if !textInPostTextView.text.isEmpty {
+        if textInPostTextView.text.isEmpty {
             self.api_CreateNewPost()
         } else {
             alert(code: 1000, content: "")
