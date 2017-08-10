@@ -91,7 +91,7 @@ class MakeNewPostViewController: UIViewController {
         fusuma.delegate = self as? FusumaDelegate
         fusuma.hasVideo = false // If you want to let the users allow to use video.
         fusuma.cropHeightRatio = 0.75 // Height-to-width ratio. The default value is 1, which means a squared-size photo.
-        fusuma.allowMultipleSelection = true // You can select multiple photos from the camera roll. The default value is false.
+        fusuma.allowMultipleSelection = false // You can select multiple photos from the camera roll. The default value is false.
         fusuma.defaultMode = .library // The first choice to show (.camera, .library, .video). The default value is .camera.
         self.present(fusuma, animated: true, completion: nil)
     }
@@ -181,23 +181,34 @@ extension MakeNewPostViewController: UITextViewDelegate {
 extension MakeNewPostViewController: FusumaDelegate {
     
     func fusumaMultipleImageSelected(_ images: [UIImage], source: FusumaMode) {
-        for oneImage in images {
-            let imageOrintationIsOkay = self.sFunc_imageFixOrientation(img: oneImage)
-            
-            if let imageData = imageOrintationIsOkay.jpeg(.low) {
-                imageT = scaledImage(UIImage(data: imageData)!, maximumWidth: 400)
-                photosFromUserInPostArray.append(UIImage(data: imageData)!)
-            }
-        }
-        
-        buttonIsPressed = true
-        photosOfAnimalInCollectionView.contentMode = .scaleAspectFit //3
-        photosOfAnimalInCollectionView?.reloadData()
+//        for oneImage in images {
+//            let imageOrintationIsOkay = self.sFunc_imageFixOrientation(img: oneImage)
+//            
+//            if let imageData = imageOrintationIsOkay.jpeg(.low) {
+//                imageT = scaledImage(UIImage(data: imageData)!, maximumWidth: 400)
+//                photosFromUserInPostArray.append(UIImage(data: imageData)!)
+//            }
+//        }
+//        
+//        buttonIsPressed = true
+//        photosOfAnimalInCollectionView.contentMode = .scaleAspectFit //3
+//        photosOfAnimalInCollectionView?.reloadData()
     }
     
     // Return the image which is selected from camera roll or is taken via the camera.
     func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
         
+        let imageOrintationIsOkay = self.sFunc_imageFixOrientation(img: image)
+        
+        if let imageData = imageOrintationIsOkay.jpeg(.low) {
+            imageT = scaledImage(UIImage(data: imageData)!, maximumWidth: 400)
+            photosFromUserInPostArray.append(UIImage(data: imageData)!)
+        }
+
+        buttonIsPressed = true
+        photosOfAnimalInCollectionView.contentMode = .scaleAspectFit //3
+        photosOfAnimalInCollectionView?.reloadData()
+
         print("Image selected")
     }
     
