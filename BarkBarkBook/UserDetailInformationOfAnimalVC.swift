@@ -18,6 +18,7 @@ class UserDetailInformationOfAnimalViewController: UIViewController {
     var userContent = UserContent()
     var postsArray = [UserContent]()
     
+    var cgs = CGSize()
     let tvc = TableViewCell()
     var postId = 0
     var statusOfPost = 0

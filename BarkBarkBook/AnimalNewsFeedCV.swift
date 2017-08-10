@@ -9,6 +9,25 @@
 import UIKit
 import SDWebImage
 
+extension UIImage{
+    
+    func resizeImageWith(newSize: CGSize) -> UIImage {
+        
+        let horizontalRatio = newSize.width / size.width
+        let verticalRatio = newSize.height / size.height
+        
+        let ratio = max(horizontalRatio, verticalRatio)
+        let newSize = CGSize(width: size.width * ratio, height: size.height * ratio)
+        UIGraphicsBeginImageContextWithOptions(newSize, true, 0)
+        draw(in: CGRect(origin: CGPoint(x: 0, y: 0), size: newSize))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+    }
+    
+    
+}
+
 extension UserDetailInformationOfAnimalViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -45,15 +64,30 @@ extension UserDetailInformationOfAnimalViewController: UICollectionViewDelegate,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = self.view.frame.size.height;
-        let width  = self.view.frame.size.width;
-        // in case you you want the cell to be 40% of your controllers view
-        return CGSize(width: width, height: height * 0.35)
         
-//        return CGSize(width: view.frame.width / 2, height: 350)
+        let height = collectionView.frame.size.height
+        let width  = collectionView.frame.size.width;
+        
+        return CGSize(width: width, height: height)
     }
     
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+//        return CGSize(width: collectionView.bounds.size.width/1.5 - 20, height: collectionView.bounds.size.width)
+//        
+//    }
+//    
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 //        return 0
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return 20
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView,
+//                        layout collectionViewLayout: UICollectionViewLayout,
+//                        insetForSectionAt section: Int) -> UIEdgeInsets
+//    {
+//        return  UIEdgeInsetsMake( 5,  14, 5,  14)
 //    }
 }
