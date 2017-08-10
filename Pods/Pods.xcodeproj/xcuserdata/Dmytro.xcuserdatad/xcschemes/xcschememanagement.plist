@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Fusuma.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ImagePicker-ImagePicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,7 +62,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5971A1C9809FAA6B7BFDD04C084F4E2A</key>
+		<key>3E0D8640A124012AB6F0A9F775A38285</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C6A39406E0BFBBC189107D5AB0C6592</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,22 +77,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8A74B90AA6145AC0047534BFA8EB5351</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A7EAF6440906E182EA8B8ECA560EDAED</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B9CA554A5F586947EAC6D2746815FF38</key>
+		<key>971470A81C52408F9BED44B7FFC39862</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>CBBCECA8F04D9F15E6A3146D9559ED53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D618C17C6BBDF4D1834284B361C977B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E8C87AD3CFE25C982BE60C644FD45C4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

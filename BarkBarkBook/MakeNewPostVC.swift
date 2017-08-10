@@ -9,6 +9,7 @@
 import UIKit
 import ImagePicker
 import SDWebImage
+import Fusuma
 
 class MakeNewPostViewController: UIViewController {
     
@@ -86,10 +87,13 @@ class MakeNewPostViewController: UIViewController {
     }
     
     @IBAction private func addPhotoToPost(_ sender: Any) {
-        let imagePicker = ImagePickerController()
-        imagePicker.delegate = self
-        
-        present(imagePicker, animated: true, completion: nil)
+        let fusuma = FusumaViewController()
+        fusuma.delegate = self as? FusumaDelegate
+        fusuma.hasVideo = false // If you want to let the users allow to use video.
+        fusuma.cropHeightRatio = 0.75 // Height-to-width ratio. The default value is 1, which means a squared-size photo.
+        fusuma.allowMultipleSelection = true // You can select multiple photos from the camera roll. The default value is false.
+        fusuma.defaultMode = .library // The first choice to show (.camera, .library, .video). The default value is .camera.
+        self.present(fusuma, animated: true, completion: nil)
     }
     
     @IBAction func cancelBarButtonOnPostPage(_ sender: Any) {
@@ -97,7 +101,7 @@ class MakeNewPostViewController: UIViewController {
     }
     
     @IBAction func makeNewPostBarButton(_ sender: Any) {
-        if textInPostTextView.text.isEmpty {
+        if !textInPostTextView.text.isEmpty {
             self.api_CreateNewPost()
         } else {
             alert(code: 1000, content: "")
@@ -173,10 +177,10 @@ extension MakeNewPostViewController: UITextViewDelegate {
 }
 
 
-//MARK: - PickerView pod
-extension MakeNewPostViewController: ImagePickerDelegate {
-    internal func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
-        
+//MARK: - Fusuma image pod
+extension MakeNewPostViewController: FusumaDelegate {
+    
+    func fusumaMultipleImageSelected(_ images: [UIImage], source: FusumaMode) {
         for oneImage in images {
             let imageOrintationIsOkay = self.sFunc_imageFixOrientation(img: oneImage)
             
@@ -184,22 +188,41 @@ extension MakeNewPostViewController: ImagePickerDelegate {
                 imageT = scaledImage(UIImage(data: imageData)!, maximumWidth: 400)
                 photosFromUserInPostArray.append(UIImage(data: imageData)!)
             }
-
         }
         
-        //photosFromUserInPostArray = images
-        imagePicker.dismiss(animated: true, completion: nil)
         buttonIsPressed = true
+        photosOfAnimalInCollectionView.contentMode = .scaleAspectFit //3
         photosOfAnimalInCollectionView?.reloadData()
     }
     
-    internal func cancelButtonDidPress(_ imagePicker: ImagePickerController) {
-        imagePicker.dismiss(animated: true, completion: nil)
+    // Return the image which is selected from camera roll or is taken via the camera.
+    func fusumaImageSelected(_ image: UIImage, source: FusumaMode) {
+        
+        print("Image selected")
     }
     
-    internal func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]) {
-        imagePicker.dismiss(animated: true, completion: nil)
+    // Return the image but called after is dismissed.
+    func fusumaDismissedWithImage(image: UIImage, source: FusumaMode) {
+        
+        print("Called just after FusumaViewController is dismissed.")
     }
+    
+    func fusumaVideoCompleted(withFileURL fileURL: URL) {
+        
+        print("Called just after a video has been selected.")
+    }
+    
+    // When camera roll is not authorized, this method is called.
+    func fusumaCameraRollUnauthorized() {
+        
+        print("Camera roll unauthorized")
+    }
+    
+    // Return an image and the detailed information.
+    func fusumaImageSelected(_ image: UIImage, source: FusumaMode, metaData: ImageMetadata) {
+        
+    }
+    
 }
 
 

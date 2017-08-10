@@ -10,4 +10,5 @@ target 'BarkBarkBook' do
 	pod 'ImagePicker'
 	pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
 	pod "AFViewShaker", "~> 0.0.4"
+	pod 'Fusuma'
 end
