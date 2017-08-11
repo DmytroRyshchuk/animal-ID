@@ -157,7 +157,7 @@ class MakeNewPostViewController: UIViewController {
             }
             
             let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
-                print("You've pressed OK button");
+                print("You've pressed OK button")
             }
             
             alertController.addAction(OKAction)
