@@ -99,15 +99,7 @@ class MakeNewPostViewController: UIViewController {
     }
     
     @IBAction private func addPhotoToPost(_ sender: Any) {
-        let fusuma = FusumaViewController()
-        fusuma.delegate = self as? FusumaDelegate
-        fusuma.hasVideo = false // If you want to let the users allow to use video.
-        fusuma.cropHeightRatio = 0.75 // Height-to-width ratio. The default value is 1, which means a squared-size photo.
-        fusuma.allowMultipleSelection = false // You can select multiple photos from the camera roll. The default value is false.
-        fusuma.defaultMode = .library // The first choice to show (.camera, .library, .video). The default value is .camera.
-        self.present(fusuma, animated: true, completion: nil)
-        
-        cleanDataInPost = false
+        fusumaPod()
     }
     
     @IBAction func cancelBarButtonOnPostPage(_ sender: Any) {
@@ -190,6 +182,19 @@ extension MakeNewPostViewController: UITextViewDelegate {
 //MARK: - Fusuma image pod
 extension MakeNewPostViewController: FusumaDelegate {
     
+    func fusumaPod() {
+        let fusuma = FusumaViewController()
+        fusuma.delegate = self
+        fusuma.hasVideo = false // If you want to let the users allow to use video.
+        fusuma.cropHeightRatio = 0.75 // Height-to-width ratio. The default value is 1, which means a squared-size photo.
+        fusuma.allowMultipleSelection = false // You can select multiple photos from the camera roll. The default value is false.
+        fusuma.defaultMode = .library // The first choice to show (.camera, .library, .video). The default value is .camera.
+        self.present(fusuma, animated: true, completion: nil)
+        
+        fusuma.hideButtons()
+        cleanDataInPost = false
+    }
+    
     func fusumaMultipleImageSelected(_ images: [UIImage], source: FusumaMode) {
 //        for oneImage in images {
 //            let imageOrintationIsOkay = self.sFunc_imageFixOrientation(img: oneImage)
@@ -211,10 +216,9 @@ extension MakeNewPostViewController: FusumaDelegate {
         let imageOrintationIsOkay = self.sFunc_imageFixOrientation(img: image)
         
         if let imageData = imageOrintationIsOkay.jpeg(.low) {
-            imageT = scaledImage(UIImage(data: imageData)!, maximumWidth: 400)
             photosFromUserInPostArray.append(UIImage(data: imageData)!)
         }
-
+        
         buttonIsPressed = true
         photosOfAnimalInCollectionView.contentMode = .scaleAspectFit //3
         photosOfAnimalInCollectionView?.reloadData()
@@ -352,3 +356,15 @@ extension MakeNewPostViewController {
         return imgEnd
     }
 }
+
+extension FusumaViewController {
+    
+    func hideButtons() {
+        let btnLibrary = self.value(forKey: "libraryButton") as? UIButton
+        let btnCamera = self.value(forKey: "cameraButton") as? UIButton
+        
+        btnLibrary?.isHidden = true
+        btnCamera?.isHidden = true
+    }
+}
+
