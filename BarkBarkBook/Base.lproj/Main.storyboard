@@ -180,7 +180,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tBr-Ce-Mdp" id="xnR-RQ-ka7">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="129.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="05i-c0-IrU">
@@ -1145,7 +1145,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="190"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dl3-dq-v99" id="GRL-MK-acX">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="189.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EbL-py-GUs">
@@ -1198,7 +1198,7 @@
                                         <rect key="frame" x="0.0" y="218" width="320" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lf6-jk-yPU" id="0Uv-5e-MiQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="349.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cci-Ag-eY2">
@@ -1847,12 +1847,21 @@
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="146897792919975145.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6yX-t6-Slb">
                                                                     <rect key="frame" x="0.0" y="0.0" width="279" height="292"/>
                                                                 </imageView>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhG-pt-vN3">
+                                                                    <rect key="frame" x="231" y="48" width="30" height="36"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                                                    <state key="normal" title="X">
+                                                                        <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    </state>
+                                                                </button>
                                                             </subviews>
                                                         </view>
                                                         <constraints>
+                                                            <constraint firstItem="VhG-pt-vN3" firstAttribute="top" secondItem="jNf-s1-p5b" secondAttribute="topMargin" constant="40" id="E57-1w-ttG"/>
                                                             <constraint firstAttribute="bottom" secondItem="6yX-t6-Slb" secondAttribute="bottom" id="SKD-1b-gJV"/>
                                                             <constraint firstAttribute="trailing" secondItem="6yX-t6-Slb" secondAttribute="trailing" id="VDE-dN-7oh"/>
                                                             <constraint firstItem="6yX-t6-Slb" firstAttribute="top" secondItem="jNf-s1-p5b" secondAttribute="top" id="Y3g-7H-OUx"/>
+                                                            <constraint firstAttribute="trailingMargin" secondItem="VhG-pt-vN3" secondAttribute="trailing" constant="10" id="f64-sC-eNB"/>
                                                             <constraint firstItem="6yX-t6-Slb" firstAttribute="leading" secondItem="jNf-s1-p5b" secondAttribute="leading" id="uGb-26-0IM"/>
                                                         </constraints>
                                                         <connections>
@@ -1954,7 +1963,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GFP-bJ-KwN" id="aUU-qV-Z8g">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="adE-vR-MMz">
@@ -2335,9 +2344,8 @@
                                                                 </label>
                                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Vy-mM-kED">
                                                                     <rect key="frame" x="0.0" y="175" width="288" height="249"/>
-                                                                    <color key="backgroundColor" red="0.2416662871837616" green="0.21467065811157227" blue="0.2190527617931366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="288" id="ISk-wy-Jf1"/>
                                                                         <constraint firstAttribute="height" constant="249" id="kv8-ny-Taz"/>
                                                                     </constraints>
                                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="ny5-VR-2Bj">
@@ -2355,7 +2363,7 @@
                                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PzK-u1-iZM">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="289" height="249"/>
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="249"/>
                                                                                     </imageView>
                                                                                 </subviews>
                                                                             </view>
@@ -2438,8 +2446,10 @@
                                                                 <constraint firstItem="ddZ-M2-4IF" firstAttribute="leading" secondItem="zUI-CW-K5B" secondAttribute="leading" id="Bbo-Si-bHm"/>
                                                                 <constraint firstAttribute="trailing" secondItem="ddZ-M2-4IF" secondAttribute="trailing" id="Fsd-qy-fWQ"/>
                                                                 <constraint firstItem="xyR-ht-dJg" firstAttribute="leading" secondItem="zUI-CW-K5B" secondAttribute="leading" id="Wk5-UF-Dsh"/>
+                                                                <constraint firstAttribute="trailing" secondItem="9Vy-mM-kED" secondAttribute="trailing" id="osg-Ah-7uS"/>
                                                                 <constraint firstAttribute="trailing" secondItem="xyR-ht-dJg" secondAttribute="trailing" id="qRc-76-ICz"/>
                                                                 <constraint firstAttribute="trailing" secondItem="MCC-do-goP" secondAttribute="trailing" id="uMc-S7-qKh"/>
+                                                                <constraint firstItem="9Vy-mM-kED" firstAttribute="leading" secondItem="zUI-CW-K5B" secondAttribute="leading" id="wJp-4N-u7j"/>
                                                             </constraints>
                                                         </stackView>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pP3-RW-bCV">
