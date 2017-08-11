@@ -271,6 +271,19 @@ extension MakeNewPostViewController: UICollectionViewDelegate, UICollectionViewD
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        let cellWidth = collectionView.bounds.size.width
+        return CGSize(width: cellWidth, height: cellWidth)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.item)
+//        collectionView.deleteItems(at: [indexPath])
+        photosFromUserInPostArray.remove(at: indexPath.item)
+        collectionView.reloadData()
+    }
 }
 
 

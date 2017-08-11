@@ -65,10 +65,8 @@ extension UserDetailInformationOfAnimalViewController: UICollectionViewDelegate,
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let height = collectionView.frame.size.height
-        let width  = collectionView.frame.size.width;
-        
-        return CGSize(width: width, height: height)
+        let cellWidth = collectionView.bounds.size.width
+        return CGSize(width: cellWidth, height: cellWidth)
     }
     
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {

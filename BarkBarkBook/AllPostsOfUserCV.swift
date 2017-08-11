@@ -39,4 +39,10 @@ extension AllPostsOfUserViewController: UICollectionViewDelegate, UICollectionVi
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        
+        let cellWidth = collectionView.bounds.size.width 
+        return CGSize(width: cellWidth, height: cellWidth)
+    }
 }
