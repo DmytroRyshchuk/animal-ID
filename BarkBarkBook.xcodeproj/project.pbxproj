@@ -245,7 +245,7 @@
 				663955081F30A3C000F2299A /* Singleton.swift */,
 				66AA3BB21EFD0C2300524D01 /* LoginGroup */,
 				66AA3BB31EFD0C2E00524D01 /* RegisterNewUser */,
-				663269A31F13807F00A64D5A /* TabBar */,
+				663269A31F13807F00A64D5A /* TabBar(4 Views) */,
 				66AA3BB51EFD0C4D00524D01 /* MenuGroup */,
 				6617FED11EFD40A5001F8A56 /* ProfileOfUser */,
 				6617FEDC1EFD4EB3001F8A56 /* ProfileOfAnimal */,
@@ -256,7 +256,7 @@
 			path = BarkBarkBook;
 			sourceTree = "<group>";
 		};
-		663269A31F13807F00A64D5A /* TabBar */ = {
+		663269A31F13807F00A64D5A /* TabBar(4 Views) */ = {
 			isa = PBXGroup;
 			children = (
 				6639550C1F30A4F800F2299A /* Tab Bar */,
@@ -264,7 +264,7 @@
 				66E6EF301F190A5A00E82BE0 /* Menu actions */,
 				66E6EF2B1F18D89900E82BE0 /* Make New Post */,
 			);
-			name = TabBar;
+			name = "TabBar(4 Views)";
 			sourceTree = "<group>";
 		};
 		663954DF1F306EB800F2299A /* Model */ = {
@@ -398,11 +398,11 @@
 		663954FE1F3085AE00F2299A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				663954FF1F3085D600F2299A /* UserContent + UserComments + UserImages.swift */,
+				6639550E1F30BCC500F2299A /* UpdatePostsList.swift */,
 				66AD1A2C1F05569A00269019 /* TODOApi_NewsFeedOfChoosenAnimal.swift */,
+				663954FF1F3085D600F2299A /* UserContent + UserComments + UserImages.swift */,
 				663955031F30A2D900F2299A /* TableViewCell + API.swift */,
 				6617FEDE1EFD4ED8001F8A56 /* (notUsed)UserDetailInformation.swift */,
-				6639550E1F30BCC500F2299A /* UpdatePostsList.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";

@@ -1169,7 +1169,7 @@
                                                                 <constraint firstAttribute="height" constant="40" id="Kb8-nc-7Ih"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -1925,6 +1925,7 @@
                         <outlet property="chooseAnimalButtonOutlet" destination="wjJ-4M-mUm" id="cNo-ig-ACw"/>
                         <outlet property="leadingConstraint" destination="LWT-oB-X3o" id="ubS-Ck-rcv"/>
                         <outlet property="photosOfAnimalInCollectionView" destination="rgz-ar-XuK" id="wy2-Or-pIZ"/>
+                        <outlet property="segmentedControllerOutlet" destination="qRN-OG-CIZ" id="gim-PF-pX8"/>
                         <outlet property="textInPostTextView" destination="ED0-Nh-fbB" id="UP6-pQ-t2y"/>
                         <outlet property="traillingConstraint" destination="iPa-Wc-lUv" id="y7Y-bQ-HtL"/>
                     </connections>
@@ -1969,7 +1970,7 @@
                                                         <constraint firstAttribute="height" constant="25" id="xYh-qP-PZ7"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dav-6e-wlI">
@@ -1993,6 +1994,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.25506612658500671" green="0.22836330533027649" blue="0.23268762230873108" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="dav-6e-wlI" secondAttribute="trailing" constant="10" id="7A2-fs-8t4"/>
                                                 <constraint firstItem="dav-6e-wlI" firstAttribute="centerY" secondItem="aUU-qV-Z8g" secondAttribute="centerY" id="LM5-ha-eXK"/>

@@ -22,6 +22,7 @@ class MakeNewPostViewController: UIViewController {
     @IBOutlet weak var photosOfAnimalInCollectionView: UICollectionView!
     @IBOutlet weak var traillingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var segmentedControllerOutlet: UISegmentedControl!
     
     var menuIsShowing = false
     var menuIsOpen = false
@@ -36,6 +37,7 @@ class MakeNewPostViewController: UIViewController {
     var photosFromUserInPostArray = [UIImage]()
     var buttonIsPressed = false
     var moveToPostVC = true
+    var cleanDataInPost = false
     
     
     //MARK: - Default func
@@ -48,6 +50,15 @@ class MakeNewPostViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         dataAboutChoosenAnimalInPost()
+        
+        if cleanDataInPost {
+            photosFromUserInPostArray = []
+            photosOfAnimalInCollectionView.reloadData()
+            textInPostTextView.text = ""
+            segmentedControllerOutlet.selectedSegmentIndex = 0
+            
+            cleanDataInPost = true
+        }
         
         leadingConstraint.constant = 0
         traillingConstraint.constant = 0
@@ -84,6 +95,7 @@ class MakeNewPostViewController: UIViewController {
     
     @IBAction private func chooseAccessToPostButtonAction(_ sender: Any) {
         api_UserAnimals()
+        cleanDataInPost = false
     }
     
     @IBAction private func addPhotoToPost(_ sender: Any) {
@@ -94,10 +106,13 @@ class MakeNewPostViewController: UIViewController {
         fusuma.allowMultipleSelection = false // You can select multiple photos from the camera roll. The default value is false.
         fusuma.defaultMode = .library // The first choice to show (.camera, .library, .video). The default value is .camera.
         self.present(fusuma, animated: true, completion: nil)
+        
+        cleanDataInPost = false
     }
     
     @IBAction func cancelBarButtonOnPostPage(_ sender: Any) {
         self.tabBarController?.selectedIndex = 0
+        cleanDataInPost = true
     }
     
     @IBAction func makeNewPostBarButton(_ sender: Any) {
@@ -127,11 +142,6 @@ class MakeNewPostViewController: UIViewController {
     
     
     //MARK: - Funcs
-    func cleanDataInPost() {
-        photosFromUserInPostArray = []
-        textInPostTextView.text = ""
-    }
-    
     func dataAboutChoosenAnimalInPost() {
         animalNamesOfUserArray = []
         let title = SharingManager.sharedInstance.nicknameOfAnimal

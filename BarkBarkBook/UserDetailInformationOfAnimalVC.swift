@@ -31,6 +31,10 @@ class UserDetailInformationOfAnimalViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(UserDetailInformationOfAnimalViewController.deleteOnePost), name: NSNotification.Name(rawValue: "deleteOnePost"), object: nil)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        apiNewsFeedOfChoosenAnimal()
+    }
+    
     func deleteOnePost() {
         //This function will be called when you post the notification
         
