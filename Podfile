@@ -11,5 +11,4 @@ target 'BarkBarkBook' do
 	pod 'SwiftValidator', :git => 'https://github.com/jpotts18/SwiftValidator.git', :branch => 'master'
 	pod "AFViewShaker", "~> 0.0.4"
 	pod 'Fusuma'
-	pod "FlexiblePageControl"
 end

@@ -1,7 +1,6 @@
 PODS:
   - AFViewShaker (0.0.4)
   - Alamofire (4.5.0)
-  - FlexiblePageControl (1.0.5)
   - Fusuma (1.1.0)
   - ImagePicker (2.1.1)
   - SDWebImage (4.0.0):
@@ -13,7 +12,6 @@ PODS:
 DEPENDENCIES:
   - AFViewShaker (~> 0.0.4)
   - Alamofire
-  - FlexiblePageControl
   - Fusuma
   - ImagePicker
   - SDWebImage
@@ -33,13 +31,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AFViewShaker: 4296c638c24a037e02727b40d89d8f178df3b3f4
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  FlexiblePageControl: 70caa5dad6603a7b361b154fa8b75295a8c44f9b
   Fusuma: 087dcf57cd0e8712d357dcf14559927da369642c
   ImagePicker: fe4c699abb56ff03994fa98d8b02e3883ee118be
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SwiftValidator: 25ded5ca1f10c05adf57f6ac82a72d28ac8d91af
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: 84d5bffdfe2c7205f0d08e832e39e5fabf75494a
+PODFILE CHECKSUM: 9faefb3525107e988fd61fe4db99cd06306a7eaf
 
 COCOAPODS: 1.2.0
