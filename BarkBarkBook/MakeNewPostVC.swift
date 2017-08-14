@@ -288,6 +288,14 @@ extension MakeNewPostViewController: UICollectionViewDelegate, UICollectionViewD
         let cellWidth = collectionView.bounds.size.width
         return CGSize(width: cellWidth, height: cellWidth)
     }
+    
+    //TODO: open image on whole view on new ViewController
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //        print(indexPath.item)
+        //        collectionView.deleteItems(at: [indexPath])
+        //        photosFromUserInPostArray.remove(at: indexPath.item)
+        //        collectionView.reloadData()
+    }
 }
 
 
