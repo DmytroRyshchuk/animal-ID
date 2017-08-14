@@ -54,7 +54,7 @@ extension AllAnimalsOfUserViewController: UITableViewDataSource, UITableViewDele
             if self.allAnimalsOfUserArray[indexPath.row].photo == "" {
                 cell.avatarOfAnimalImage.image = UIImage(named: "Dof-for-ios")
             }
-        }        
+        }
         
         return cell
     }

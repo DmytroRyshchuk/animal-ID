@@ -75,7 +75,12 @@ class RegisterNewUserVC: UIViewController, ValidationDelegate {
         _ = navigationController?.popToRootViewController(animated: true)
     }
 
-
+    @IBAction func userPoliticsOnWebSite(_ sender: Any) {
+        if let url = URL(string: "https://animal-id.info/ua/site/terms-use") {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
     //MARK: - Alerts
     func alerts(message: String) {
         let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
