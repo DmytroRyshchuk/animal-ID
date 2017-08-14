@@ -38,6 +38,7 @@ class MakeNewPostViewController: UIViewController {
     var buttonIsPressed = false
     var moveToPostVC = true
     var cleanDataInPost = false
+    var deleteRow = 0
     
     
     //MARK: - Default func
@@ -130,6 +131,16 @@ class MakeNewPostViewController: UIViewController {
         
         menuIsShowing = !menuIsShowing
         
+    }
+    
+    @IBAction func deleteImageInCollectionViewButton(_ sender: Any) {
+        if let cell = (sender as AnyObject).superview??.superview as? MultiplyPhotosOfAnimalCollectionViewCell {
+            let indexPath = photosOfAnimalInCollectionView.indexPath(for: cell)
+            deleteRow = indexPath!.row
+        }
+        
+        photosFromUserInPostArray.remove(at: deleteRow)
+        photosOfAnimalInCollectionView.reloadData()
     }
     
     
@@ -276,13 +287,6 @@ extension MakeNewPostViewController: UICollectionViewDelegate, UICollectionViewD
         
         let cellWidth = collectionView.bounds.size.width
         return CGSize(width: cellWidth, height: cellWidth)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath.item)
-//        collectionView.deleteItems(at: [indexPath])
-        photosFromUserInPostArray.remove(at: indexPath.item)
-        collectionView.reloadData()
     }
 }
 
