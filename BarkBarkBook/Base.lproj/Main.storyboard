@@ -1089,7 +1089,7 @@
                                                 </constraints>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.21444770693778992" green="0.19148635864257812" blue="0.19598186016082764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.2416662871837616" green="0.21467065811157227" blue="0.2190527617931366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="hTj-Ea-Pvk" secondAttribute="trailing" constant="15" id="Aix-Ao-GGr"/>
                                             <constraint firstItem="hTj-Ea-Pvk" firstAttribute="leading" secondItem="Mkx-I6-Ouc" secondAttribute="leading" constant="15" id="cyX-Cb-QtR"/>

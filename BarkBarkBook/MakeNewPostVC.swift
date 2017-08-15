@@ -117,11 +117,7 @@ class MakeNewPostViewController: UIViewController {
     }
     
     @IBAction func makeNewPostBarButton(_ sender: Any) {
-        if textInPostTextView.text != "" {
-            self.api_CreateNewPost()
-        } else {
-            alert(code: 1000, content: "")
-        }
+        self.api_CreateNewPost()
     }
     
     @IBAction func showMenu(_ sender: Any) {
@@ -169,11 +165,8 @@ class MakeNewPostViewController: UIViewController {
         DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
             var alertController = UIAlertController()
-            if code == 1000 {
-                alertController = UIAlertController(title: "Error!", message: "Please fill text field.", preferredStyle: .alert)
-            } else {
-                alertController = UIAlertController(title: "Error: \(code)", message: "\(content)", preferredStyle: .alert)
-            }
+            
+            alertController = UIAlertController(title: "Error: \(code)", message: "\(content)", preferredStyle: .alert)
             
             let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
                 print("You've pressed OK button")

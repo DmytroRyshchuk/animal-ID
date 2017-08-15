@@ -59,7 +59,7 @@ extension LoginVC {
             if let code = jsonAsSwiftyJSON["code"].int {
                 if code != 200 {
                     switch code {
-                    case 403: self.alert(title: "НІЗЯ!11", message: "Ти чо район попутав?!")
+                    case 403: self.alert(title: "Error", message: "You can't authorize with this account")
                     case 401: self.alert(title: "Error", message: "You use wrong login or password")
                     default: self.alert(title: "Error", message: "Please connect with developer team")
                     }
