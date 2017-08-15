@@ -97,7 +97,7 @@ extension MenuVC {
                 }
                 
                 DispatchQueue.main.async {
-                    self.userAnimalsArray.reverse()
+//                    self.userAnimalsArray.reverse()
                     self.tableView.reloadData()
                     self.userAnimalsArray.isEmpty ? self.ifTableViewIsEmpty(status: true) : self.ifTableViewIsEmpty(status: false)
                     

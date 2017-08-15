@@ -61,8 +61,8 @@ class MakeNewPostViewController: UIViewController {
             cleanDataInPost = true
         }
         
-        leadingConstraint.constant = 0
-        traillingConstraint.constant = 0
+//        leadingConstraint.constant = 0
+//        traillingConstraint.constant = 0
         menuIsShowing = false
         
         if menuIsOpen {
