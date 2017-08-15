@@ -14,6 +14,7 @@ class AllPostsOfUserViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var menuButtonOutlet: UIBarButtonItem!
     
     @IBOutlet weak var trailiingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
@@ -39,6 +40,9 @@ class AllPostsOfUserViewController: UIViewController {
         //        self.automaticallyAdjustsScrollViewInsets = false
         
         NotificationCenter.default.addObserver(self, selector: #selector(AllPostsOfUserViewController.deleteMessage), name: NSNotification.Name(rawValue: "notificationName"), object: nil)
+        
+//        menuButtonOutlet.setBackgroundImage(UIImage(named:"menuIcon4"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
+        menuButtonOutlet.image = UIImage(named:"menuIcon")?.withRenderingMode(.alwaysOriginal)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -52,18 +56,19 @@ class AllPostsOfUserViewController: UIViewController {
         tableView.setContentOffset(CGPoint.zero, animated: true)
     }
     
-    
     //MARK: - Actions
     @IBAction func showMenuAction(_ sender: Any) {
+        let width = Int(view.frame.width)
+        
         if menuIsShow {
             leadingConstraint.constant = 0
             trailiingConstraint.constant = 0
         } else {
-            leadingConstraint.constant = 150
-            trailiingConstraint.constant = -150
+            leadingConstraint.constant = CGFloat(width) * 0.75//150
+            trailiingConstraint.constant = CGFloat(width) * -0.75//-150
         }
         
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 0.2) {
             self.view.layoutIfNeeded()
         }
         

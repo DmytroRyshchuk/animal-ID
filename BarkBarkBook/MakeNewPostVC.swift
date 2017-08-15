@@ -23,6 +23,7 @@ class MakeNewPostViewController: UIViewController {
     @IBOutlet weak var traillingConstraint: NSLayoutConstraint!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     @IBOutlet weak var segmentedControllerOutlet: UISegmentedControl!
+    @IBOutlet weak var addSomePhotoButtonOutlet: UIButton!
     
     var menuIsShowing = false
     var menuIsOpen = false
@@ -49,6 +50,11 @@ class MakeNewPostViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()        
         
         api_GetFirstUserAnimalToPost()
+        
+        textInPostTextView.layer.cornerRadius = 5
+        chooseAnimalButtonOutlet.layer.cornerRadius = 5
+        addSomePhotoButtonOutlet.layer.cornerRadius = 5
+        addSomePhotoButtonOutlet.setTitle("  Add some photo  ", for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
