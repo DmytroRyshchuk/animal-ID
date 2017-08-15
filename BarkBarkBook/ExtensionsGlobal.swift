@@ -8,7 +8,7 @@
 
 import UIKit
 
-let api_animalID = "http://devapi.animal-id.info/v1"
+let api_animalID = "http://api.animal-id.info/v1"
 
 //MARK: - For hidding textfield when tap somewhere except that textfield
 extension UIViewController {
