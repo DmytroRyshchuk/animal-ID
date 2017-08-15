@@ -32,6 +32,9 @@ class AllPostsOfUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.367, green: 0.342, blue: 0.341, alpha: 1)
+        tabBarController?.tabBar.barTintColor = UIColor(colorLiteralRed: 0.367, green: 0.342, blue: 0.341, alpha: 1)
+        
 //        apiAllPostsOfUser()
         //        self.automaticallyAdjustsScrollViewInsets = false
         

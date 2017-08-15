@@ -56,7 +56,7 @@ class RegisterNewAnimalViewController: UIViewController {
         iv_imageOfAnimal.layer.cornerRadius = iv_imageOfAnimal.frame.height/2
         iv_imageOfAnimal.clipsToBounds = true
     }
-
+    
     
     
     //MARK: - Actions
@@ -73,6 +73,25 @@ class RegisterNewAnimalViewController: UIViewController {
     }
     
     @IBAction func ba_registrationNewAnimal(_ sender: Any) {
+        if s_microchip.isOn {
+            if tf_transponder.text?.characters.count != 15 {
+                let alertController = UIAlertController(title: "Error", message: "Transponder should be 15 characters long", preferredStyle: .alert)
+                
+                let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+                    print("You've pressed OK button");
+                }
+                
+                alertController.addAction(OKAction)
+                self.present(alertController, animated: true, completion:nil)
+            } else {
+                registerForm()
+            }
+        } else {
+            registerForm()
+        }
+    }
+    
+    func registerForm() {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         
@@ -94,7 +113,7 @@ class RegisterNewAnimalViewController: UIViewController {
                 img = imageData
             }
         }
-
+        
         print(SharingManager.sharedInstance.date)
         
         if tf_breed.text! == "" || SharingManager.sharedInstance.key == "" || tf_nickname.text! == "" || SharingManager.sharedInstance.date == "" {

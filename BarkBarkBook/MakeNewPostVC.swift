@@ -44,6 +44,8 @@ class MakeNewPostViewController: UIViewController {
     //MARK: - Default func
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.367, green: 0.342, blue: 0.341, alpha: 1)
+
         self.hideKeyboardWhenTappedAround()        
         
         api_GetFirstUserAnimalToPost()

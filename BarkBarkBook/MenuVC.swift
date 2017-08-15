@@ -28,7 +28,7 @@ class MenuVC: UIViewController, UITextViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
         postsArray = []
-        addNavBarImage()
+//        addNavBarImage()
         openListOfAnimals(view: self)
     }
     

@@ -77,7 +77,13 @@ class LoginVC: UIViewController {
 extension LoginVC: UITextFieldDelegate {
     //MARK: - Text Field Logic
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        if textField == tf_email {
+            tf_password.becomeFirstResponder()
+        } else {
+            base64Password()
+            tf_password.resignFirstResponder()
+        }
+        
         return true
     }
     
