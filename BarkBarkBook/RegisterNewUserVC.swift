@@ -35,7 +35,8 @@ class RegisterNewUserVC: UIViewController, ValidationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.hideKeyboardWhenTappedAround()
+        
+        self.hideKeyboardWhenTappedAround()
         langaugeOnPhone()
         validatorInViewDidLoad()
     
@@ -130,11 +131,7 @@ class RegisterNewUserVC: UIViewController, ValidationDelegate {
     }
     
     func validationSuccessful() {
-//        print("Validation Success!")
-//        let alert = UIAlertController(title: "Success", message: "You are validated!", preferredStyle: UIAlertControllerStyle.alert)
-//        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-//        alert.addAction(defaultAction)
-//        self.present(alert, animated: true, completion: nil)
+        print("Validation SUCCESS!")
     }
     
     func validationFailed(_ errors:[(Validatable, ValidationError)]) {
@@ -150,7 +147,31 @@ extension RegisterNewUserVC: UITextFieldDelegate {
         return true
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+    //MARK: - up screen when keyboard appear
+    func animateTextField(textField: UITextField, up: Bool) {
+        let movementDistance:CGFloat = -100
+        let movementDuration: Double = 0.3
+        
+        var movement:CGFloat = 0
+        if up {
+            movement = movementDistance
+        }
+        else {
+            movement = -movementDistance
+        }
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+        UIView.commitAnimations()
+    }
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        self.animateTextField(textField: textField, up:true)
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        self.animateTextField(textField: textField, up:false)
     }
 }
