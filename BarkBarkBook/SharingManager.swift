@@ -1,5 +1,5 @@
 //
-//  Singleton.swift
+//  SharingManager.swift
 //  BarkBarkBook
 //
 //  Created by Dmytro Ryshchuk on 01.08.17.

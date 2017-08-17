@@ -21,12 +21,6 @@ extension RegisterNewUserVC {
         var langStr = Locale.current.languageCode
         print("language on phone is ====== ", langStr!)
         
-        let auth_key_user = "\(String(describing: UserDefaults.standard.object(forKey: "auth_key_user")!))"
-        
-        let headers: HTTPHeaders = [
-            "Authorization": "Bearer \(auth_key_user)"
-        ]
-        
         if langStr == "uk" {
             langStr = "ua"
         } else if langStr == "ru" {
@@ -35,7 +29,7 @@ extension RegisterNewUserVC {
             langStr = "en"
         }
         
-        Alamofire.request("\(api_animalID)/country?lang=\(langStr!)", method: .get, headers: headers).responseJSON { response in
+        Alamofire.request("\(api_animalID)/country?lang=\(langStr!)", method: .get).responseJSON { response in
             print("\n========ProfileOfUser========")
             debugPrint("RESPONSE: ", response.result)
             

@@ -99,5 +99,229 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/GetIOSOfCountryGetData.swift"
+            timestampString = "524648881.662602"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "api_getISOOfCountry()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/GetIOSOfCountryGetData.swift"
+            timestampString = "524648882.288376"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "api_getISOOfCountry()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarkBarkBook.RegisterNewUserVC.api_getISOOfCountry () -&gt; ()"
+                  moduleName = "BarkBarkBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/GetIOSOfCountryGetData.swift"
+                  timestampString = "524648904.249823"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarkBarkBook.RegisterNewUserVC.(api_getISOOfCountry () -&gt; ()).(closure #1)"
+                  moduleName = "BarkBarkBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/GetIOSOfCountryGetData.swift"
+                  timestampString = "524648904.254273"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/GetIOSOfCountryGetData.swift"
+            timestampString = "524648882.847383"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "api_getISOOfCountry()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarkBarkBook.RegisterNewUserVC.api_getISOOfCountry () -&gt; ()"
+                  moduleName = "BarkBarkBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/GetIOSOfCountryGetData.swift"
+                  timestampString = "524648904.257755"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarkBarkBook.RegisterNewUserVC.(api_getISOOfCountry () -&gt; ()).(closure #1)"
+                  moduleName = "BarkBarkBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/GetIOSOfCountryGetData.swift"
+                  timestampString = "524648904.259318"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/GetIOSOfCountryGetData.swift"
+            timestampString = "524648960.303137"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "api_getISOOfCountry()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/GetIOSOfCountryGetData.swift"
+            timestampString = "524648960.303137"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "api_getISOOfCountry()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarkBarkBook.RegisterNewUserVC.api_getISOOfCountry () -&gt; ()"
+                  moduleName = "BarkBarkBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/GetIOSOfCountryGetData.swift"
+                  timestampString = "524648904.272779"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "2460">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BarkBarkBook.RegisterNewUserVC.(api_getISOOfCountry () -&gt; ()).(closure #1)"
+                  moduleName = "BarkBarkBook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dmytro/Desktop/GitProjects/animal-ID/BarkBarkBook/GetIOSOfCountryGetData.swift"
+                  timestampString = "524648904.275187"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/GetIOSOfCountryGetData.swift"
+            timestampString = "524648960.303137"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "api_getISOOfCountry()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/GetIOSOfCountryGetData.swift"
+            timestampString = "524648960.303137"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "api_getISOOfCountry()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BarkBarkBook/GetIOSOfCountryGetData.swift"
+            timestampString = "524648960.303137"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "api_getISOOfCountry()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

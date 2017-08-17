@@ -52,8 +52,13 @@ class LoginVC: UIViewController {
     
     //MARK: - Actions    
     @IBAction private func ba_logIn(_ sender: Any) {
-        base64Password()
-        tf_password.resignFirstResponder()
+        if Reachability.isConnectedToNetwork() {
+            base64Password()
+            tf_password.resignFirstResponder()
+        } else {
+            print("Internet lost")
+            alert(title: "Please connect to the internet to continue", message: "")
+        }
     }
     
     @IBAction private func ba_forgotThePassword(_ sender: Any) {

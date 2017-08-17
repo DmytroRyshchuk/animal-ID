@@ -54,21 +54,31 @@ class RegisterNewUserVC: UIViewController, ValidationDelegate {
     //MARK: - Actions
     @IBAction func ba_registerNewUser(_ sender: Any) {
         
-        if tf_name.text != "" || tf_surname.text != "" || tf_phone.text != "" || tf_email.text != "" || tf_password.text != "" || zipcodeTextField.text != "" || addressTextField.text != "" || countryLabel.text != "" {
+        if Reachability.isConnectedToNetwork() {
+            if tf_name.text != "" || tf_surname.text != "" || tf_phone.text != "" || tf_email.text != "" || tf_password.text != "" || zipcodeTextField.text != "" || addressTextField.text != "" || countryLabel.text != "" {
                 api_RegistrationOfNewUser(name: tf_name.text!, surname: tf_surname.text!,
                                           phone: tf_phone.text!, email: tf_email.text!,
                                           password: tf_password.text!, zipcode: zipcodeTextField.text!,
                                           countryISO: SharingManager.sharedInstance.isoOfCountry,
                                           address: addressTextField.text!, language: langOnPhone!)
-            activityIndicator.isHidden = false
-            activityIndicator.startAnimating()
+                activityIndicator.isHidden = false
+                activityIndicator.startAnimating()
+            } else {
+                alerts(title: "Please, filled all fields", message: "")
+            }
         } else {
-            alerts(message: "Please, filled all fields")
+            print("Internet lost")
+            alerts(title: "Please connect to the internet to continue", message: "")
         }
     }
     
     @IBAction func chooseCountryButtonAction(_ sender: Any) {
-        api_getISOOfCountry()
+        if Reachability.isConnectedToNetwork() {
+            api_getISOOfCountry()
+        } else {
+            print("Internet lost")
+            alerts(title: "Please connect to the internet to continue", message: "")
+        }
     }
     
     
@@ -83,8 +93,8 @@ class RegisterNewUserVC: UIViewController, ValidationDelegate {
     }
     
     //MARK: - Alerts
-    func alerts(message: String) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+    func alerts(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         
