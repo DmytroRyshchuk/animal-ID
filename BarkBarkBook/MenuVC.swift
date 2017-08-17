@@ -29,7 +29,12 @@ class MenuVC: UIViewController, UITextViewDelegate {
         self.navigationController?.isNavigationBarHidden = false
         postsArray = []
 //        addNavBarImage()
-        openListOfAnimals(view: self)
+        if Reachability.isConnectedToNetwork() {
+            openListOfAnimals(view: self)
+        } else {
+            print("Internet lost")
+            Reachability.alertInternetLost(view: self)
+        }
     }
     
     func addNavBarImage() {

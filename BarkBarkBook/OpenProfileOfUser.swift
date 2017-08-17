@@ -10,13 +10,6 @@ import Foundation
 
 class OpenMenu {
     
-//    var userAnimalsDetailsArray = [UserAnimalsDetails]()
-//    var speciesOfAnimalFromJson = ""
-//    var sexOfAnimalFromJson = 0
-//    var transponderOfAnimalFromJson = ""
-//    var photoOfAnimalFromJson = ""
-//    var nicknameOfAnimalFromJson = ""
-//    var idOfAnimalFromJson = 0
     var userProfilePage = [UserProfile]()
-    
+
 }

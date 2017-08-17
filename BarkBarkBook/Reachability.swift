@@ -6,7 +6,7 @@
 //  Copyright © 2017 Dmytro Ryshchuk. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import SystemConfiguration
 
 //MARK: - Internet connection checking
@@ -35,5 +35,15 @@ public class Reachability {
         
         return ret
         
+    }
+    
+    
+    class func alertInternetLost(view: UIViewController) {
+        let alertController = UIAlertController(title: "Please connect to the internet to continue", message: "", preferredStyle: .alert)
+        
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alertController.addAction(OKAction)
+        view.present(alertController, animated: true, completion:nil)
     }
 }

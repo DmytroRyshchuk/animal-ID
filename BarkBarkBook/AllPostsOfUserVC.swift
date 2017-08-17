@@ -41,14 +41,17 @@ class AllPostsOfUserViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(AllPostsOfUserViewController.deleteMessage), name: NSNotification.Name(rawValue: "notificationName"), object: nil)
         
-//        menuButtonOutlet.setBackgroundImage(UIImage(named:"menuIcon4"), for: UIControlState.normal, barMetrics: UIBarMetrics.default)
         menuButtonOutlet.image = UIImage(named:"menuIcon")?.withRenderingMode(.alwaysOriginal)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        apiAllPostsOfUser()
-//        tableView.reloadData()
+        if Reachability.isConnectedToNetwork() {
+            apiAllPostsOfUser()
+        } else {
+            print("Internet lost")
+            Reachability.alertInternetLost(view: self)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -77,17 +80,31 @@ class AllPostsOfUserViewController: UIViewController {
     }
     
     @IBAction func openProfileOfUser(_ sender: Any) {
-//        openMenu.openProfileOfUser()
-        openMenu.api_ProfileOfUser(view: self)
+        if Reachability.isConnectedToNetwork() {
+            openMenu.api_ProfileOfUser(view: self)
+        } else {
+            print("Internet lost")
+            Reachability.alertInternetLost(view: self)
+        }
     }
     
     @IBAction func openListOfAnimals(_ sender: Any) {
-        openMenu.openListOfAnimals(view: self)
-        menuIsOpen = true
+        if Reachability.isConnectedToNetwork() {
+            openMenu.openListOfAnimals(view: self)
+            menuIsOpen = true
+        } else {
+            print("Internet lost")
+            Reachability.alertInternetLost(view: self)
+        }
     }
     
     @IBAction func logout(_ sender: Any) {
-        api_LogOut()
+        if Reachability.isConnectedToNetwork() {
+            api_LogOut()
+        } else {
+            print("Internet lost")
+            Reachability.alertInternetLost(view: self)
+        }
     }
     
     
@@ -147,17 +164,14 @@ class AllPostsOfUserViewController: UIViewController {
             
             if actionTitleFirst == "Only me" {
                 self.apou.changePost(id: self.postId, status: 1)
-//                self.tvc.changePost(id: self.postId, status: 1)
             } else {
                 self.apou.deletePost(id: self.postId)
-//                self.tvc.deletePost(id: self.postId)
             }
         }
         
         let actionSecond = UIAlertAction(title: actionTitleSecond, style: .default) { (action:UIAlertAction) in
             if actionTitleSecond == "Everyone" {
                 self.apou.changePost(id: self.postId, status: 3)
-//                self.tvc.changePost(id: self.postId, status: 3)
             }
         }
         

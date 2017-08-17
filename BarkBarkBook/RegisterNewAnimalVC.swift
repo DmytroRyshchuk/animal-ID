@@ -73,21 +73,26 @@ class RegisterNewAnimalViewController: UIViewController {
     }
     
     @IBAction func ba_registrationNewAnimal(_ sender: Any) {
-        if s_microchip.isOn {
-            if tf_transponder.text?.characters.count != 15 {
-                let alertController = UIAlertController(title: "Error", message: "Transponder should be 15 characters long", preferredStyle: .alert)
-                
-                let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
-                    print("You've pressed OK button");
+        if Reachability.isConnectedToNetwork() {
+            if s_microchip.isOn {
+                if tf_transponder.text?.characters.count != 15 {
+                    let alertController = UIAlertController(title: "Error", message: "Transponder should be 15 characters long", preferredStyle: .alert)
+                    
+                    let OKAction = UIAlertAction(title: "OK", style: .default) { (action:UIAlertAction) in
+                        print("You've pressed OK button");
+                    }
+                    
+                    alertController.addAction(OKAction)
+                    self.present(alertController, animated: true, completion:nil)
+                } else {
+                    registerForm()
                 }
-                
-                alertController.addAction(OKAction)
-                self.present(alertController, animated: true, completion:nil)
             } else {
                 registerForm()
             }
         } else {
-            registerForm()
+            print("Internet lost")
+            Reachability.alertInternetLost(view: self)
         }
     }
     
@@ -151,7 +156,12 @@ class RegisterNewAnimalViewController: UIViewController {
     }
     
     @IBAction func ba_ChooseSpecies(_ sender: Any) {
-        api_getAllSpeciesOfAnimal()
+        if Reachability.isConnectedToNetwork() {
+            api_getAllSpeciesOfAnimal()
+        } else {
+            print("Internet lost")
+            Reachability.alertInternetLost(view: self)
+        }
     }
     
     func openListOfAnimalPage() {

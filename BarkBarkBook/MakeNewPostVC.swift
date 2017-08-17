@@ -102,9 +102,15 @@ class MakeNewPostViewController: UIViewController {
         }
     }
     
-    @IBAction private func chooseAccessToPostButtonAction(_ sender: Any) {
-        api_UserAnimals()
-        cleanDataInPost = false
+    @IBAction private func chooseAnAnimalInPost(_ sender: Any) {
+        if Reachability.isConnectedToNetwork() {
+            api_UserAnimals()
+            cleanDataInPost = false
+        } else {
+            print("Internet lost")
+            Reachability.alertInternetLost(view: self)
+        }
+        
     }
     
     @IBAction private func addPhotoToPost(_ sender: Any) {
@@ -117,7 +123,12 @@ class MakeNewPostViewController: UIViewController {
     }
     
     @IBAction func makeNewPostBarButton(_ sender: Any) {
-        self.api_CreateNewPost()
+        if Reachability.isConnectedToNetwork() {
+            self.api_CreateNewPost()
+        } else {
+            print("Internet lost")
+            Reachability.alertInternetLost(view: self)
+        }
     }
     
     @IBAction func showMenu(_ sender: Any) {

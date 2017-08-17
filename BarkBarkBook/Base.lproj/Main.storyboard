@@ -1772,7 +1772,7 @@
                                                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                         </state>
                                                                         <connections>
-                                                                            <action selector="chooseAccessToPostButtonAction:" destination="D0p-Ti-D0P" eventType="touchUpInside" id="Ahv-LE-4aM"/>
+                                                                            <action selector="chooseAnAnimalInPost:" destination="D0p-Ti-D0P" eventType="touchUpInside" id="Z0i-kZ-Wub"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>

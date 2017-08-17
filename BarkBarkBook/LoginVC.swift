@@ -57,7 +57,7 @@ class LoginVC: UIViewController {
             tf_password.resignFirstResponder()
         } else {
             print("Internet lost")
-            alert(title: "Please connect to the internet to continue", message: "")
+            Reachability.alertInternetLost(view: self)
         }
     }
     

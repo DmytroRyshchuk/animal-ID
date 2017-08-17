@@ -243,9 +243,7 @@
 		6631A2C11EFA9B0A00C71872 /* BarkBarkBook */ = {
 			isa = PBXGroup;
 			children = (
-				667C54DE1F21FA4B00E25ABA /* ExtensionsGlobal.swift */,
-				66FB34291F4584D40077CB2B /* Reachability.swift */,
-				663955081F30A3C000F2299A /* SharingManager.swift */,
+				66FB342B1F458D170077CB2B /* Extensions + Public classes */,
 				66AA3BB21EFD0C2300524D01 /* LoginGroup */,
 				66AA3BB31EFD0C2E00524D01 /* RegisterNewUser */,
 				663269A31F13807F00A64D5A /* TabBar(4 Views) */,
@@ -290,17 +288,10 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		663954E81F30796800F2299A /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				66E6EF331F190AC000E82BE0 /* OpenProfileOfUser.swift */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
 		663954E91F30797000F2299A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				66E6EF331F190AC000E82BE0 /* OpenProfileOfUser.swift */,
 				663954EA1F30799500F2299A /* OpenMenu + API.swift */,
 			);
 			name = Model;
@@ -562,7 +553,6 @@
 		66E6EF301F190A5A00E82BE0 /* Menu actions */ = {
 			isa = PBXGroup;
 			children = (
-				663954E81F30796800F2299A /* Controller */,
 				663954E91F30797000F2299A /* Model */,
 			);
 			name = "Menu actions";
@@ -582,6 +572,16 @@
 				66E978DB1F31F4210003EF24 /* AnimationLikeButtonOnTV.swift */,
 			);
 			name = "Table View";
+			sourceTree = "<group>";
+		};
+		66FB342B1F458D170077CB2B /* Extensions + Public classes */ = {
+			isa = PBXGroup;
+			children = (
+				667C54DE1F21FA4B00E25ABA /* ExtensionsGlobal.swift */,
+				66FB34291F4584D40077CB2B /* Reachability.swift */,
+				663955081F30A3C000F2299A /* SharingManager.swift */,
+			);
+			name = "Extensions + Public classes";
 			sourceTree = "<group>";
 		};
 		EACD1D2BC2A657603EF9B5BE /* Frameworks */ = {

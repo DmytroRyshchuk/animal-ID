@@ -68,7 +68,7 @@ class RegisterNewUserVC: UIViewController, ValidationDelegate {
             }
         } else {
             print("Internet lost")
-            alerts(title: "Please connect to the internet to continue", message: "")
+            Reachability.alertInternetLost(view: self)
         }
     }
     
@@ -77,7 +77,7 @@ class RegisterNewUserVC: UIViewController, ValidationDelegate {
             api_getISOOfCountry()
         } else {
             print("Internet lost")
-            alerts(title: "Please connect to the internet to continue", message: "")
+            Reachability.alertInternetLost(view: self)
         }
     }
     
