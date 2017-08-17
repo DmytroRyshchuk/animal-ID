@@ -1656,7 +1656,7 @@
                                 <color key="color" red="0.4473865628" green="0.64415681359999999" blue="0.39108675720000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                         </subviews>
-                        <color key="backgroundColor" red="0.25554466250000002" green="0.22727599740000001" blue="0.23116087909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.2416662871837616" green="0.21467065811157227" blue="0.2190527617931366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HH8-mQ-SGb" firstAttribute="centerX" secondItem="DI1-ET-mud" secondAttribute="centerX" id="5Ae-Pr-QjC"/>
                             <constraint firstItem="MkI-Xf-wJf" firstAttribute="top" secondItem="q5u-yq-Tfc" secondAttribute="bottom" id="JUU-nz-Bmx"/>
@@ -2195,13 +2195,13 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tag-dM-Ss4">
                                 <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                                <color key="backgroundColor" red="0.25554466247558594" green="0.22727599740028381" blue="0.23116087913513184" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.2416662871837616" green="0.21467065811157227" blue="0.2190527617931366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="70" id="CKy-Xx-5VC" customClass="ChooseSpeciesOfAnimalTableViewCell" customModule="BarkBarkBook" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CKy-Xx-5VC" id="yWp-09-u13">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cP1-VA-AfJ">
@@ -2246,7 +2246,7 @@
                                                 <constraint firstItem="cP1-VA-AfJ" firstAttribute="centerX" secondItem="yWp-09-u13" secondAttribute="centerX" id="sAQ-WZ-NST"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.25554466250000002" green="0.22727599740000001" blue="0.23116087909999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.2416662871837616" green="0.21467065811157227" blue="0.2190527617931366" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="l_key_isHidden" destination="t7j-3g-D7v" id="dtd-GT-54B"/>
                                             <outlet property="l_species" destination="aa3-Lf-Sev" id="L4Y-Zh-Xxe"/>
