@@ -2340,18 +2340,24 @@
                                     <action selector="saveAction:" destination="2Lp-Do-iFq" eventType="touchUpInside" id="TqE-wH-6m1"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="KxG-gi-hZd">
+                                <rect key="frame" x="142" y="266" width="37" height="37"/>
+                                <color key="color" red="1" green="1" blue="0.31931182479999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.25506612658500671" green="0.22836330533027649" blue="0.23268762230873108" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HRm-K8-o7O" firstAttribute="top" secondItem="O3P-yx-ztL" secondAttribute="bottom" constant="15" id="0cO-9R-jTz"/>
                             <constraint firstItem="boN-aY-32a" firstAttribute="leading" secondItem="8Wm-6V-pBI" secondAttribute="leadingMargin" id="17y-JP-DIp"/>
                             <constraint firstItem="boN-aY-32a" firstAttribute="top" secondItem="O3P-yx-ztL" secondAttribute="bottom" constant="15" id="Hcw-ls-qBx"/>
+                            <constraint firstItem="KxG-gi-hZd" firstAttribute="centerY" secondItem="8Wm-6V-pBI" secondAttribute="centerY" id="JK9-b5-Ceh"/>
                             <constraint firstItem="dMB-Qj-Gov" firstAttribute="trailing" secondItem="8Wm-6V-pBI" secondAttribute="trailingMargin" id="MpF-co-cpr"/>
                             <constraint firstItem="axI-HF-GjE" firstAttribute="leading" secondItem="8Wm-6V-pBI" secondAttribute="leadingMargin" id="NFq-n1-UG6"/>
                             <constraint firstItem="O3P-yx-ztL" firstAttribute="trailing" secondItem="8Wm-6V-pBI" secondAttribute="trailingMargin" id="NrW-sZ-h1f"/>
                             <constraint firstItem="O3P-yx-ztL" firstAttribute="leading" secondItem="8Wm-6V-pBI" secondAttribute="leadingMargin" id="OQm-PU-8Ci"/>
                             <constraint firstAttribute="trailing" secondItem="1ja-Fy-nfK" secondAttribute="trailing" id="POF-1W-oPb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="XKW-nb-vaU" secondAttribute="trailing" constant="8" id="QSb-d2-kZi"/>
+                            <constraint firstItem="KxG-gi-hZd" firstAttribute="centerX" secondItem="8Wm-6V-pBI" secondAttribute="centerX" id="WQp-0f-r8A"/>
                             <constraint firstItem="dMB-Qj-Gov" firstAttribute="top" secondItem="hLZ-CO-oP2" secondAttribute="bottom" constant="15" id="cDX-Dx-trr"/>
                             <constraint firstItem="hLZ-CO-oP2" firstAttribute="leading" secondItem="8Wm-6V-pBI" secondAttribute="leading" id="dr2-cw-Kd1"/>
                             <constraint firstItem="O3P-yx-ztL" firstAttribute="top" secondItem="axI-HF-GjE" secondAttribute="bottom" constant="15" id="i6U-1d-pDL"/>
@@ -2366,6 +2372,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="KxG-gi-hZd" id="Gf0-oe-RRC"/>
                         <outlet property="animalAvatar" destination="axI-HF-GjE" id="JII-Hf-Adx"/>
                         <outlet property="animalButtonOutlet" destination="rbG-Hu-uUa" id="V8n-r2-6RU"/>
                         <outlet property="animalNickname" destination="Nvb-Ah-y4c" id="kKA-mP-QYh"/>
