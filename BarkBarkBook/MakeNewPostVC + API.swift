@@ -58,7 +58,7 @@ extension MakeNewPostViewController {
                 
                 DispatchQueue.main.async {
                     self.getFirstAnimal()
-                }
+                }                
             }
         }
     }
