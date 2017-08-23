@@ -1713,9 +1713,6 @@
                                 <!--2037-12-31 11:00:00 +0000-->
                             </date>
                             <locale key="locale" localeIdentifier="uk_UA"/>
-                            <connections>
-                                <action selector="ba_dataPicker:" destination="pu7-cs-taN" eventType="valueChanged" id="kAp-kL-wHC"/>
-                            </connections>
                         </datePicker>
                     </subviews>
                     <color key="backgroundColor" red="0.48019105200000001" green="0.69455021620000001" blue="0.42401957509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -2372,11 +2369,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="KxG-gi-hZd" id="Gf0-oe-RRC"/>
+                        <outlet property="activityIndicator" destination="KxG-gi-hZd" id="nqM-8e-Git"/>
+                        <outlet property="addViewPop" destination="f5i-8a-X2h" id="CEq-fb-fmk"/>
                         <outlet property="animalAvatar" destination="axI-HF-GjE" id="JII-Hf-Adx"/>
                         <outlet property="animalButtonOutlet" destination="rbG-Hu-uUa" id="V8n-r2-6RU"/>
                         <outlet property="animalNickname" destination="Nvb-Ah-y4c" id="kKA-mP-QYh"/>
                         <outlet property="dateOutlet" destination="HRm-K8-o7O" id="odR-oo-fHW"/>
+                        <outlet property="datePicker" destination="C4w-ai-bUo" id="bvZ-FR-3By"/>
                         <outlet property="notation" destination="O3P-yx-ztL" id="C6A-ES-Ok0"/>
                         <outlet property="repeatOutlet" destination="hjt-nn-S7f" id="ZtW-e7-T8f"/>
                         <outlet property="saveButtonOutlet" destination="dMB-Qj-Gov" id="dN0-Ea-7o5"/>
@@ -2385,6 +2384,41 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBf-73-j2z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="f5i-8a-X2h">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="320"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsv-Eu-9fD">
+                            <rect key="frame" x="30" y="288" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Повернутися назад">
+                                <color key="titleColor" red="0.48019105200000001" green="0.69455021620000001" blue="0.42401957509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="closeDatePicker:" destination="2Lp-Do-iFq" eventType="touchUpInside" id="VB0-dd-4n8"/>
+                            </connections>
+                        </button>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="C4w-ai-bUo">
+                            <rect key="frame" x="-10" y="52" width="320" height="216"/>
+                            <date key="date" timeIntervalSinceReferenceDate="518091486.37061697">
+                                <!--2017-06-02 10:18:06 +0000-->
+                            </date>
+                            <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                <!--1970-01-01 11:00:00 +0000-->
+                            </date>
+                            <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                <!--2037-12-31 11:00:00 +0000-->
+                            </date>
+                            <locale key="locale" localeIdentifier="uk_UA"/>
+                        </datePicker>
+                    </subviews>
+                    <color key="backgroundColor" red="0.48019105200000001" green="0.69455021620000001" blue="0.42401957509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="C4w-ai-bUo" firstAttribute="centerY" secondItem="f5i-8a-X2h" secondAttribute="centerY" id="AnH-wX-4Dy"/>
+                        <constraint firstItem="C4w-ai-bUo" firstAttribute="centerX" secondItem="f5i-8a-X2h" secondAttribute="centerX" id="BLs-dt-NNP"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="7976.25" y="547.18309859154931"/>
         </scene>

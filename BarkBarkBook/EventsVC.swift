@@ -10,12 +10,12 @@ import UIKit
 
 class EventsVC: UIViewController {
  
-    
+    let setView = SetView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.367, green: 0.342, blue: 0.341, alpha: 1)
+        setView.naviColor(navi: navigationController)
     }
     
     @IBAction func addNewEvent(_ sender: Any) {

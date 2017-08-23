@@ -21,9 +21,14 @@ class MakeAnEventVC: UIViewController {
     @IBOutlet weak var repeatOutlet: UIButton!
     @IBOutlet weak var saveButtonOutlet: UIButton!
     
+    @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet var addViewPop: UIView!
+    
+    var dateIsPicked = false
     var animalNamesOfUserArray = [ChooseAnimalForMakeNewPost]()
     
     let apiClass = ApiClass()
+    let setView = SetView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +44,15 @@ class MakeAnEventVC: UIViewController {
     }
     
     @IBAction func setTimeAction(_ sender: Any) {
-    
+        setView.callViewPop(view: self, addViewPop: addViewPop, datepicker: datePicker, mode: "Time")
     }
     
     @IBAction func setDateAction(_ sender: Any) {
-        
+        setView.callViewPop(view: self, addViewPop: addViewPop, datepicker: datePicker, mode: "Date")
+    }
+    
+    @IBAction func closeDatePicker(_ sender: Any) {
+        setView.closeViewPop(view: self, addViewPop: addViewPop, datepicker: datePicker, setDataButton: dateOutlet, setTimeButton: timeOutlet, dateIsPicked: dateIsPicked)
     }
     
     @IBAction func setRepeatAction(_ sender: Any) {
@@ -54,32 +63,19 @@ class MakeAnEventVC: UIViewController {
         
     }
     
-    
     func setViewDidLoad() {
-        navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.367, green: 0.342, blue: 0.341, alpha: 1)
-        
-        animalAvatar.layer.cornerRadius = animalAvatar.frame.height / 2
-        animalNickname.layer.cornerRadius = 5
-        animalButtonOutlet.layer.cornerRadius = 5
-        notation.layer.cornerRadius = 5
-        timeOutlet.layer.cornerRadius = 5
-        dateOutlet.layer.cornerRadius = 5
-        saveButtonOutlet.layer.cornerRadius = 5
+        setView.naviColor(navi: navigationController)
+        setView.makeAvatarRound(avatar: animalAvatar)
+        setView.setRadius(elements: [animalNickname, animalButtonOutlet, notation, timeOutlet, dateOutlet, saveButtonOutlet])
     }
     
     //MARK: - Funcs
     func firstAnimalFromApi() {
-        animalAvatar.image = SharingManager.sharedInstance.photoOfAnimal
-//        animalAvatar.sd_setImage(with: url! as URL)
-        animalAvatar.layer.masksToBounds = false
-        animalAvatar.layer.cornerRadius = animalAvatar.frame.height/2 - 2
-        animalAvatar.clipsToBounds = true
-        animalNickname.text = SharingManager.sharedInstance.nicknameOfAnimal
+        setView.showDataOfFirstAnimal(avatar: animalAvatar, element: animalNickname)
     }
     
     func choosenAnimalFromApi() {
-        animalAvatar.image = SharingManager.sharedInstance.photoOfAnimal
-        animalNickname.text = SharingManager.sharedInstance.nicknameOfAnimal
+        setView.showDataOfAnimal(avatar: animalAvatar, element: animalNickname)
     }
 }
 
