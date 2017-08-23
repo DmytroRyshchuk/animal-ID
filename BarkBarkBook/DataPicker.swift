@@ -16,6 +16,6 @@ extension RegisterNewAnimalViewController {
     }
     
     @IBAction func ba_backToViewController(_ sender: Any) {
-        setView.closeViewPop(view: self, addViewPop: bo_addViewPop, datepicker: dp_datePicker, setDataButton: bo_datePicker, setTimeButton: nil, dateIsPicked: dateIsPicked)
+        setView.closeViewPop(view: self, addViewPop: bo_addViewPop, datepicker: dp_datePicker, setDataButton: bo_datePicker, setTimeButton: nil)
     }
 }

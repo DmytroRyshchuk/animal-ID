@@ -30,8 +30,6 @@ class RegisterNewAnimalViewController: UIViewController {
     var img: Data?
     var speciesTypeDict = [SpeciesClass]()
     
-    var dateIsPicked = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

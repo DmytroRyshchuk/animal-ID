@@ -24,7 +24,6 @@ class MakeAnEventVC: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet var addViewPop: UIView!
     
-    var dateIsPicked = false
     var animalNamesOfUserArray = [ChooseAnimalForMakeNewPost]()
     
     let apiClass = ApiClass()
@@ -52,7 +51,7 @@ class MakeAnEventVC: UIViewController {
     }
     
     @IBAction func closeDatePicker(_ sender: Any) {
-        setView.closeViewPop(view: self, addViewPop: addViewPop, datepicker: datePicker, setDataButton: dateOutlet, setTimeButton: timeOutlet, dateIsPicked: dateIsPicked)
+        setView.closeViewPop(view: self, addViewPop: addViewPop, datepicker: datePicker, setDataButton: dateOutlet, setTimeButton: timeOutlet)
     }
     
     @IBAction func setRepeatAction(_ sender: Any) {

@@ -78,7 +78,7 @@ class SetView {
             formatter.timeStyle = .short
         }
     }
-    func closeViewPop(view: UIViewController, addViewPop: UIView, datepicker: UIDatePicker, setDataButton: UIButton, setTimeButton: UIButton?, dateIsPicked: Bool) {
+    func closeViewPop(view: UIViewController, addViewPop: UIView, datepicker: UIDatePicker, setDataButton: UIButton, setTimeButton: UIButton?) {
         UIView.animate(withDuration: 0.3, animations: {
             addViewPop.transform = CGAffineTransform.init(scaleX: 1.3, y: 1.3)
             addViewPop.alpha = 0
@@ -86,13 +86,13 @@ class SetView {
         }) { (success:Bool) in
             addViewPop.removeFromSuperview()
         }
-        if dateIsPicked == false {
+        
+        if datepicker.datePickerMode == .date {
             SharingManager.sharedInstance.date = formatter.string(from: datepicker.date)
-            if datepicker.datePickerMode == .date {
-                setDataButton.setTitle("  " + SharingManager.sharedInstance.date + "  ", for: .normal)
-            } else if datepicker.datePickerMode == .time {
-                setTimeButton?.setTitle("  " + SharingManager.sharedInstance.date + "  ", for: .normal)
-            }
+            setDataButton.setTitle("  " + SharingManager.sharedInstance.date + "  ", for: .normal)
+        } else if datepicker.datePickerMode == .time {
+            SharingManager.sharedInstance.time = formatter.string(from: datepicker.date)
+            setTimeButton?.setTitle("  " + SharingManager.sharedInstance.time + "  ", for: .normal)
         }
     }
 }
