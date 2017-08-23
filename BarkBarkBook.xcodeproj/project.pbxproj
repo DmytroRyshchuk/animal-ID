@@ -63,6 +63,7 @@
 		66AA3BB71EFD0C6C00524D01 /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AA3BB61EFD0C6C00524D01 /* MenuTVC.swift */; };
 		66AD1A2D1F05569A00269019 /* TODOApi_NewsFeedOfChoosenAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD1A2C1F05569A00269019 /* TODOApi_NewsFeedOfChoosenAnimal.swift */; };
 		66B0A9521F4D6F5500F8F901 /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B0A9511F4D6F5500F8F901 /* SetView.swift */; };
+		66B0A9571F4DA72A00F8F901 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B0A9561F4DA72A00F8F901 /* Event.swift */; };
 		66C2C8681F1CECED007ADEF3 /* GetISOOfCountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C8671F1CECED007ADEF3 /* GetISOOfCountryVC.swift */; };
 		66C2C86A1F1CED2F007ADEF3 /* GetISOOfCountryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C8691F1CED2F007ADEF3 /* GetISOOfCountryTVC.swift */; };
 		66C2C86C1F1CF005007ADEF3 /* GetIOSOfCountryGetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C86B1F1CF004007ADEF3 /* GetIOSOfCountryGetData.swift */; };
@@ -136,6 +137,7 @@
 		66AA3BB61EFD0C6C00524D01 /* MenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTVC.swift; sourceTree = "<group>"; };
 		66AD1A2C1F05569A00269019 /* TODOApi_NewsFeedOfChoosenAnimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODOApi_NewsFeedOfChoosenAnimal.swift; sourceTree = "<group>"; };
 		66B0A9511F4D6F5500F8F901 /* SetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
+		66B0A9561F4DA72A00F8F901 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		66C2C8671F1CECED007ADEF3 /* GetISOOfCountryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetISOOfCountryVC.swift; sourceTree = "<group>"; };
 		66C2C8691F1CED2F007ADEF3 /* GetISOOfCountryTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetISOOfCountryTVC.swift; sourceTree = "<group>"; };
 		66C2C86B1F1CF004007ADEF3 /* GetIOSOfCountryGetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIOSOfCountryGetData.swift; sourceTree = "<group>"; };
@@ -561,6 +563,14 @@
 			name = Global;
 			sourceTree = "<group>";
 		};
+		66B0A9551F4DA71700F8F901 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				66B0A9561F4DA72A00F8F901 /* Event.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		66C2C8661F1CECCD007ADEF3 /* GetCountryISO */ = {
 			isa = PBXGroup;
 			children = (
@@ -598,6 +608,7 @@
 		66CE5E881F4B2DE700FE6166 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				66B0A9551F4DA71700F8F901 /* Model */,
 				66CBFBAB1F4C57F300D50C6E /* TableView */,
 				66CBFBAC1F4C57FD00D50C6E /* ViewController */,
 			);
@@ -799,6 +810,7 @@
 				663D400A1F0F7E21007D5409 /* TextFieldLogic.swift in Sources */,
 				6631A2D91EFAA2DE00C71872 /* Api_Login.swift in Sources */,
 				6631A2D71EFAA07F00C71872 /* LoginVC.swift in Sources */,
+				66B0A9571F4DA72A00F8F901 /* Event.swift in Sources */,
 				663D40081F0F7D87007D5409 /* DataPicker.swift in Sources */,
 				66E978DC1F31F4210003EF24 /* AnimationLikeButtonOnTV.swift in Sources */,
 				663269AB1F13AB0700A64D5A /* AllAnimalsOfUserTVC.swift in Sources */,

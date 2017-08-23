@@ -25,14 +25,21 @@ class MakeAnEventVC: UIViewController {
     @IBOutlet var addViewPop: UIView!
     
     var animalNamesOfUserArray = [ChooseAnimalForMakeNewPost]()
+    var events = [Event]()
     
     let apiClass = ApiClass()
     let setView = SetView()
+    
+    var mode = false
+    var repeatingTime = 0
+    var unixDataTime = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: "firstAnimalFromApi", name: NSNotification.Name(rawValue: "firstAnimalFromApi"), object: nil)
         NotificationCenter.default.addObserver(self, selector: "choosenAnimalFromApi", name: NSNotification.Name(rawValue: "choosenAnimalFromApi"), object: nil)
+        
+        SharingManager.sharedInstance.repeating = 0
         
         setViewDidLoad()
         apiClass.getFirstUserAnimalToPostAPI(delegate: self, activityIndicator: activityIndicator)
@@ -55,11 +62,60 @@ class MakeAnEventVC: UIViewController {
     }
     
     @IBAction func setRepeatAction(_ sender: Any) {
+        let alert = UIAlertController(title: "Repeat", message: "Please Choose how often to repeat", preferredStyle: .actionSheet)
         
+        setView.repeatingModeInAlertList(alert: alert, button: repeatOutlet, times: ["Once", "Every day", "One in a week", "Twice per month", "Every month", "Every year"])
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func saveAction(_ sender: Any) {
+        if switchMode.isOn {
+            mode = true
+        } else {
+            mode = false
+        }
         
+        let timeUnix = formateTimeToDate()
+        if let unixDate = timeUnix {
+            unixDataTime = unixDate
+        }
+        
+        let s = formateDateToString()
+        
+        print("u = ", unixDataTime)
+        print("s = ", s)
+        
+        let event = Event(note: notation.text, animal: animalNickname.text!, repeating: SharingManager.sharedInstance.repeating, dateTime: unixDataTime, mode: mode)
+        events.append(event)
+    }
+    
+    func formateTimeToDate() -> Date? {
+        let date = dateOutlet.titleLabel?.text
+        let time = timeOutlet.titleLabel?.text
+        
+        let RFC3339DateFormatter = DateFormatter()
+        RFC3339DateFormatter.locale = NSLocale.current//Locale(identifier: "en_US_POSIX")
+        RFC3339DateFormatter.dateFormat = "  dd MMMM yyyy  'T'  HH:mm  "
+        RFC3339DateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        
+        let string = "\(String(describing: date!))T\(String(describing: time!))"
+        let convertedDate = RFC3339DateFormatter.date(from: string)
+        
+        if let convert = convertedDate {
+            return convert
+        } else {
+            return nil
+        }
+    }
+    
+    func formateDateToString() -> String {
+        let formatter = DateFormatter()
+        formatter.locale = NSLocale.current//Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "dd MMMM yyyy HH:mm"
+        let str = formatter.string(from: unixDataTime)
+        
+        return str
     }
     
     func setViewDidLoad() {

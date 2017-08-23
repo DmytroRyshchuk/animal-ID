@@ -72,7 +72,7 @@ class SetView {
             datepicker.maximumDate = Date()
             datepicker.datePickerMode = .date
             formatter.locale = NSLocale.current
-            formatter.dateFormat = "yyyy-MM-dd" //Specify your format that you want
+            formatter.dateFormat = "dd MMMM yyyy" //Specify your format that you want
         } else {
             datepicker.datePickerMode = .time
             formatter.timeStyle = .short
@@ -93,6 +93,15 @@ class SetView {
         } else if datepicker.datePickerMode == .time {
             SharingManager.sharedInstance.time = formatter.string(from: datepicker.date)
             setTimeButton?.setTitle("  " + SharingManager.sharedInstance.time + "  ", for: .normal)
+        }
+    }
+    func repeatingModeInAlertList(alert: UIAlertController, button: UIButton, times: [String]) {
+        for title in 0..<times.count {
+            alert.addAction(UIAlertAction(title: times[title], style: .default, handler: { (action) in
+                //execute some code when this option is selected
+                button.setTitle(times[title], for: .normal)
+                SharingManager.sharedInstance.repeating = title
+            }))
         }
     }
 }
