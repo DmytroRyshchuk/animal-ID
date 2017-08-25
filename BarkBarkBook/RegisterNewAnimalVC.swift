@@ -20,15 +20,15 @@ class RegisterNewAnimalViewController: UIViewController {
     @IBOutlet weak var tf_nickname: UITextField!
     @IBOutlet weak var dp_datePicker: UIDatePicker!
     @IBOutlet weak var bo_datePicker: UIButton!
-    @IBOutlet var v_view: UIView!
+    @IBOutlet weak var v_view: UIView!
     @IBOutlet weak var sv_tran: UIStackView!
     
     @IBOutlet var bo_addViewPop: UIView!
     
+    let setView = SetView()
+    
     var img: Data?
     var speciesTypeDict = [SpeciesClass]()
-    
-    var dateIsPicked = false
     
     override func viewDidLoad() {
         super.viewDidLoad()

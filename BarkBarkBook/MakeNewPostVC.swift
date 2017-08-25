@@ -28,6 +28,8 @@ class MakeNewPostViewController: UIViewController {
     var menuIsShowing = false
     var menuIsOpen = false
     let openMenu = OpenMenu()
+    let apiClass = ApiClass()
+    let setView = SetView()
     
     var imageT = UIImage()
     var nicknameOfAnimalFromJson = ""
@@ -45,20 +47,19 @@ class MakeNewPostViewController: UIViewController {
     //MARK: - Default func
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.367, green: 0.342, blue: 0.341, alpha: 1)
-
-        self.hideKeyboardWhenTappedAround()        
+        self.hideKeyboardWhenTappedAround()
         
-        api_GetFirstUserAnimalToPost()
+        setView.naviColor(navi: navigationController)
+        setView.setRadius(elements: [textInPostTextView, chooseAnimalButtonOutlet, addSomePhotoButtonOutlet])
+        setView.setTitleForButton(button: addSomePhotoButtonOutlet, title: "  Add some photo  ", forState: .normal)
         
-        textInPostTextView.layer.cornerRadius = 5
-        chooseAnimalButtonOutlet.layer.cornerRadius = 5
-        addSomePhotoButtonOutlet.layer.cornerRadius = 5
-        addSomePhotoButtonOutlet.setTitle("  Add some photo  ", for: .normal)
+        NotificationCenter.default.addObserver(self, selector: "firstAnimalFromApi", name: NSNotification.Name(rawValue: "firstAnimalFromApi"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: "choosenAnimalFromApi", name: NSNotification.Name(rawValue: "choosenAnimalFromApi"), object: nil)
+        
+        apiClass.getFirstUserAnimalToPostAPI(delegate: self, activityIndicator: activityIndicator)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        dataAboutChoosenAnimalInPost()
         
         if cleanDataInPost {
             photosFromUserInPostArray = []
@@ -79,9 +80,8 @@ class MakeNewPostViewController: UIViewController {
         }
         
         self.tabBarController?.tabBar.isHidden = true
-        //cleanDataInPost()
         
-        if nicknameOfAnimalFromJson != "" {
+        if SharingManager.sharedInstance.nicknameOfAnimal != "" {
             activityIndicator.stopAnimating()
         }
     }
@@ -104,13 +104,12 @@ class MakeNewPostViewController: UIViewController {
     
     @IBAction private func chooseAnAnimalInPost(_ sender: Any) {
         if Reachability.isConnectedToNetwork() {
-            api_UserAnimals()
+            apiClass.allAnimalsOfUserAPI(del: self)
             cleanDataInPost = false
         } else {
             print("Internet lost")
             Reachability.alertInternetLost(view: self)
         }
-        
     }
     
     @IBAction private func addPhotoToPost(_ sender: Any) {
@@ -160,16 +159,13 @@ class MakeNewPostViewController: UIViewController {
     
     
     //MARK: - Funcs
-    func dataAboutChoosenAnimalInPost() {
-        animalNamesOfUserArray = []
-        let title = SharingManager.sharedInstance.nicknameOfAnimal
-        if title != "" {
-            chooseAnimalButtonOutlet.setTitle(title, for: .normal)
-        } else {
-            chooseAnimalButtonOutlet.setTitle("Choose animal", for: .normal)
-        }
-        
-        avatarOfAnimalImage.image = SharingManager.sharedInstance.photoOfAnimal
+    func firstAnimalFromApi() {
+        setView.showDataOfFirstAnimal(avatar: avatarOfAnimalImage, element: chooseAnimalButtonOutlet)
+    }
+
+    
+    func choosenAnimalFromApi() {
+        setView.showDataOfAnimal(avatar: avatarOfAnimalImage, element: chooseAnimalButtonOutlet)
     }
     
     func alert(code: Int, content: String) {

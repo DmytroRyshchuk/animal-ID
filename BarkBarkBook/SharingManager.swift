@@ -16,6 +16,8 @@ class SharingManager {
     var key: String = ""
     var value: String = ""
     var date: String = ""
+    var time: String = ""
+    var repeating = 0
     
     var idOfAnimal: Int = 0
     var nicknameOfAnimal: String = ""

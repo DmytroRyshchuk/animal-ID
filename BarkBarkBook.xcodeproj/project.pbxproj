@@ -62,9 +62,15 @@
 		66AA3BB11EFD0C0600524D01 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AA3BB01EFD0C0600524D01 /* MenuVC.swift */; };
 		66AA3BB71EFD0C6C00524D01 /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AA3BB61EFD0C6C00524D01 /* MenuTVC.swift */; };
 		66AD1A2D1F05569A00269019 /* TODOApi_NewsFeedOfChoosenAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD1A2C1F05569A00269019 /* TODOApi_NewsFeedOfChoosenAnimal.swift */; };
+		66B0A9521F4D6F5500F8F901 /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B0A9511F4D6F5500F8F901 /* SetView.swift */; };
+		66B0A9571F4DA72A00F8F901 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B0A9561F4DA72A00F8F901 /* Event.swift */; };
 		66C2C8681F1CECED007ADEF3 /* GetISOOfCountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C8671F1CECED007ADEF3 /* GetISOOfCountryVC.swift */; };
 		66C2C86A1F1CED2F007ADEF3 /* GetISOOfCountryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C8691F1CED2F007ADEF3 /* GetISOOfCountryTVC.swift */; };
 		66C2C86C1F1CF005007ADEF3 /* GetIOSOfCountryGetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C86B1F1CF004007ADEF3 /* GetIOSOfCountryGetData.swift */; };
+		66CBFBAE1F4C61AF00D50C6E /* ApiClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CBFBAD1F4C61AF00D50C6E /* ApiClass.swift */; };
+		66CE5E8A1F4B2E0A00FE6166 /* EventsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE5E891F4B2E0A00FE6166 /* EventsVC.swift */; };
+		66CE5E8C1F4B2F3C00FE6166 /* MakeAnEventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE5E8B1F4B2F3C00FE6166 /* MakeAnEventVC.swift */; };
+		66CE5E901F4C2D8900FE6166 /* EventsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE5E8F1F4C2D8900FE6166 /* EventsTVCell.swift */; };
 		66E6EF341F190AC000E82BE0 /* OpenProfileOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E6EF331F190AC000E82BE0 /* OpenProfileOfUser.swift */; };
 		66E978DC1F31F4210003EF24 /* AnimationLikeButtonOnTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E978DB1F31F4210003EF24 /* AnimationLikeButtonOnTV.swift */; };
 		66FB342A1F4584D40077CB2B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FB34291F4584D40077CB2B /* Reachability.swift */; };
@@ -130,9 +136,15 @@
 		66AA3BB01EFD0C0600524D01 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		66AA3BB61EFD0C6C00524D01 /* MenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTVC.swift; sourceTree = "<group>"; };
 		66AD1A2C1F05569A00269019 /* TODOApi_NewsFeedOfChoosenAnimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODOApi_NewsFeedOfChoosenAnimal.swift; sourceTree = "<group>"; };
+		66B0A9511F4D6F5500F8F901 /* SetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
+		66B0A9561F4DA72A00F8F901 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		66C2C8671F1CECED007ADEF3 /* GetISOOfCountryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetISOOfCountryVC.swift; sourceTree = "<group>"; };
 		66C2C8691F1CED2F007ADEF3 /* GetISOOfCountryTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetISOOfCountryTVC.swift; sourceTree = "<group>"; };
 		66C2C86B1F1CF004007ADEF3 /* GetIOSOfCountryGetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIOSOfCountryGetData.swift; sourceTree = "<group>"; };
+		66CBFBAD1F4C61AF00D50C6E /* ApiClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClass.swift; sourceTree = "<group>"; };
+		66CE5E891F4B2E0A00FE6166 /* EventsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsVC.swift; sourceTree = "<group>"; };
+		66CE5E8B1F4B2F3C00FE6166 /* MakeAnEventVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeAnEventVC.swift; sourceTree = "<group>"; };
+		66CE5E8F1F4C2D8900FE6166 /* EventsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTVCell.swift; sourceTree = "<group>"; };
 		66E6EF331F190AC000E82BE0 /* OpenProfileOfUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenProfileOfUser.swift; sourceTree = "<group>"; };
 		66E978DB1F31F4210003EF24 /* AnimationLikeButtonOnTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationLikeButtonOnTV.swift; sourceTree = "<group>"; };
 		66FB34291F4584D40077CB2B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
@@ -243,7 +255,7 @@
 		6631A2C11EFA9B0A00C71872 /* BarkBarkBook */ = {
 			isa = PBXGroup;
 			children = (
-				66FB342B1F458D170077CB2B /* Extensions + Public classes */,
+				66B0A9541F4D723800F8F901 /* Global */,
 				66AA3BB21EFD0C2300524D01 /* LoginGroup */,
 				66AA3BB31EFD0C2E00524D01 /* RegisterNewUser */,
 				663269A31F13807F00A64D5A /* TabBar(4 Views) */,
@@ -264,6 +276,7 @@
 				6682688C1F1CA546007EE4F5 /* All posts */,
 				66E6EF301F190A5A00E82BE0 /* Menu actions */,
 				66E6EF2B1F18D89900E82BE0 /* Make New Post */,
+				66CE5E881F4B2DE700FE6166 /* Events */,
 			);
 			name = "TabBar(4 Views)";
 			sourceTree = "<group>";
@@ -532,6 +545,32 @@
 			name = MenuGroup;
 			sourceTree = "<group>";
 		};
+		66B0A9531F4D723000F8F901 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66B0A9511F4D6F5500F8F901 /* SetView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		66B0A9541F4D723800F8F901 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				66B0A9531F4D723000F8F901 /* View */,
+				66CBFBAF1F4C769400D50C6E /* API */,
+				66FB342B1F458D170077CB2B /* Extensions + Public classes */,
+			);
+			name = Global;
+			sourceTree = "<group>";
+		};
+		66B0A9551F4DA71700F8F901 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				66B0A9561F4DA72A00F8F901 /* Event.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		66C2C8661F1CECCD007ADEF3 /* GetCountryISO */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +578,41 @@
 				6622C2051F27719F000A5822 /* Model */,
 			);
 			name = GetCountryISO;
+			sourceTree = "<group>";
+		};
+		66CBFBAB1F4C57F300D50C6E /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				66CE5E891F4B2E0A00FE6166 /* EventsVC.swift */,
+				66CE5E8F1F4C2D8900FE6166 /* EventsTVCell.swift */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		66CBFBAC1F4C57FD00D50C6E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				66CE5E8B1F4B2F3C00FE6166 /* MakeAnEventVC.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		66CBFBAF1F4C769400D50C6E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				66CBFBAD1F4C61AF00D50C6E /* ApiClass.swift */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		66CE5E881F4B2DE700FE6166 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				66B0A9551F4DA71700F8F901 /* Model */,
+				66CBFBAB1F4C57F300D50C6E /* TableView */,
+				66CBFBAC1F4C57FD00D50C6E /* ViewController */,
+			);
+			name = Events;
 			sourceTree = "<group>";
 		};
 		66E6EF2B1F18D89900E82BE0 /* Make New Post */ = {
@@ -717,7 +791,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66CE5E901F4C2D8900FE6166 /* EventsTVCell.swift in Sources */,
 				6617FED71EFD45E5001F8A56 /* UserProfileClass.swift in Sources */,
+				66CE5E8A1F4B2E0A00FE6166 /* EventsVC.swift in Sources */,
+				66CE5E8C1F4B2F3C00FE6166 /* MakeAnEventVC.swift in Sources */,
 				66C2C86C1F1CF005007ADEF3 /* GetIOSOfCountryGetData.swift in Sources */,
 				66FB342A1F4584D40077CB2B /* Reachability.swift in Sources */,
 				6617FEE01EFD4ED8001F8A56 /* (notUsed)UserDetailInformation.swift in Sources */,
@@ -733,9 +810,11 @@
 				663D400A1F0F7E21007D5409 /* TextFieldLogic.swift in Sources */,
 				6631A2D91EFAA2DE00C71872 /* Api_Login.swift in Sources */,
 				6631A2D71EFAA07F00C71872 /* LoginVC.swift in Sources */,
+				66B0A9571F4DA72A00F8F901 /* Event.swift in Sources */,
 				663D40081F0F7D87007D5409 /* DataPicker.swift in Sources */,
 				66E978DC1F31F4210003EF24 /* AnimationLikeButtonOnTV.swift in Sources */,
 				663269AB1F13AB0700A64D5A /* AllAnimalsOfUserTVC.swift in Sources */,
+				66CBFBAE1F4C61AF00D50C6E /* ApiClass.swift in Sources */,
 				66411DEE1F20DC14003FAA31 /* AllPostsOfUserTBC.swift in Sources */,
 				663954E51F30719E00F2299A /* MakeNewPostVC + API.swift in Sources */,
 				6631A2C31EFA9B0A00C71872 /* AppDelegate.swift in Sources */,
@@ -749,6 +828,7 @@
 				6622C2031F277047000A5822 /* Api_Logout.swift in Sources */,
 				663954EB1F30799500F2299A /* OpenMenu + API.swift in Sources */,
 				663955091F30A3C000F2299A /* SharingManager.swift in Sources */,
+				66B0A9521F4D6F5500F8F901 /* SetView.swift in Sources */,
 				663954FA1F307DBE00F2299A /* UserProfileVC + API.swift in Sources */,
 				66559D8F1F041BF400227846 /* ChooseSpeciesOfAnimalTVC.swift in Sources */,
 				66AA3BB71EFD0C6C00524D01 /* MenuTVC.swift in Sources */,

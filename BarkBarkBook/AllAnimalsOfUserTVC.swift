@@ -30,5 +30,7 @@ class AllAnimalsOfUserTableViewCell: UITableViewCell {
         SharingManager.sharedInstance.nicknameOfAnimal = nicknameOfAnimal.text!
         SharingManager.sharedInstance.idOfAnimal = Int(idOfAnimalIsHidden.text!)!
         SharingManager.sharedInstance.photoOfAnimal = avatarOfAnimalImage.image!
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "choosenAnimalFromApi"), object: nil)
     }
 }
