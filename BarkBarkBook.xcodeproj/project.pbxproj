@@ -53,6 +53,7 @@
 		66559D931F041C7200227846 /* RegisterNewAnimalVC + Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66559D911F041C7200227846 /* RegisterNewAnimalVC + Images.swift */; };
 		66559D941F041C7200227846 /* RegisterNewAnimalVC + API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66559D921F041C7200227846 /* RegisterNewAnimalVC + API.swift */; };
 		667C54DF1F21FA4C00E25ABA /* ExtensionsGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667C54DE1F21FA4B00E25ABA /* ExtensionsGlobal.swift */; };
+		668072BD1F501F94008970FE /* Igotpet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 668072BB1F501F94008970FE /* Igotpet.xcdatamodeld */; };
 		6682688E1F1CA580007EE4F5 /* AllPostsOfUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682688D1F1CA580007EE4F5 /* AllPostsOfUserVC.swift */; };
 		668268951F1CA679007EE4F5 /* AllPostsOfUserCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668268941F1CA679007EE4F5 /* AllPostsOfUserCV.swift */; };
 		668268971F1CA6E5007EE4F5 /* AllPostsOfUserCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668268961F1CA6E5007EE4F5 /* AllPostsOfUserCVC.swift */; };
@@ -63,7 +64,6 @@
 		66AA3BB71EFD0C6C00524D01 /* MenuTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AA3BB61EFD0C6C00524D01 /* MenuTVC.swift */; };
 		66AD1A2D1F05569A00269019 /* TODOApi_NewsFeedOfChoosenAnimal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AD1A2C1F05569A00269019 /* TODOApi_NewsFeedOfChoosenAnimal.swift */; };
 		66B0A9521F4D6F5500F8F901 /* SetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B0A9511F4D6F5500F8F901 /* SetView.swift */; };
-		66B0A9571F4DA72A00F8F901 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B0A9561F4DA72A00F8F901 /* Event.swift */; };
 		66C2C8681F1CECED007ADEF3 /* GetISOOfCountryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C8671F1CECED007ADEF3 /* GetISOOfCountryVC.swift */; };
 		66C2C86A1F1CED2F007ADEF3 /* GetISOOfCountryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C8691F1CED2F007ADEF3 /* GetISOOfCountryTVC.swift */; };
 		66C2C86C1F1CF005007ADEF3 /* GetIOSOfCountryGetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66C2C86B1F1CF004007ADEF3 /* GetIOSOfCountryGetData.swift */; };
@@ -127,6 +127,7 @@
 		66559D911F041C7200227846 /* RegisterNewAnimalVC + Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegisterNewAnimalVC + Images.swift"; sourceTree = "<group>"; };
 		66559D921F041C7200227846 /* RegisterNewAnimalVC + API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegisterNewAnimalVC + API.swift"; sourceTree = "<group>"; };
 		667C54DE1F21FA4B00E25ABA /* ExtensionsGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsGlobal.swift; sourceTree = "<group>"; };
+		668072BC1F501F94008970FE /* Igotpet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Igotpet.xcdatamodel; sourceTree = "<group>"; };
 		6682688D1F1CA580007EE4F5 /* AllPostsOfUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostsOfUserVC.swift; sourceTree = "<group>"; };
 		668268941F1CA679007EE4F5 /* AllPostsOfUserCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostsOfUserCV.swift; sourceTree = "<group>"; };
 		668268961F1CA6E5007EE4F5 /* AllPostsOfUserCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostsOfUserCVC.swift; sourceTree = "<group>"; };
@@ -137,7 +138,6 @@
 		66AA3BB61EFD0C6C00524D01 /* MenuTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTVC.swift; sourceTree = "<group>"; };
 		66AD1A2C1F05569A00269019 /* TODOApi_NewsFeedOfChoosenAnimal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TODOApi_NewsFeedOfChoosenAnimal.swift; sourceTree = "<group>"; };
 		66B0A9511F4D6F5500F8F901 /* SetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetView.swift; sourceTree = "<group>"; };
-		66B0A9561F4DA72A00F8F901 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		66C2C8671F1CECED007ADEF3 /* GetISOOfCountryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetISOOfCountryVC.swift; sourceTree = "<group>"; };
 		66C2C8691F1CED2F007ADEF3 /* GetISOOfCountryTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetISOOfCountryTVC.swift; sourceTree = "<group>"; };
 		66C2C86B1F1CF004007ADEF3 /* GetIOSOfCountryGetData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetIOSOfCountryGetData.swift; sourceTree = "<group>"; };
@@ -496,6 +496,14 @@
 			name = RegisterNewAnimal;
 			sourceTree = "<group>";
 		};
+		668072BA1F501F7C008970FE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				668072BB1F501F94008970FE /* Igotpet.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		6682688C1F1CA546007EE4F5 /* All posts */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,19 +564,12 @@
 		66B0A9541F4D723800F8F901 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				668072BA1F501F7C008970FE /* CoreData */,
 				66B0A9531F4D723000F8F901 /* View */,
 				66CBFBAF1F4C769400D50C6E /* API */,
 				66FB342B1F458D170077CB2B /* Extensions + Public classes */,
 			);
 			name = Global;
-			sourceTree = "<group>";
-		};
-		66B0A9551F4DA71700F8F901 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				66B0A9561F4DA72A00F8F901 /* Event.swift */,
-			);
-			name = Model;
 			sourceTree = "<group>";
 		};
 		66C2C8661F1CECCD007ADEF3 /* GetCountryISO */ = {
@@ -608,7 +609,6 @@
 		66CE5E881F4B2DE700FE6166 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				66B0A9551F4DA71700F8F901 /* Model */,
 				66CBFBAB1F4C57F300D50C6E /* TableView */,
 				66CBFBAC1F4C57FD00D50C6E /* ViewController */,
 			);
@@ -810,7 +810,6 @@
 				663D400A1F0F7E21007D5409 /* TextFieldLogic.swift in Sources */,
 				6631A2D91EFAA2DE00C71872 /* Api_Login.swift in Sources */,
 				6631A2D71EFAA07F00C71872 /* LoginVC.swift in Sources */,
-				66B0A9571F4DA72A00F8F901 /* Event.swift in Sources */,
 				663D40081F0F7D87007D5409 /* DataPicker.swift in Sources */,
 				66E978DC1F31F4210003EF24 /* AnimationLikeButtonOnTV.swift in Sources */,
 				663269AB1F13AB0700A64D5A /* AllAnimalsOfUserTVC.swift in Sources */,
@@ -831,6 +830,7 @@
 				66B0A9521F4D6F5500F8F901 /* SetView.swift in Sources */,
 				663954FA1F307DBE00F2299A /* UserProfileVC + API.swift in Sources */,
 				66559D8F1F041BF400227846 /* ChooseSpeciesOfAnimalTVC.swift in Sources */,
+				668072BD1F501F94008970FE /* Igotpet.xcdatamodeld in Sources */,
 				66AA3BB71EFD0C6C00524D01 /* MenuTVC.swift in Sources */,
 				663D3FFC1F0F7409007D5409 /* AnimalNewsFeedCV.swift in Sources */,
 				663955041F30A2D900F2299A /* TableViewCell + API.swift in Sources */,
@@ -979,7 +979,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F6NXT24YVT;
 				INFOPLIST_FILE = BarkBarkBook/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RyshchukDmytro.animal-ID";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -994,7 +994,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = F6NXT24YVT;
 				INFOPLIST_FILE = BarkBarkBook/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "RyshchukDmytro.animal-ID";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1024,6 +1024,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		668072BB1F501F94008970FE /* Igotpet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				668072BC1F501F94008970FE /* Igotpet.xcdatamodel */,
+			);
+			currentVersion = 668072BC1F501F94008970FE /* Igotpet.xcdatamodel */;
+			path = Igotpet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6631A2B71EFA9B0A00C71872 /* Project object */;
 }

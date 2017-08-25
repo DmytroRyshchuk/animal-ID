@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MakeAnEventVC: UIViewController {
     
@@ -24,8 +25,10 @@ class MakeAnEventVC: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet var addViewPop: UIView!
     
+    var fetchedResultsController: NSFetchedResultsController<Event>!
+    var managedContext:NSManagedObjectContext!
+    
     var animalNamesOfUserArray = [ChooseAnimalForMakeNewPost]()
-    var events = [Event]()
     
     let apiClass = ApiClass()
     let setView = SetView()
@@ -44,6 +47,11 @@ class MakeAnEventVC: UIViewController {
         setViewDidLoad()
         apiClass.getFirstUserAnimalToPostAPI(delegate: self, activityIndicator: activityIndicator)
         getCurentDateTime()
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        managedContext = appDelegate.persistentContainer.viewContext
     }
     
     @IBAction func changeAnimalAction(_ sender: Any) {
@@ -87,8 +95,24 @@ class MakeAnEventVC: UIViewController {
         print("u = ", unixDataTime)
         print("s = ", s)
         
-        let event = Event(note: notation.text, animal: animalNickname.text!, repeating: SharingManager.sharedInstance.repeating, dateTime: unixDataTime, mode: mode)
-        events.append(event)
+        let userID = UserDefaults.standard.value(forKey: "id_of_user") as? Int
+        
+        let event = Event(entity: Event.entity(), insertInto: managedContext)
+        
+        event.note = notation.text
+        event.animal = animalNickname.text
+        event.repeating = Int16(SharingManager.sharedInstance.repeating)
+        event.dateTime = unixDataTime as NSDate
+        event.mode = mode
+        event.userID = Int32(userID!)
+        
+        do {
+            try managedContext.save()
+            // MARK: - Remove people.append(person)
+            print("event was created")
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
     
     func getCurentDateTime() {
