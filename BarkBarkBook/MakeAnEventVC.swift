@@ -36,13 +36,14 @@ class MakeAnEventVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NotificationCenter.default.addObserver(self, selector: "firstAnimalFromApi", name: NSNotification.Name(rawValue: "firstAnimalFromApi"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: "choosenAnimalFromApi", name: NSNotification.Name(rawValue: "choosenAnimalFromApi"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MakeAnEventVC.firstAnimalFromApi), name: NSNotification.Name(rawValue: "firstAnimalFromApi"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MakeAnEventVC.choosenAnimalFromApi), name: NSNotification.Name(rawValue: "choosenAnimalFromApi"), object: nil)
         
         SharingManager.sharedInstance.repeating = 0
         
         setViewDidLoad()
         apiClass.getFirstUserAnimalToPostAPI(delegate: self, activityIndicator: activityIndicator)
+        getCurentDateTime()
     }
     
     @IBAction func changeAnimalAction(_ sender: Any) {
@@ -50,11 +51,11 @@ class MakeAnEventVC: UIViewController {
     }
     
     @IBAction func setTimeAction(_ sender: Any) {
-        setView.callViewPop(view: self, addViewPop: addViewPop, datepicker: datePicker, mode: "Time")
+        setView.callViewPop(view: self, addViewPop: addViewPop, datepicker: datePicker, mode: "Time", max: false)
     }
     
     @IBAction func setDateAction(_ sender: Any) {
-        setView.callViewPop(view: self, addViewPop: addViewPop, datepicker: datePicker, mode: "Date")
+        setView.callViewPop(view: self, addViewPop: addViewPop, datepicker: datePicker, mode: "Date", max: false)
     }
     
     @IBAction func closeDatePicker(_ sender: Any) {
@@ -88,6 +89,22 @@ class MakeAnEventVC: UIViewController {
         
         let event = Event(note: notation.text, animal: animalNickname.text!, repeating: SharingManager.sharedInstance.repeating, dateTime: unixDataTime, mode: mode)
         events.append(event)
+    }
+    
+    func getCurentDateTime() {
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        let time = "  \(hour):\(minutes)  "
+        
+        let formatter = DateFormatter()
+        formatter.locale = NSLocale.current//Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "  dd MMMM yyyy  "
+        let dateStr = formatter.string(from: unixDataTime)
+        
+        timeOutlet.setTitle(time, for: .normal)
+        dateOutlet.setTitle(dateStr, for: .normal)
     }
     
     func formateTimeToDate() -> Date? {

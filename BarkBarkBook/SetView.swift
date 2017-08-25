@@ -56,7 +56,7 @@ class SetView {
             label.text = SharingManager.sharedInstance.nicknameOfAnimal
         }
     }
-    func callViewPop(view: UIViewController, addViewPop: UIView, datepicker: UIDatePicker, mode: String) {
+    func callViewPop(view: UIViewController, addViewPop: UIView, datepicker: UIDatePicker, mode: String, max: Bool) {
         view.view.addSubview(addViewPop)
         addViewPop.center = view.view.center
         
@@ -69,7 +69,9 @@ class SetView {
         }
         
         if mode == "Date" {
-            datepicker.maximumDate = Date()
+            if max {
+                datepicker.maximumDate = Date()
+            }
             datepicker.datePickerMode = .date
             formatter.locale = NSLocale.current
             formatter.dateFormat = "dd MMMM yyyy" //Specify your format that you want
