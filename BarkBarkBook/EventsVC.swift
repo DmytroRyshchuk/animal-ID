@@ -19,6 +19,8 @@ class EventsVC: UIViewController {
     let setView = SetView()
     var eventModel = EventModel()
     
+    var eventObject = Event()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -103,8 +105,8 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let object = self.fetchedResultsController.object(at: indexPath)
-        eventModel = EventModel(note: object.note!, animal: object.animal!, repeating: Int(object.repeating), dateTime: object.dateTime! as Date, mode: object.mode)
+        eventObject = self.fetchedResultsController.object(at: indexPath)
+        eventModel = EventModel(note: eventObject.note!, animal: eventObject.animal!, repeating: Int(eventObject.repeating), dateTime: eventObject.dateTime! as Date, mode: eventObject.mode, userID: Int(eventObject.userID))
         //        alert(isEdit: true, object: object)
         moveToListOfAnimalPage()
     }
@@ -113,6 +115,7 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
         let myVC = self.storyboard?.instantiateViewController(withIdentifier: "MakeAnEventVC") as! MakeAnEventVC
         
         myVC.eventModel = self.eventModel
+        myVC.eventObject = eventObject
         self.navigationController?.pushViewController(myVC, animated: true)
     }
     

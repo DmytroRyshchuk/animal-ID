@@ -33,6 +33,7 @@ class MakeAnEventVC: UIViewController {
     let apiClass = ApiClass()
     let setView = SetView()
     var eventModel = EventModel()
+    var eventObject = Event()
     
     let times = ["Once", "Every day", "One in a week", "Twice per month", "Every month", "Every year"]
     var mode = false
@@ -47,7 +48,9 @@ class MakeAnEventVC: UIViewController {
         SharingManager.sharedInstance.repeating = 0
         
         setViewDidLoad()
-        apiClass.getFirstUserAnimalToPostAPI(delegate: self, activityIndicator: activityIndicator)
+        if eventModel.animal == "" {
+            apiClass.getFirstUserAnimalToPostAPI(delegate: self, activityIndicator: activityIndicator)
+        }
         getCurentDateTime()
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
@@ -67,6 +70,9 @@ class MakeAnEventVC: UIViewController {
     }
     
     @IBAction func setDateAction(_ sender: Any) {
+        let displayDate = formatTime(format: "  dd MMMM yyyy  ").string(from: eventModel.dateTime)
+        dateOutlet.setTitle(displayDate, for: .normal)
+        
         setView.callViewPop(view: self, addViewPop: addViewPop, datepicker: datePicker, mode: "Date", max: false)
     }
     
@@ -100,18 +106,27 @@ class MakeAnEventVC: UIViewController {
         print("s = ", s)
         
         let userID = UserDefaults.standard.value(forKey: "id_of_user") as? Int
-        
-        let event = Event(entity: Event.entity(), insertInto: managedContext)
-        
-        event.note = notation.text
-        event.animal = animalNickname.text
-        event.repeating = Int16(SharingManager.sharedInstance.repeating)
-        event.dateTime = unixDataTime as NSDate
-        event.mode = mode
-        event.userID = Int32(userID!)
+    
+        if eventModel.animal != "" {
+            eventObject.note = notation.text
+            eventObject.animal = animalNickname.text!
+            eventObject.repeating = Int16(SharingManager.sharedInstance.repeating)
+            eventObject.dateTime = unixDataTime as NSDate
+            eventObject.mode = mode
+            eventObject.userID = Int32(userID!)
+        } else {
+            let event = Event(entity: Event.entity(), insertInto: managedContext)
+            
+            event.note = notation.text
+            event.animal = animalNickname.text
+            event.repeating = Int16(SharingManager.sharedInstance.repeating)
+            event.dateTime = unixDataTime as NSDate
+            event.mode = mode
+            event.userID = Int32(userID!)
+        }
         
         do {
-            try managedContext.save()
+            try self.managedContext.save()
             // MARK: - Remove people.append(person)
             print("event was created")
         } catch let error as NSError {
@@ -119,6 +134,8 @@ class MakeAnEventVC: UIViewController {
         }
     }
     
+    
+    //MARK: - Funcs
     func eventModelWithData() {
         if eventModel.animal != "" {
             animalNickname.text = eventModel.animal
@@ -186,7 +203,6 @@ class MakeAnEventVC: UIViewController {
         setView.setRadius(elements: [animalNickname, animalButtonOutlet, notation, timeOutlet, dateOutlet, saveButtonOutlet])
     }
     
-    //MARK: - Funcs
     func firstAnimalFromApi() {
         setView.showDataOfFirstAnimal(avatar: animalAvatar, element: animalNickname)
     }

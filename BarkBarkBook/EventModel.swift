@@ -15,13 +15,15 @@ class EventModel {
     var repeating = 0
     var dateTime = Date()
     var mode = false
+    var userID = 0
     
-    init(note: String, animal: String, repeating: Int, dateTime: Date, mode: Bool) {
+    init(note: String, animal: String, repeating: Int, dateTime: Date, mode: Bool, userID: Int) {
         self.note = note
         self.animal = animal
         self.repeating = repeating
         self.dateTime = dateTime
         self.mode = mode
+        self.userID = userID
     }
     
     init() { }
