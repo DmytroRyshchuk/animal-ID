@@ -54,6 +54,7 @@
 		66559D941F041C7200227846 /* RegisterNewAnimalVC + API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66559D921F041C7200227846 /* RegisterNewAnimalVC + API.swift */; };
 		667C54DF1F21FA4C00E25ABA /* ExtensionsGlobal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667C54DE1F21FA4B00E25ABA /* ExtensionsGlobal.swift */; };
 		668072BD1F501F94008970FE /* Igotpet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 668072BB1F501F94008970FE /* Igotpet.xcdatamodeld */; };
+		668072CF1F503D76008970FE /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668072CE1F503D76008970FE /* EventModel.swift */; };
 		6682688E1F1CA580007EE4F5 /* AllPostsOfUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682688D1F1CA580007EE4F5 /* AllPostsOfUserVC.swift */; };
 		668268951F1CA679007EE4F5 /* AllPostsOfUserCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668268941F1CA679007EE4F5 /* AllPostsOfUserCV.swift */; };
 		668268971F1CA6E5007EE4F5 /* AllPostsOfUserCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668268961F1CA6E5007EE4F5 /* AllPostsOfUserCVC.swift */; };
@@ -128,6 +129,7 @@
 		66559D921F041C7200227846 /* RegisterNewAnimalVC + API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RegisterNewAnimalVC + API.swift"; sourceTree = "<group>"; };
 		667C54DE1F21FA4B00E25ABA /* ExtensionsGlobal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionsGlobal.swift; sourceTree = "<group>"; };
 		668072BC1F501F94008970FE /* Igotpet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Igotpet.xcdatamodel; sourceTree = "<group>"; };
+		668072CE1F503D76008970FE /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		6682688D1F1CA580007EE4F5 /* AllPostsOfUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostsOfUserVC.swift; sourceTree = "<group>"; };
 		668268941F1CA679007EE4F5 /* AllPostsOfUserCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostsOfUserCV.swift; sourceTree = "<group>"; };
 		668268961F1CA6E5007EE4F5 /* AllPostsOfUserCVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllPostsOfUserCVC.swift; sourceTree = "<group>"; };
@@ -504,6 +506,14 @@
 			name = CoreData;
 			sourceTree = "<group>";
 		};
+		668072D01F5042B3008970FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				668072CE1F503D76008970FE /* EventModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		6682688C1F1CA546007EE4F5 /* All posts */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,6 +619,7 @@
 		66CE5E881F4B2DE700FE6166 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				668072D01F5042B3008970FE /* Model */,
 				66CBFBAB1F4C57F300D50C6E /* TableView */,
 				66CBFBAC1F4C57FD00D50C6E /* ViewController */,
 			);
@@ -821,6 +832,7 @@
 				663D40041F0F7C28007D5409 /* MenuTV.swift in Sources */,
 				661F63021F0BB99A0099AAC8 /* AnimalInfoTVC.swift in Sources */,
 				66559D941F041C7200227846 /* RegisterNewAnimalVC + API.swift in Sources */,
+				668072CF1F503D76008970FE /* EventModel.swift in Sources */,
 				669556091F0A3135003A0BB5 /* TVC.swift in Sources */,
 				662A65C71EFABB5900416609 /* RegisterNewUserVC.swift in Sources */,
 				6617FED31EFD448F001F8A56 /* UserProfileVC.swift in Sources */,

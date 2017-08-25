@@ -74,6 +74,7 @@ class SetView {
             }
             datepicker.datePickerMode = .date
             formatter.locale = NSLocale.current
+            formatter.timeZone = TimeZone(secondsFromGMT: 0)
             formatter.dateFormat = "dd MMMM yyyy" //Specify your format that you want
         } else {
             datepicker.datePickerMode = .time

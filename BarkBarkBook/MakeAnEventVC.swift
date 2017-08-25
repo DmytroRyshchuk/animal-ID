@@ -32,7 +32,9 @@ class MakeAnEventVC: UIViewController {
     
     let apiClass = ApiClass()
     let setView = SetView()
+    var eventModel = EventModel()
     
+    let times = ["Once", "Every day", "One in a week", "Twice per month", "Every month", "Every year"]
     var mode = false
     var repeatingTime = 0
     var unixDataTime = Date()
@@ -52,6 +54,8 @@ class MakeAnEventVC: UIViewController {
             return
         }
         managedContext = appDelegate.persistentContainer.viewContext
+        
+        eventModelWithData()
     }
     
     @IBAction func changeAnimalAction(_ sender: Any) {
@@ -73,7 +77,7 @@ class MakeAnEventVC: UIViewController {
     @IBAction func setRepeatAction(_ sender: Any) {
         let alert = UIAlertController(title: "Repeat", message: "Please Choose how often to repeat", preferredStyle: .actionSheet)
         
-        setView.repeatingModeInAlertList(alert: alert, button: repeatOutlet, times: ["Once", "Every day", "One in a week", "Twice per month", "Every month", "Every year"])
+        setView.repeatingModeInAlertList(alert: alert, button: repeatOutlet, times: times)
         
         self.present(alert, animated: true, completion: nil)
     }
@@ -115,6 +119,34 @@ class MakeAnEventVC: UIViewController {
         }
     }
     
+    func eventModelWithData() {
+        if eventModel.animal != "" {
+            animalNickname.text = eventModel.animal
+            notation.text = eventModel.note
+            repeatOutlet.setTitle(times[eventModel.repeating], for: .normal)
+            
+            if eventModel.mode {
+                switchMode.setOn(true, animated: false)
+            } else {
+                switchMode.setOn(false, animated: false)
+            }
+            
+            let displayDate = formatTime(format: "  dd MMMM yyyy  ").string(from: eventModel.dateTime)
+            let displayTime = formatTime(format: "  HH:mm  ").string(from: eventModel.dateTime)
+            dateOutlet.setTitle(displayDate, for: .normal)
+            timeOutlet.setTitle(displayTime, for: .normal)
+        }
+    }
+    
+    func formatTime(format: String) -> DateFormatter {
+        let formatter = DateFormatter()
+        formatter.locale = NSLocale.current//Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = format
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        
+        return formatter
+    }
+    
     func getCurentDateTime() {
         let date = Date()
         let calendar = Calendar.current
@@ -122,10 +154,7 @@ class MakeAnEventVC: UIViewController {
         let minutes = calendar.component(.minute, from: date)
         let time = "  \(hour):\(minutes)  "
         
-        let formatter = DateFormatter()
-        formatter.locale = NSLocale.current//Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "  dd MMMM yyyy  "
-        let dateStr = formatter.string(from: unixDataTime)
+        let dateStr = formatTime(format: "  dd MMMM yyyy  ").string(from: unixDataTime)
         
         timeOutlet.setTitle(time, for: .normal)
         dateOutlet.setTitle(dateStr, for: .normal)
@@ -135,13 +164,8 @@ class MakeAnEventVC: UIViewController {
         let date = dateOutlet.titleLabel?.text
         let time = timeOutlet.titleLabel?.text
         
-        let RFC3339DateFormatter = DateFormatter()
-        RFC3339DateFormatter.locale = NSLocale.current//Locale(identifier: "en_US_POSIX")
-        RFC3339DateFormatter.dateFormat = "  dd MMMM yyyy  'T'  HH:mm  "
-        RFC3339DateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-        
         let string = "\(String(describing: date!))T\(String(describing: time!))"
-        let convertedDate = RFC3339DateFormatter.date(from: string)
+        let convertedDate = formatTime(format: "  dd MMMM yyyy  'T'  HH:mm  ").date(from: string)
         
         if let convert = convertedDate {
             return convert
@@ -151,10 +175,7 @@ class MakeAnEventVC: UIViewController {
     }
     
     func formateDateToString() -> String {
-        let formatter = DateFormatter()
-        formatter.locale = NSLocale.current//Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "dd MMMM yyyy HH:mm"
-        let str = formatter.string(from: unixDataTime)
+        let str = formatTime(format: "dd MMMM yyyy HH:mm").string(from: unixDataTime)
         
         return str
     }

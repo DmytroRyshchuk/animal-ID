@@ -17,6 +17,7 @@ class EventsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let setView = SetView()
+    var eventModel = EventModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,14 +74,15 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
         let event = fetchedResultsController.object(at: indexPath)
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EventsTVCell
         
-        let date = String(describing: event.dateTime!)
-        let dateCountCharacters = date.characters.count - 9
-        let index = date.index(date.startIndex, offsetBy: dateCountCharacters)
-        let showDate = date.substring(to: index)
+        let formatter = DateFormatter()
+        formatter.locale = NSLocale.current
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.dateFormat = "dd MMMM yyyy HH:mm"
+        let displayDate = formatter.string(from: event.dateTime! as Date)
         
         cell.eventText.text = event.note
         cell.nicknameOfAnimal.text = event.animal
-        cell.dateOfEvent.text = showDate
+        cell.dateOfEvent.text = displayDate
         
         return cell
     }
@@ -101,18 +103,18 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let object = self.fetchedResultsController.object(at: indexPath)
-//        personData = PersonData(name: object.name!, year: Int(object.years), nationality: object.nationality!)
+        let object = self.fetchedResultsController.object(at: indexPath)
+        eventModel = EventModel(note: object.note!, animal: object.animal!, repeating: Int(object.repeating), dateTime: object.dateTime! as Date, mode: object.mode)
         //        alert(isEdit: true, object: object)
-//        moveToListOfAnimalPage()
+        moveToListOfAnimalPage()
     }
     
-//    func moveToListOfAnimalPage () {
-//        let myVC = self.storyboard?.instantiateViewController(withIdentifier: "GreenVC") as! GreenVC
-//        
-//        myVC.person = self.personData
-//        self.navigationController?.pushViewController(myVC, animated: true)
-//    }
+    func moveToListOfAnimalPage () {
+        let myVC = self.storyboard?.instantiateViewController(withIdentifier: "MakeAnEventVC") as! MakeAnEventVC
+        
+        myVC.eventModel = self.eventModel
+        self.navigationController?.pushViewController(myVC, animated: true)
+    }
     
 }
 
