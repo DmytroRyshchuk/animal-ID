@@ -107,6 +107,15 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         eventObject = self.fetchedResultsController.object(at: indexPath)
         eventModel = EventModel(note: eventObject.note!, animal: eventObject.animal!, repeating: Int(eventObject.repeating), dateTime: eventObject.dateTime! as Date, mode: eventObject.mode, userID: Int(eventObject.userID))
+        
+        let formatter = DateFormatter()
+        formatter.locale = NSLocale.current
+        formatter.timeZone = TimeZone(secondsFromGMT: 0)
+        formatter.dateFormat = "dd MMMM yyyy"
+        SharingManager.sharedInstance.date = formatter.string(from: eventObject.dateTime! as Date)
+        formatter.dateFormat = "HH:mm"
+        SharingManager.sharedInstance.time = formatter.string(from: eventObject.dateTime! as Date)
+        
         //        alert(isEdit: true, object: object)
         moveToListOfAnimalPage()
     }

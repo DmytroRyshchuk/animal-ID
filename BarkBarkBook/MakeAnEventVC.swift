@@ -49,7 +49,13 @@ class MakeAnEventVC: UIViewController {
         
         setViewDidLoad()
         if eventModel.animal == "" {
+            SharingManager.sharedInstance.date = ""
+            SharingManager.sharedInstance.time = ""
+            
             apiClass.getFirstUserAnimalToPostAPI(delegate: self, activityIndicator: activityIndicator)
+        } else {
+            activityIndicator.isHidden = true
+            activityIndicator.stopAnimating()
         }
         getCurentDateTime()
         
@@ -70,9 +76,6 @@ class MakeAnEventVC: UIViewController {
     }
     
     @IBAction func setDateAction(_ sender: Any) {
-        let displayDate = formatTime(format: "  dd MMMM yyyy  ").string(from: eventModel.dateTime)
-        dateOutlet.setTitle(displayDate, for: .normal)
-        
         setView.callViewPop(view: self, addViewPop: addViewPop, datepicker: datePicker, mode: "Date", max: false)
     }
     

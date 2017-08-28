@@ -76,9 +76,18 @@ class SetView {
             formatter.locale = NSLocale.current
             formatter.timeZone = TimeZone(secondsFromGMT: 0)
             formatter.dateFormat = "dd MMMM yyyy" //Specify your format that you want
+
+            if SharingManager.sharedInstance.date != "" {
+                let convertedStartDate = formatter.date(from: SharingManager.sharedInstance.date)
+                datepicker.date = convertedStartDate!
+            }
         } else {
             datepicker.datePickerMode = .time
             formatter.timeStyle = .short
+            if SharingManager.sharedInstance.time != "" {
+                let convertedStartDate = formatter.date(from: SharingManager.sharedInstance.time)
+                datepicker.date = convertedStartDate!
+            }
         }
     }
     func closeViewPop(view: UIViewController, addViewPop: UIView, datepicker: UIDatePicker, setDataButton: UIButton, setTimeButton: UIButton?) {
