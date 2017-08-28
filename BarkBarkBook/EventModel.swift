@@ -16,14 +16,16 @@ class EventModel {
     var dateTime = Date()
     var mode = false
     var userID = 0
+    var photoData = Data()
     
-    init(note: String, animal: String, repeating: Int, dateTime: Date, mode: Bool, userID: Int) {
+    init(note: String, animal: String, repeating: Int, dateTime: Date, mode: Bool, userID: Int, photoData: Data) {
         self.note = note
         self.animal = animal
         self.repeating = repeating
         self.dateTime = dateTime
         self.mode = mode
         self.userID = userID
+        self.photoData = photoData
     }
     
     init() { }

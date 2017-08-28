@@ -117,6 +117,9 @@ class MakeAnEventVC: UIViewController {
             eventObject.dateTime = unixDataTime as NSDate
             eventObject.mode = mode
             eventObject.userID = Int32(userID!)
+            
+            let photoData = UIImagePNGRepresentation(animalAvatar.image!)
+            eventObject.photoData = NSData(data: photoData!)
         } else {
             let event = Event(entity: Event.entity(), insertInto: managedContext)
             
@@ -126,6 +129,9 @@ class MakeAnEventVC: UIViewController {
             event.dateTime = unixDataTime as NSDate
             event.mode = mode
             event.userID = Int32(userID!)
+            
+            let photoData = UIImagePNGRepresentation(animalAvatar.image!)
+            event.photoData = NSData(data: photoData!)
         }
         
         do {
@@ -155,6 +161,9 @@ class MakeAnEventVC: UIViewController {
             let displayTime = formatTime(format: "  HH:mm  ").string(from: eventModel.dateTime)
             dateOutlet.setTitle(displayDate, for: .normal)
             timeOutlet.setTitle(displayTime, for: .normal)
+            
+            setView.makeAvatarRound(avatar: animalAvatar)
+            animalAvatar.image = UIImage(data: eventModel.photoData)
         }
     }
     
