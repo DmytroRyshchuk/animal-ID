@@ -106,7 +106,7 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         eventObject = self.fetchedResultsController.object(at: indexPath)
-        eventModel = EventModel(note: eventObject.note!, animal: eventObject.animal!, repeating: Int(eventObject.repeating), dateTime: eventObject.dateTime! as Date, mode: eventObject.mode, userID: Int(eventObject.userID), photoData: eventObject.photoData as! Data)
+        eventModel = EventModel(note: eventObject.note!, animal: eventObject.animal!, repeating: Int(eventObject.repeating), dateTime: eventObject.dateTime! as Date, mode: eventObject.mode, userID: Int(eventObject.userID), photoData: eventObject.photoData! as Data)
         
         let formatter = DateFormatter()
         formatter.locale = NSLocale.current
