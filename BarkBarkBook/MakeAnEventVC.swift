@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class MakeAnEventVC: UIViewController {
     
@@ -42,6 +43,11 @@ class MakeAnEventVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (didAllow, error) in
+        
+        }
+        
         NotificationCenter.default.addObserver(self, selector: #selector(MakeAnEventVC.firstAnimalFromApi), name: NSNotification.Name(rawValue: "firstAnimalFromApi"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MakeAnEventVC.choosenAnimalFromApi), name: NSNotification.Name(rawValue: "choosenAnimalFromApi"), object: nil)
         
@@ -145,6 +151,19 @@ class MakeAnEventVC: UIViewController {
     
     
     //MARK: - Funcs
+    func setLocalNotification() {
+        let content = UNMutableNotificationContent()
+        content.title = "5 sec"
+        content.subtitle = "There are"
+        content.body = "The body"
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "timer done", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
+    }
+    
     func eventModelWithData() {
         if eventModel.animal != "" {
             animalNickname.text = eventModel.animal
