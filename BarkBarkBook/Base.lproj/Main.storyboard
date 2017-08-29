@@ -2173,7 +2173,6 @@
                     <navigationItem key="navigationItem" id="tQZ-Q1-Xom">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aCx-Ek-JqI">
                             <connections>
-                                <action selector="addNewEvent:" destination="SYR-qW-xMs" id="6KK-S6-Vhm"/>
                                 <segue destination="2Lp-Do-iFq" kind="show" id="7SU-vC-to6"/>
                             </connections>
                         </barButtonItem>

@@ -52,10 +52,6 @@ class EventsVC: UIViewController {
         scheduleLocal()
     }
     
-    @IBAction func addNewEvent(_ sender: Any) {
-        
-    }
-    
     func scheduleLocal() {
         let center = UNUserNotificationCenter.current()
         
@@ -70,7 +66,6 @@ class EventsVC: UIViewController {
             
             content.title = i.title
             content.body = i.body
-//            content.badge = 1
             
             var dateComponents = DateComponents()
             dateComponents.hour = i.date[0]
@@ -80,7 +75,7 @@ class EventsVC: UIViewController {
             dateComponents.year = i.date[4]
             
             let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-
+            
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
             center.add(request)
         }
@@ -132,7 +127,7 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
         cell.nicknameOfAnimal.text = event.animal
         cell.dateOfEvent.text = displayDate
         
-        wwd.setDate(date: displayDate, title: "Animal: \(String(describing: event.animal))", body: event.note!)
+        wwd.setDate(date: displayDate, title: "Animal: \(event.animal!)", body: event.note!)
         
         return cell
     }
