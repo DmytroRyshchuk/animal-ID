@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 class EventsVC: UIViewController {
  
@@ -18,12 +19,22 @@ class EventsVC: UIViewController {
     
     let setView = SetView()
     var eventModel = EventModel()
-    
+    let wwd = WorkWithDate()
     var eventObject = Event()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let center = UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if granted {
+                print("Yay!")
+            } else {
+                print("D'oh")
+            }
+        }
+        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
@@ -34,10 +45,45 @@ class EventsVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         reloadData()
+        wwd.eventsArray = []
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        scheduleLocal()
     }
     
     @IBAction func addNewEvent(_ sender: Any) {
         
+    }
+    
+    func scheduleLocal() {
+        let center = UNUserNotificationCenter.current()
+        
+        let content = UNMutableNotificationContent()
+        content.categoryIdentifier = "alarm"
+        content.userInfo = ["customData": "fizzbuzz"]
+        content.sound = UNNotificationSound.default()
+        
+        let dateOfEvent = wwd.getDate()
+        for i in dateOfEvent {
+            print(dateOfEvent)
+            
+            content.title = i.title
+            content.body = i.body
+//            content.badge = 1
+            
+            var dateComponents = DateComponents()
+            dateComponents.hour = i.date[0]
+            dateComponents.minute = i.date[1]
+            dateComponents.day = i.date[2]
+            dateComponents.month = i.date[3]
+            dateComponents.year = i.date[4]
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+
+            let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+            center.add(request)
+        }
     }
     
     func reloadData() {
@@ -85,6 +131,8 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
         cell.eventText.text = event.note
         cell.nicknameOfAnimal.text = event.animal
         cell.dateOfEvent.text = displayDate
+        
+        wwd.setDate(date: displayDate, title: "Animal: \(String(describing: event.animal))", body: event.note!)
         
         return cell
     }

@@ -79,6 +79,7 @@ class SetView {
 
             if SharingManager.sharedInstance.date != "" {
                 let convertedStartDate = formatter.date(from: SharingManager.sharedInstance.date)
+                print(SharingManager.sharedInstance.date)
                 datepicker.date = convertedStartDate!
             }
         } else {
