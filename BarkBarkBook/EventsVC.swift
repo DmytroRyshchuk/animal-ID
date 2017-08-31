@@ -12,19 +12,36 @@ import UserNotifications
 
 class EventsVC: UIViewController {
  
+    @IBOutlet weak var tableView: UITableView!
+    
     var fetchedResultsController: NSFetchedResultsController<Event>!
     var managedContext:NSManagedObjectContext!
     
-    @IBOutlet weak var tableView: UITableView!
-    
     let setView = SetView()
-    var eventModel = EventModel()
     let wwd = WorkWithDate()
     var eventObject = Event()
+    var eventModel = EventModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return
+        }
+        managedContext = appDelegate.persistentContainer.viewContext
+        setView.naviColor(navi: navigationController)
+        notificationPermision()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {        
+        reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        scheduleLocal()
+    }
+    
+    func notificationPermision() {
         let center = UNUserNotificationCenter.current()
         
         center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
@@ -34,33 +51,20 @@ class EventsVC: UIViewController {
                 print("D'oh")
             }
         }
-        
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        managedContext = appDelegate.persistentContainer.viewContext
-        
-        setView.naviColor(navi: navigationController)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        reloadData()
-        wwd.eventsArray = []
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        scheduleLocal()
     }
     
     func scheduleLocal() {
+        
         let center = UNUserNotificationCenter.current()
+        center.removeAllDeliveredNotifications()
+        center.removeAllPendingNotificationRequests()
         
         let content = UNMutableNotificationContent()
         content.categoryIdentifier = "alarm"
         content.userInfo = ["customData": "fizzbuzz"]
         content.sound = UNNotificationSound.default()
         
-        let dateOfEvent = wwd.getDate()
+        var dateOfEvent = wwd.getDate()
         for i in dateOfEvent {
             print(dateOfEvent)
             
@@ -78,7 +82,10 @@ class EventsVC: UIViewController {
             
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
             center.add(request)
+            print(i.date[1])
         }
+        wwd.cleanArray()
+        dateOfEvent = []
     }
     
     func reloadData() {
@@ -101,9 +108,6 @@ class EventsVC: UIViewController {
             print(error)
         }
     }
-
-    
-    
 }
 
 extension EventsVC: UITableViewDelegate, UITableViewDataSource {
@@ -161,6 +165,7 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
         
         //        alert(isEdit: true, object: object)
         moveToListOfAnimalPage()
+        print("Pressed")
     }
     
     func moveToListOfAnimalPage () {
@@ -170,7 +175,6 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
         myVC.eventObject = eventObject
         self.navigationController?.pushViewController(myVC, animated: true)
     }
-    
 }
 
 

@@ -12,6 +12,10 @@ class WorkWithDate {
     
     var eventsArray = [EventsArray]()
     
+    func cleanArray() {
+        eventsArray = []
+    }
+    
     func getDate() -> [EventsArray] {
         
         return eventsArray
@@ -24,7 +28,7 @@ class WorkWithDate {
         formatter.dateFormat = "dd MMMM yyyy HH:mm"
         
         let convertedStartDate = formatter.date(from: date)
-
+        
         let displayHours = formatTime(format: "HH").string(from: convertedStartDate!)
         let displayMinutes = formatTime(format: "mm").string(from: convertedStartDate!)
         let displayDate = formatTime(format: "dd").string(from: convertedStartDate!)
