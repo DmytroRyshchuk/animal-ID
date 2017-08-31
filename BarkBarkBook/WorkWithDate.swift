@@ -21,7 +21,7 @@ class WorkWithDate {
         return eventsArray
     }
     
-    func setDate(date: String, title: String, body: String) {
+    func setDate(date: String, title: String, body: String, mode: Bool) {
         let formatter = DateFormatter()
         formatter.locale = NSLocale.current
         formatter.timeZone = TimeZone(secondsFromGMT: 0)
@@ -39,7 +39,9 @@ class WorkWithDate {
                                        Int(displayMonth)!, Int(displayYear)!],
                                 title: title,
                                 body: body)
-        eventsArray.append(event)
+        if mode {
+            eventsArray.append(event)
+        }
     }
     
     private func formatTime(format: String) -> DateFormatter {

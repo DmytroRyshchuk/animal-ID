@@ -33,7 +33,7 @@ class EventsVC: UIViewController {
         notificationPermision()
     }
     
-    override func viewWillAppear(_ animated: Bool) {        
+    override func viewWillAppear(_ animated: Bool) {
         reloadData()
     }
     
@@ -82,7 +82,6 @@ class EventsVC: UIViewController {
             
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
             center.add(request)
-            print(i.date[1])
         }
         wwd.cleanArray()
         dateOfEvent = []
@@ -131,7 +130,7 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
         cell.nicknameOfAnimal.text = event.animal
         cell.dateOfEvent.text = displayDate
         
-        wwd.setDate(date: displayDate, title: "Animal: \(event.animal!)", body: event.note!)
+        wwd.setDate(date: displayDate, title: "Animal: \(event.animal!)", body: event.note!, mode: event.mode)
         
         return cell
     }
