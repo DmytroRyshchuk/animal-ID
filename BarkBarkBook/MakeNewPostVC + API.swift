@@ -78,7 +78,6 @@ extension MakeNewPostViewController {
             imageT = scaledImage(UIImage(data: imageData!)!, maximumWidth: 400)
             
             let data = UIImagePNGRepresentation(imageT) as NSData?
-            print("data = ", imageT)
             body.append(data! as Data)
             body.append(NSString(format: "\r\n--%@\r\n", boundary).data(using: String.Encoding.utf8.rawValue)!)
         }

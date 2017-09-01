@@ -12,7 +12,7 @@ extension RegisterNewAnimalViewController {
     //MARK: - Data Picker
     
     @IBAction func ba_callViewPop(_ sender: Any) {
-        setView.callViewPop(view: self, addViewPop: bo_addViewPop, datepicker: dp_datePicker, mode: "Date")
+        setView.callViewPop(view: self, addViewPop: bo_addViewPop, datepicker: dp_datePicker, mode: "Date", max: true)
     }
     
     @IBAction func ba_backToViewController(_ sender: Any) {
