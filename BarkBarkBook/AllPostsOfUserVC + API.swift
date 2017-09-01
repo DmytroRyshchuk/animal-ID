@@ -42,7 +42,7 @@ extension AllPostsOfUserViewController {
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(auth_key_user)"
         ]
-        
+
         Alamofire.request("\(api_animalID)/post/animal-posts", method: .get, headers: headers).responseJSON { response in
             print("\n========POSTS========")
             //            debugPrint("RESPONSE: ", response.result)

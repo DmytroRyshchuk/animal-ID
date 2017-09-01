@@ -162,9 +162,7 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
         formatter.dateFormat = "HH:mm"
         SharingManager.sharedInstance.time = formatter.string(from: eventObject.dateTime! as Date)
         
-        //        alert(isEdit: true, object: object)
         moveToListOfAnimalPage()
-        print("Pressed")
     }
     
     func moveToListOfAnimalPage () {
