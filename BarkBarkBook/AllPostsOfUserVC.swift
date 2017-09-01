@@ -59,6 +59,17 @@ class AllPostsOfUserViewController: UIViewController {
         tableView.setContentOffset(CGPoint.zero, animated: true)
     }
     
+    // MARK: - clear cache of images
+    override func viewDidDisappear(_ animated: Bool) {
+        let gg = SDImageCache()
+        print("size on start = ", gg.getSize())
+        print(gg.clearDisk(onCompletion: { 
+            print("inside")
+        }))
+        print("size later = ", gg.getSize())
+        
+    }
+    
     //MARK: - Actions
     @IBAction func showMenuAction(_ sender: Any) {
         let width = Int(view.frame.width)
