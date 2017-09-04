@@ -17,7 +17,7 @@ extension AllPostsOfUserViewController {
         self.activityIndicator.isHidden = false
         self.activityIndicator.startAnimating()
         self.tableView.isScrollEnabled = false
-        allPostsOfUserArray = []
+        
         
         let auth_key_user = "\(String(describing: UserDefaults.standard.object(forKey: "auth_key_user")!))"
         
@@ -38,23 +38,30 @@ extension AllPostsOfUserViewController {
         var authorSurname = ""
         var authorContent = ""
         var authorCreatedAt = 0
+        let link = "\(api_animalID)/post/index/\(pageIndex)"
         
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(auth_key_user)"
         ]
-
-        Alamofire.request("\(api_animalID)/post/animal-posts", method: .get, headers: headers).responseJSON { response in
+        
+        pageIndex += 1
+        
+        
+        Alamofire.request(link, method: .get, headers: headers).responseJSON { response in
             print("\n========POSTS========")
-            //            debugPrint("RESPONSE: ", response.result)
+            debugPrint("RESPONSE: ", response.result)
             
             guard let jsonAsDictionary = response.result.value as? [String: Any] else {
                 //                print("Error: (response.result.error)")
                 return }
             let jsonAsSwiftyJSON = JSON(jsonAsDictionary)
             
-            if let data = jsonAsSwiftyJSON["data"].array {
+            if let data = jsonAsSwiftyJSON["data"]["posts"].array {
+                if let total_count = jsonAsSwiftyJSON["data"]["total_count"].int {
+                    self.countOfAllPost = total_count
+                }
+                
                 for json in data {
-                    
                     if let animal = json["_animal"]["nickname"].string {
                         animalName = animal
                     }
