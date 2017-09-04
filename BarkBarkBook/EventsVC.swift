@@ -78,7 +78,14 @@ class EventsVC: UIViewController {
             dateComponents.month = i.date[3]
             dateComponents.year = i.date[4]
             
-            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+            var repeatingMode = false
+            if eventModel.repeating == 0 {
+                repeatingMode = false
+            } else {
+                repeatingMode = true
+            }
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: repeatingMode)
             
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
             center.add(request)

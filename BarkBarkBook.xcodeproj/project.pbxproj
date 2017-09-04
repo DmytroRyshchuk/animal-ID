@@ -625,9 +625,9 @@
 		66CE5E881F4B2DE700FE6166 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				668072D01F5042B3008970FE /* Model */,
-				66CBFBAB1F4C57F300D50C6E /* TableView */,
 				66CBFBAC1F4C57FD00D50C6E /* ViewController */,
+				66CBFBAB1F4C57F300D50C6E /* TableView */,
+				668072D01F5042B3008970FE /* Model */,
 			);
 			name = Events;
 			sourceTree = "<group>";
