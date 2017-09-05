@@ -10,4 +10,5 @@ import UIKit
 
 class AllPostsOfUserCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageOfAnimalInCollectionView: UIImageView!
+    @IBOutlet weak var pageControl: UIPageControl!
 }

@@ -43,6 +43,9 @@ extension UserDetailInformationOfAnimalViewController: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
         
+        cell.pageControl.numberOfPages = postsArray[collectionView.tag].imageLinks.count
+        cell.pageControl.currentPage = indexPath.row
+        
         let post = postsArray[collectionView.tag]
         //        print("postArrayPhotos: ", post.imagesLink.count)
         if post.imageLinks.count != 0 {

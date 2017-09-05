@@ -168,7 +168,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tBr-Ce-Mdp" id="xnR-RQ-ka7">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="129.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="05i-c0-IrU">
@@ -1155,7 +1155,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="190"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dl3-dq-v99" id="GRL-MK-acX">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="189.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EbL-py-GUs">
@@ -1208,7 +1208,7 @@
                                         <rect key="frame" x="0.0" y="218" width="320" height="350"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lf6-jk-yPU" id="0Uv-5e-MiQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="349.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cci-Ag-eY2">
@@ -1267,16 +1267,24 @@
                                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wrf-IH-sAK">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="249"/>
                                                                             </imageView>
+                                                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="N27-XA-Qb5">
+                                                                                <rect key="frame" x="125" y="197" width="39" height="37"/>
+                                                                                <color key="pageIndicatorTintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                <color key="currentPageIndicatorTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </pageControl>
                                                                         </subviews>
                                                                     </view>
                                                                     <constraints>
                                                                         <constraint firstItem="Wrf-IH-sAK" firstAttribute="leading" secondItem="Y69-sZ-xuP" secondAttribute="leading" id="Gn1-2d-OGe"/>
                                                                         <constraint firstAttribute="trailing" secondItem="Wrf-IH-sAK" secondAttribute="trailing" id="Gsc-2F-NwE"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="N27-XA-Qb5" secondAttribute="bottom" constant="15" id="Jce-bE-XJH"/>
                                                                         <constraint firstAttribute="bottom" secondItem="Wrf-IH-sAK" secondAttribute="bottom" id="MKr-he-qKR"/>
                                                                         <constraint firstItem="Wrf-IH-sAK" firstAttribute="top" secondItem="Y69-sZ-xuP" secondAttribute="top" id="QTi-3B-UPT"/>
+                                                                        <constraint firstItem="N27-XA-Qb5" firstAttribute="centerX" secondItem="Y69-sZ-xuP" secondAttribute="centerX" id="hZJ-JJ-nmM"/>
                                                                     </constraints>
                                                                     <connections>
                                                                         <outlet property="imageOfAnimalInCollectionView" destination="Wrf-IH-sAK" id="7iU-Tx-s6g"/>
+                                                                        <outlet property="pageControl" destination="N27-XA-Qb5" id="xuB-4c-4cg"/>
                                                                     </connections>
                                                                 </collectionViewCell>
                                                             </cells>
@@ -2108,7 +2116,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Amc-Ig-Ovq" id="B3G-xE-L7f">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LNv-gH-QVv">
@@ -2512,7 +2520,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CKy-Xx-5VC" id="yWp-09-u13">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cP1-VA-AfJ">
@@ -2660,7 +2668,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="320" height="477"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eVu-Vo-sce" id="1MT-sz-1fo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="477"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="476.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zUI-CW-K5B">
@@ -2719,16 +2727,24 @@
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PzK-u1-iZM">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="249"/>
                                                                                     </imageView>
+                                                                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="1ku-Ac-XEm">
+                                                                                        <rect key="frame" x="125" y="189" width="39" height="37"/>
+                                                                                        <color key="pageIndicatorTintColor" red="0.50196081400000003" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                        <color key="currentPageIndicatorTintColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                                    </pageControl>
                                                                                 </subviews>
                                                                             </view>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="trailing" secondItem="PzK-u1-iZM" secondAttribute="trailing" id="2sn-it-skl"/>
+                                                                                <constraint firstAttribute="bottomMargin" secondItem="1ku-Ac-XEm" secondAttribute="bottom" constant="15" id="6Q9-jd-v7W"/>
                                                                                 <constraint firstItem="PzK-u1-iZM" firstAttribute="top" secondItem="Xb7-mo-X9p" secondAttribute="top" id="GKg-PD-yUj"/>
+                                                                                <constraint firstItem="1ku-Ac-XEm" firstAttribute="centerX" secondItem="Xb7-mo-X9p" secondAttribute="centerX" id="JaC-Wu-8lW"/>
                                                                                 <constraint firstItem="PzK-u1-iZM" firstAttribute="leading" secondItem="Xb7-mo-X9p" secondAttribute="leading" id="Xf2-Jc-eZM"/>
                                                                                 <constraint firstAttribute="bottom" secondItem="PzK-u1-iZM" secondAttribute="bottom" id="sVp-9k-fsw"/>
                                                                             </constraints>
                                                                             <connections>
                                                                                 <outlet property="imageOfAnimalInCollectionView" destination="PzK-u1-iZM" id="XeB-yy-BDs"/>
+                                                                                <outlet property="pageControl" destination="1ku-Ac-XEm" id="b95-JJ-lA6"/>
                                                                             </connections>
                                                                         </collectionViewCell>
                                                                     </cells>
@@ -2918,7 +2934,7 @@
                                         <rect key="frame" x="0.0" y="72" width="320" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tJR-rQ-h55" id="V8V-u8-wg2">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="69.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNp-37-8xW">
