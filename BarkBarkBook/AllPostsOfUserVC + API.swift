@@ -38,18 +38,17 @@ extension AllPostsOfUserViewController {
         var authorSurname = ""
         var authorContent = ""
         var authorCreatedAt = 0
+        
+        pageIndex += 1
         let link = "\(api_animalID)/post/index/\(pageIndex)"
         
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(auth_key_user)"
         ]
         
-        pageIndex += 1
-        
-        
         Alamofire.request(link, method: .get, headers: headers).responseJSON { response in
             print("\n========POSTS========")
-            debugPrint("RESPONSE: ", response.result)
+//            debugPrint("RESPONSE: ", response.result)
             
             guard let jsonAsDictionary = response.result.value as? [String: Any] else {
                 //                print("Error: (response.result.error)")

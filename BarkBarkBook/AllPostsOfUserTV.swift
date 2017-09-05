@@ -70,9 +70,6 @@ extension AllPostsOfUserViewController: UITableViewDelegate, UITableViewDataSour
         let lastItem = allPostsOfUserArray.count - 1
         if indexPath.row == lastItem {
             if countOfAllPost == 0 || Int((countOfAllPost / 3) + 1) >= pageIndex {
-//                pageIndex += 1
-                print("Int((countOfAllPost / 3) + 1) = ", Int((countOfAllPost / 3) + 1))
-                print("pageIndex = ", pageIndex)
                 apiAllPostsOfUser()
             }
         }
