@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		660342291F5FEDB500D6AB20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660342281F5FEDB500D6AB20 /* Assets.xcassets */; };
 		6617FED31EFD448F001F8A56 /* UserProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6617FED21EFD448F001F8A56 /* UserProfileVC.swift */; };
 		6617FED71EFD45E5001F8A56 /* UserProfileClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6617FED61EFD45E5001F8A56 /* UserProfileClass.swift */; };
 		6617FED91EFD4639001F8A56 /* AnimalDetailsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6617FED81EFD4639001F8A56 /* AnimalDetailsClass.swift */; };
 		6617FEDF1EFD4ED8001F8A56 /* UserDetailInformationOfAnimalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6617FEDD1EFD4ED8001F8A56 /* UserDetailInformationOfAnimalVC.swift */; };
 		6617FEE01EFD4ED8001F8A56 /* (notUsed)UserDetailInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6617FEDE1EFD4ED8001F8A56 /* (notUsed)UserDetailInformation.swift */; };
 		6617FEE21EFD6098001F8A56 /* UserProfileVC + Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6617FEE11EFD6098001F8A56 /* UserProfileVC + Image.swift */; };
-		661D64311F43192800A7C847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661D64301F43192800A7C847 /* Assets.xcassets */; };
 		661F63021F0BB99A0099AAC8 /* AnimalInfoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F63011F0BB99A0099AAC8 /* AnimalInfoTVC.swift */; };
 		661F63061F0E1CED0099AAC8 /* CVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661F63051F0E1CED0099AAC8 /* CVC.swift */; };
 		6622C2031F277047000A5822 /* Api_Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6622C2021F277047000A5822 /* Api_Logout.swift */; };
@@ -82,13 +82,13 @@
 
 /* Begin PBXFileReference section */
 		0F40D8734EA192890050DB94 /* Pods-BarkBarkBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarkBarkBook.release.xcconfig"; path = "Pods/Target Support Files/Pods-BarkBarkBook/Pods-BarkBarkBook.release.xcconfig"; sourceTree = "<group>"; };
+		660342281F5FEDB500D6AB20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6617FED21EFD448F001F8A56 /* UserProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileVC.swift; sourceTree = "<group>"; };
 		6617FED61EFD45E5001F8A56 /* UserProfileClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileClass.swift; sourceTree = "<group>"; };
 		6617FED81EFD4639001F8A56 /* AnimalDetailsClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalDetailsClass.swift; sourceTree = "<group>"; };
 		6617FEDD1EFD4ED8001F8A56 /* UserDetailInformationOfAnimalVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailInformationOfAnimalVC.swift; sourceTree = "<group>"; };
 		6617FEDE1EFD4ED8001F8A56 /* (notUsed)UserDetailInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "(notUsed)UserDetailInformation.swift"; sourceTree = "<group>"; };
 		6617FEE11EFD6098001F8A56 /* UserProfileVC + Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserProfileVC + Image.swift"; sourceTree = "<group>"; };
-		661D64301F43192800A7C847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		661F63011F0BB99A0099AAC8 /* AnimalInfoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimalInfoTVC.swift; sourceTree = "<group>"; };
 		661F63051F0E1CED0099AAC8 /* CVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVC.swift; sourceTree = "<group>"; };
 		6622C2021F277047000A5822 /* Api_Logout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api_Logout.swift; sourceTree = "<group>"; };
@@ -551,7 +551,7 @@
 		66AA3BB41EFD0C4500524D01 /* Others */ = {
 			isa = PBXGroup;
 			children = (
-				661D64301F43192800A7C847 /* Assets.xcassets */,
+				660342281F5FEDB500D6AB20 /* Assets.xcassets */,
 				663269A61F13A3FC00A64D5A /* 146897792919975145.jpg */,
 				6631A2C21EFA9B0A00C71872 /* AppDelegate.swift */,
 				6631A2CB1EFA9B0A00C71872 /* LaunchScreen.storyboard */,
@@ -748,7 +748,7 @@
 			files = (
 				6631A2CD1EFA9B0A00C71872 /* LaunchScreen.storyboard in Resources */,
 				663269A71F13A3FC00A64D5A /* 146897792919975145.jpg in Resources */,
-				661D64311F43192800A7C847 /* Assets.xcassets in Resources */,
+				660342291F5FEDB500D6AB20 /* Assets.xcassets in Resources */,
 				6631A2C81EFA9B0A00C71872 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -34,6 +34,12 @@ extension AllPostsOfUserViewController: UITableViewDelegate, UITableViewDataSour
         cell.commentsLabel.text = String(allPostsOfUserArray[index].countCommentsPosts) + " comments"
         cell.dateOfPostLabel.text = convertUnixToDate(timeStamp: allPostsOfUserArray[index].createdAt)
         
+        if allPostsOfUserArray[index].statusOfPost == 1 {
+            cell.statusOfPostOpenOrLock.image = UIImage(named: "postLockIcon")
+        } else {
+            cell.statusOfPostOpenOrLock.image = UIImage(named: "postOpenIcon")
+        }
+        
         cell.statusOfPost = allPostsOfUserArray[index].statusOfPost
         cell.postId = allPostsOfUserArray[index].id
         
