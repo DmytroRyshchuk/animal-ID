@@ -13,6 +13,7 @@ class AllPostsOfUserTableViewCell: UITableViewCell {
     //MARK: - let/outlet
     @IBOutlet weak var nameSurnameLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var statusOfPostOpenOrLock: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var commentsLabel: UILabel!
@@ -28,6 +29,25 @@ class AllPostsOfUserTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         heartImagesArray = createImageArray(total: 24, imagePrefix: "heart")
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
+    }
+    
+    // Like post
+    @IBAction func likeButtonAction(_ sender: Any) {
+        actionWithPost(address: "\(api_animalID)/post/like", method: .post, type: "Like")
+        animate(imageView: likeButtonImageAnimation, images: heartImagesArray)
+    }
+    
+    // What to do button
+    @IBAction func whatToDoWithPostButtonAction(_ sender: Any) {
+//        let udi = UserDetailInformationOfAnimalViewController()
+//        udi.callAlertSheet(postId: postId, statusOfPost: statusOfPost)
+        let apou = AllPostsOfUserViewController()
+        apou.callAlertSheet(postId: postId, statusOfPost: statusOfPost)
     }
     
     //Animate like button
@@ -49,25 +69,6 @@ class AllPostsOfUserTableViewCell: UITableViewCell {
         imageView.animationDuration = 1.0
         imageView.animationRepeatCount = 1
         imageView.startAnimating()
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-    }
-    
-    // Like post
-    @IBAction func likeButtonAction(_ sender: Any) {
-        actionWithPost(address: "\(api_animalID)/post/like", method: .post, type: "Like")
-        animate(imageView: likeButtonImageAnimation, images: heartImagesArray)
-    }
-    
-    // What to do button
-    @IBAction func whatToDoWithPostButtonAction(_ sender: Any) {
-//        let udi = UserDetailInformationOfAnimalViewController()
-//        udi.callAlertSheet(postId: postId, statusOfPost: statusOfPost)
-        let apou = AllPostsOfUserViewController()
-        apou.callAlertSheet(postId: postId, statusOfPost: statusOfPost)
     }
     
     // Change status of post

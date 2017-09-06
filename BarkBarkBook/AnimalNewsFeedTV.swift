@@ -56,6 +56,13 @@ extension UserDetailInformationOfAnimalViewController: UITableViewDelegate, UITa
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             
             cell.nameSurnameLabel.text = postsArray[index].surname + " " + postsArray[index].name
+            
+            if postsArray[index].statusOfPost == 1 {
+                cell.statusOfPostOpenOrLock.image = UIImage(named: "postLockIcon")
+            } else {
+                cell.statusOfPostOpenOrLock.image = UIImage(named: "postOpenIcon")
+            }
+            
             //cell.nameSurnameLabel.text = postsArray[index].surname + " " + postsArray[index].name + " with " + postsArray[index].animalName
             cell.contentLabel.text = postsArray[index].content
             cell.likesLabel.text = String(postsArray[index].countLikes)

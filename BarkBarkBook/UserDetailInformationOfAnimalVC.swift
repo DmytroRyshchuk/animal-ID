@@ -62,7 +62,7 @@ class UserDetailInformationOfAnimalViewController: UIViewController {
         let alertController = UIAlertController(title: "Action Sheet", message: "What would you like to do?", preferredStyle: .actionSheet)
         
         let changeStatusOfPost = UIAlertAction(title: "Who can see this post", style: .default, handler: { (action) -> Void in
-            self.callPostAlert(title: "Who can see this post?", actionTitleFirst: "Only me", actionTitleSecond: "Everyone")
+            self.callPostAlert(title: "Who can see this post?", actionTitleFirst: "Only me \u{1F512}", actionTitleSecond: "Everyone \u{1F310}")
         })
         
         let deletePost = UIAlertAction(title: "Delete this post", style: .destructive, handler: { (action) -> Void in
@@ -93,7 +93,7 @@ class UserDetailInformationOfAnimalViewController: UIViewController {
         
         let actionFirst = UIAlertAction(title: actionTitleFirst, style: .destructive) { (action:UIAlertAction) in
             
-            if actionTitleFirst == "Only me" {
+            if actionTitleFirst == "Only me \u{1F512}" {
                 self.tvc.changePost(id: self.postId, status: 1)
             } else {
                 self.tvc.deletePost(id: self.postId)
@@ -101,7 +101,7 @@ class UserDetailInformationOfAnimalViewController: UIViewController {
         }
         
         let actionSecond = UIAlertAction(title: actionTitleSecond, style: .default) { (action:UIAlertAction) in
-            if actionTitleSecond == "Everyone" {
+            if actionTitleSecond == "Everyone \u{1F310}" {
                 self.tvc.changePost(id: self.postId, status: 3)
             }
         }

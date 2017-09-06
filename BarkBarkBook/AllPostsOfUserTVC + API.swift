@@ -34,7 +34,7 @@ extension AllPostsOfUserTableViewCell {
         
         Alamofire.request(address, method: method, parameters: parameters, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             print("\n========\(type) Post========")
-            debugPrint("RESPONSE: ", response.result)
+//            debugPrint("RESPONSE: ", response.result)
             
             guard let jsonAsDictionary = response.result.value as? [String: Any] else {
                 print("Error: (response.result.error)")

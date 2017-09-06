@@ -35,7 +35,8 @@ class MakeAnEventVC: UIViewController {
     var eventModel = EventModel()
     var eventObject = Event()
     
-    var times = ["Once", "Every day", "One in a week", "Twice per month", "Every month", "Every year"]
+//    var times = ["Once", "Every day", "One in a week", "Twice per month", "Every month", "Every year"]
+    var times = ["Once", "Every day"]
     var mode = false
     var repeatingTime = 0
     var unixDataTime = Date()
@@ -45,8 +46,6 @@ class MakeAnEventVC: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(MakeAnEventVC.firstAnimalFromApi), name: NSNotification.Name(rawValue: "firstAnimalFromApi"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(MakeAnEventVC.choosenAnimalFromApi), name: NSNotification.Name(rawValue: "choosenAnimalFromApi"), object: nil)
-        
-        SharingManager.sharedInstance.repeating = 0
         
         setViewDidLoad()
         if eventModel.animal == "" {
@@ -114,7 +113,7 @@ class MakeAnEventVC: UIViewController {
         if eventModel.animal != "" {
             eventObject.note = notation.text
             eventObject.animal = animalNickname.text!
-            eventObject.repeating = Int16(SharingManager.sharedInstance.repeating)
+            eventObject.repeating = repeatOutlet.currentTitle == "Once" ? 0 : 1
             eventObject.dateTime = unixDataTime as NSDate
             eventObject.mode = mode
             eventObject.userID = Int32(userID!)
@@ -126,7 +125,7 @@ class MakeAnEventVC: UIViewController {
             
             event.note = notation.text
             event.animal = animalNickname.text
-            event.repeating = Int16(SharingManager.sharedInstance.repeating)
+            event.repeating = repeatOutlet.currentTitle == "Once" ? 0 : 1
             event.dateTime = unixDataTime as NSDate
             event.mode = mode
             event.userID = Int32(userID!)

@@ -13,6 +13,7 @@ class TableViewCell: UITableViewCell {
     //MARK: - let/outlet
     @IBOutlet weak var nameSurnameLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
+    @IBOutlet weak var statusOfPostOpenOrLock: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var commentsLabel: UILabel!

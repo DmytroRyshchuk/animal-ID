@@ -137,6 +137,13 @@ extension EventsVC: UITableViewDelegate, UITableViewDataSource {
         cell.nicknameOfAnimal.text = event.animal
         cell.dateOfEvent.text = displayDate
         
+        if event.mode {
+            cell.switchOutlet.isOn = true
+        } else {
+            cell.switchOutlet.isOn = false
+        }
+        cell.eventObject = fetchedResultsController.object(at: indexPath)
+        
         wwd.setDate(date: displayDate, title: "Animal: \(event.animal!)", body: event.note!, mode: event.mode)
         
         return cell
