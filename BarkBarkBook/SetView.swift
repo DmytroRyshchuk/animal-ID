@@ -85,6 +85,7 @@ class SetView {
         } else {
             datepicker.datePickerMode = .time
             formatter.timeStyle = .short
+            formatter.locale = Locale(identifier: "uk_UK")
             if SharingManager.sharedInstance.time != "" {
                 let convertedStartDate = formatter.date(from: SharingManager.sharedInstance.time)
                 print(SharingManager.sharedInstance.time)
