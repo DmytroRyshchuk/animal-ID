@@ -402,8 +402,8 @@
 			isa = PBXGroup;
 			children = (
 				663955051F30A36E00F2299A /* View Controller */,
-				663D3FFE1F0F7465007D5409 /* Collection View */,
 				663D3FFD1F0F745B007D5409 /* Table View */,
+				663D3FFE1F0F7465007D5409 /* Collection View */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -625,9 +625,9 @@
 		66CE5E881F4B2DE700FE6166 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				668072D01F5042B3008970FE /* Model */,
-				66CBFBAB1F4C57F300D50C6E /* TableView */,
 				66CBFBAC1F4C57FD00D50C6E /* ViewController */,
+				66CBFBAB1F4C57F300D50C6E /* TableView */,
+				668072D01F5042B3008970FE /* Model */,
 			);
 			name = Events;
 			sourceTree = "<group>";

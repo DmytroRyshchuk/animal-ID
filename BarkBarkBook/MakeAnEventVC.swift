@@ -35,7 +35,7 @@ class MakeAnEventVC: UIViewController {
     var eventModel = EventModel()
     var eventObject = Event()
     
-    let times = ["Once", "Every day", "One in a week", "Twice per month", "Every month", "Every year"]
+    var times = ["Once", "Every day", "One in a week", "Twice per month", "Every month", "Every year"]
     var mode = false
     var repeatingTime = 0
     var unixDataTime = Date()
@@ -139,6 +139,7 @@ class MakeAnEventVC: UIViewController {
             try self.managedContext.save()
             // MARK: - Remove people.append(person)
             print("event was created")
+            _ = navigationController?.popViewController(animated: true)
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
@@ -150,6 +151,7 @@ class MakeAnEventVC: UIViewController {
         if eventModel.animal != "" {
             animalNickname.text = eventModel.animal
             notation.text = eventModel.note
+            times = ["Once", "Every day"]
             repeatOutlet.setTitle(times[eventModel.repeating], for: .normal)
             
             if eventModel.mode {

@@ -30,6 +30,8 @@ class AllPostsOfUserViewController: UIViewController {
     let apou = AllPostsOfUserTableViewCell()
     var postId = 0
     var statusOfPost = 0
+    var pageIndex = 0
+    var countOfAllPost = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,19 @@ class AllPostsOfUserViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         tableView.setContentOffset(CGPoint.zero, animated: true)
+        pageIndex = 0
+        allPostsOfUserArray = []
+        tableView.reloadData()
+    }
+    
+    // MARK: - clear cache of images
+    override func viewDidDisappear(_ animated: Bool) {
+        let gg = SDImageCache()
+        print("size on start = ", gg.getSize())
+        print(gg.clearDisk(onCompletion: { 
+            print("inside")
+        }))
+        print("size later = ", gg.getSize())
     }
     
     //MARK: - Actions
@@ -120,6 +135,10 @@ class AllPostsOfUserViewController: UIViewController {
     
     func deleteMessage() {
         //This function will be called when you post the notification
+        pageIndex = 1
+        allPostsOfUserArray = []
+        tableView.reloadData()
+        
         apiAllPostsOfUser()
     }
     

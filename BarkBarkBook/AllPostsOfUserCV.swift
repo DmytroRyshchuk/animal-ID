@@ -24,6 +24,9 @@ extension AllPostsOfUserViewController: UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! AllPostsOfUserCollectionViewCell
         
+        cell.pageControl.numberOfPages = allPostsOfUserArray[collectionView.tag].imageLinks.count
+        cell.pageControl.currentPage = indexPath.row
+        
         let post = allPostsOfUserArray[collectionView.tag]
 //        print("allPostsOfUserArray[collectionView.tag] = ", allPostsOfUserArray[collectionView.tag].imageLinks.count)
         if post.imageLinks.count != 0 {

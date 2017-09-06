@@ -54,7 +54,6 @@ class EventsVC: UIViewController {
     }
     
     func scheduleLocal() {
-        
         let center = UNUserNotificationCenter.current()
         center.removeAllDeliveredNotifications()
         center.removeAllPendingNotificationRequests()
@@ -63,6 +62,7 @@ class EventsVC: UIViewController {
         content.categoryIdentifier = "alarm"
         content.userInfo = ["customData": "fizzbuzz"]
         content.sound = UNNotificationSound.default()
+        content.badge = 0
         
         var dateOfEvent = wwd.getDate()
         for i in dateOfEvent {
@@ -78,7 +78,14 @@ class EventsVC: UIViewController {
             dateComponents.month = i.date[3]
             dateComponents.year = i.date[4]
             
-            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+            var repeatingMode = false
+            if eventModel.repeating == 0 {
+                repeatingMode = false
+            } else {
+                repeatingMode = true
+            }
+            
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: repeatingMode)
             
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
             center.add(request)

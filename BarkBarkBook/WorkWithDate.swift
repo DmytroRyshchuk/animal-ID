@@ -17,7 +17,6 @@ class WorkWithDate {
     }
     
     func getDate() -> [EventsArray] {
-        
         return eventsArray
     }
     
