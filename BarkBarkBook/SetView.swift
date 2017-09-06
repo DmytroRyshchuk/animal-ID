@@ -87,6 +87,8 @@ class SetView {
             formatter.timeStyle = .short
             if SharingManager.sharedInstance.time != "" {
                 let convertedStartDate = formatter.date(from: SharingManager.sharedInstance.time)
+                print(SharingManager.sharedInstance.time)
+                //TODO: Fix time if it american version
                 datepicker.date = convertedStartDate!
             }
         }
@@ -113,7 +115,6 @@ class SetView {
             alert.addAction(UIAlertAction(title: times[title], style: .default, handler: { (action) in
                 //execute some code when this option is selected
                 button.setTitle(times[title], for: .normal)
-                SharingManager.sharedInstance.repeating = title
             }))
         }
     }
