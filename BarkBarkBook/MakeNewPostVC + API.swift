@@ -65,20 +65,26 @@ extension MakeNewPostViewController {
         
         // Image
         for i in 0..<photosFromUserInPostArray.count {
+            let photoFormat: Data = UIImageJPEGRepresentation(photosFromUserInPostArray[i], 0.7)!
+            
             body.append(NSString(format: "\r\n--%@\r\n", boundary).data(using: String.Encoding.utf8.rawValue)!)
-            body.append(NSString(format:"Content-Disposition: form-data; name=\"files[]\"; filename=\"img\(i).jpg\"\\r\n" as NSString).data(using: String.Encoding.utf8.rawValue)!)
+            body.append(NSString(format:"Content-Disposition: form-data; name=\"files[]\"; filename=\"img\(i).\(photoFormat.format)\"\\r\n" as NSString).data(using: String.Encoding.utf8.rawValue)!)
+            
             body.append(NSString(format: "Content-Type: application/octet-stream\r\n\r\n").data(using: String.Encoding.utf8.rawValue)!)
             
             let imageOrintationIsOkay = self.sFunc_imageFixOrientation(img: photosFromUserInPostArray[i])
-            //var timageOrintationIsOkay = imageOrintationIsOkay.scaleImage(toSize: CGSize(width: 200, height: 200))
-            //let data = UIImagePNGRepresentation(timageOrintationIsOkay!) as NSData?
-            //print("data = ", timageOrintationIsOkay)
             
             let imageData = imageOrintationIsOkay.jpeg(.medium)
             imageT = scaledImage(UIImage(data: imageData!)!, maximumWidth: 400)
             
-            let data = UIImagePNGRepresentation(imageT) as NSData?
-            body.append(data! as Data)
+            var data = Data()
+            if photoFormat.format == "png" {
+                data = UIImagePNGRepresentation(imageT)!
+            } else {
+                data = UIImageJPEGRepresentation(imageT, 0.7)! //This better
+            }
+            
+            body.append(data)
             body.append(NSString(format: "\r\n--%@\r\n", boundary).data(using: String.Encoding.utf8.rawValue)!)
         }
         

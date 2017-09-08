@@ -36,6 +36,9 @@ extension AllPostsOfUserViewController: UICollectionViewDelegate, UICollectionVi
                 let url = URL(string: imageLink.imageLink!)
                 
                 cell.imageOfAnimalInCollectionView.sd_setImage(with: url!, placeholderImage: UIImage(named: "App-Default"),options: SDWebImageOptions(rawValue: 0), completed: { (image, error, cacheType, imageURL) in
+                    
+                    cell.imageOfAnimalInCollectionView.sd_setShowActivityIndicatorView(true)
+                    cell.imageOfAnimalInCollectionView.sd_setIndicatorStyle(.whiteLarge)
                 })
             }
         }

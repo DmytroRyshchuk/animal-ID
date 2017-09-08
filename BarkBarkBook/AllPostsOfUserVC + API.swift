@@ -18,7 +18,6 @@ extension AllPostsOfUserViewController {
         self.activityIndicator.startAnimating()
         self.tableView.isScrollEnabled = false
         
-        
         let auth_key_user = "\(String(describing: UserDefaults.standard.object(forKey: "auth_key_user")!))"
         
         var animalName = ""
