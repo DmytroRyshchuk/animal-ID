@@ -135,7 +135,7 @@ class AllPostsOfUserViewController: UIViewController {
     
     func deleteMessage() {
         //This function will be called when you post the notification
-        pageIndex = 1
+        pageIndex = 0
         allPostsOfUserArray = []
         tableView.reloadData()
         
