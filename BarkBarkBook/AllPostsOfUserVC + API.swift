@@ -65,8 +65,12 @@ extension AllPostsOfUserViewController {
                         animalName = animal
                     }
                     
-                    name = json["_author"]["name"].string!
-                    surname = json["_author"]["surname"].string!
+                    if let authorNameExist = json["_author"]["name"].string {
+                        name = authorNameExist
+                    }
+                    if let authorSurnameExist = json["_author"]["surname"].string {
+                        surname = authorSurnameExist
+                    }
                     
                     if let contentMessage = json["content"].string {
                         content = contentMessage
