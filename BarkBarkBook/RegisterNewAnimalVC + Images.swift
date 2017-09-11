@@ -30,13 +30,10 @@ UINavigationControllerDelegate {
     //To pick right photo from library
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        let chosenImage = info[UIImagePickerControllerEditedImage] as! UIImage //2          //Crop size of photo
-//        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
-        iv_imageOfAnimal.contentMode = .scaleAspectFit //3
-        iv_imageOfAnimal.image = chosenImage //4
-        
+        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        iv_imageOfAnimal.contentMode = .scaleAspectFit
+        iv_imageOfAnimal.image = chosenImage         
         //        UIImageWriteToSavedPhotosAlbum(chosenImage, self, #selector(UserProfileViewController.image(_:didFinishSavingWithError:contextInfo:)), nil)
-        
         let imageOrintationIsOkay = self.sFunc_imageFixOrientation(img: self.iv_imageOfAnimal.image!)
         
         if let imageData = imageOrintationIsOkay.jpeg(.high) {

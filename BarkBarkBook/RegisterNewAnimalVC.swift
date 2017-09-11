@@ -153,11 +153,16 @@ class RegisterNewAnimalViewController: UIViewController {
         let alert = UIAlertController(title: "Mode", message: "Choose some mode", preferredStyle: .actionSheet)
         
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
-            let image = UIImagePickerController()
-            image.delegate = self
-            image.sourceType = UIImagePickerControllerSourceType.camera
-            image.allowsEditing = false
-            self.present(image, animated: true, completion: nil)
+            let picker = UIImagePickerController()
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                picker.allowsEditing = false
+                picker.sourceType = UIImagePickerControllerSourceType.camera
+                picker.cameraCaptureMode = .photo
+                picker.modalPresentationStyle = .fullScreen
+                self.present(picker,animated: true,completion: nil)
+            } else {
+                print("No camera")
+            }
         }))
         alert.addAction(UIAlertAction(title: "Photo", style: .default, handler: { (action) in
             let image = UIImagePickerController()
