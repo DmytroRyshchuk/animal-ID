@@ -25,6 +25,8 @@ class MakeNewPostViewController: UIViewController {
     @IBOutlet weak var segmentedControllerOutlet: UISegmentedControl!
     @IBOutlet weak var addSomePhotoButtonOutlet: UIButton!
     
+    @IBOutlet var setBurButtonColor: [UIBarButtonItem]!
+    
     var menuIsShowing = false
     var menuIsOpen = false
     let openMenu = OpenMenu()
@@ -47,9 +49,11 @@ class MakeNewPostViewController: UIViewController {
     //MARK: - Default func
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.hideKeyboardWhenTappedAround()
         
         setView.naviColor(navi: navigationController)
+        setView.setBarButtonTintColor(buttons: setBurButtonColor)
         setView.setRadius(elements: [textInPostTextView, chooseAnimalButtonOutlet, addSomePhotoButtonOutlet])
         setView.setTitleForButton(button: addSomePhotoButtonOutlet, title: "  Add some photo  ", forState: .normal)
         

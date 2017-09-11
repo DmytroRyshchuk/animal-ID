@@ -66,7 +66,7 @@ extension UserDetailInformationOfAnimalViewController: UITableViewDelegate, UITa
             //cell.nameSurnameLabel.text = postsArray[index].surname + " " + postsArray[index].name + " with " + postsArray[index].animalName
             cell.contentLabel.text = postsArray[index].content
             cell.likesLabel.text = String(postsArray[index].countLikes)
-            cell.commentsLabel.text = String(postsArray[index].countCommentsPosts) + " comments"
+            cell.commentsLabel.text = String(postsArray[index].countCommentsPosts) + " "
             cell.dateOfPostLabel.text = convertUnixToDate(timeStamp: postsArray[index].createdAt)
             
             cell.statusOfPost = postsArray[index].statusOfPost

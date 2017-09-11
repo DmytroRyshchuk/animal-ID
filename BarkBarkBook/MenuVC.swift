@@ -15,12 +15,17 @@ class MenuVC: UIViewController, UITextViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var bo_addViewPop: UIView!
     
+    @IBOutlet var barButtonOutlets: [UIBarButtonItem]!
+    
     var userAnimalsArray = [UserAnimalsDetails]()
     var postsArray = [UserContent]()
+    
+    let setView = SetView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setView.setBarButtonTintColor(buttons: barButtonOutlets)
         activityIndicator.isHidden = true
 //        self.automaticallyAdjustsScrollViewInsets = false
     }
@@ -35,6 +40,10 @@ class MenuVC: UIViewController, UITextViewDelegate {
             print("Internet lost")
             Reachability.alertInternetLost(view: self)
         }
+    }
+    
+    @IBAction func backDismissButton(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
     }
     
     func addNavBarImage() {

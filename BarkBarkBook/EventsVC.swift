@@ -13,6 +13,7 @@ import UserNotifications
 class EventsVC: UIViewController {
  
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addNewEventBarButtonOutlet: UIBarButtonItem!
     
     var fetchedResultsController: NSFetchedResultsController<Event>!
     var managedContext:NSManagedObjectContext!
@@ -30,6 +31,7 @@ class EventsVC: UIViewController {
         }
         managedContext = appDelegate.persistentContainer.viewContext
         setView.naviColor(navi: navigationController)
+        setView.setBarButtonTintColor(buttons: [addNewEventBarButtonOutlet])
         notificationPermision()
     }
     

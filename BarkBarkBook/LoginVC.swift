@@ -19,6 +19,8 @@ class LoginVC: UIViewController {
     @IBOutlet var allButtons: [UIButton]!
     var viewShaker: AFViewShaker?
     
+    let setView = SetView()
+    
     var photoOfAnimalFromJson = ""
     var nicknameOfAnimalFromJson = ""
     var speciesOfAnimalFromJson = ""
@@ -43,6 +45,8 @@ class LoginVC: UIViewController {
         cleanUserDefaults()
         
         self.viewShaker = AFViewShaker(viewsArray: allTextFields)
+        
+        setView.setRadius(elements: allButtons)
     }
     
     override func viewWillAppear(_ animated: Bool) {

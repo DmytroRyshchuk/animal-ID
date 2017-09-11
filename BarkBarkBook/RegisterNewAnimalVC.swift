@@ -20,6 +20,7 @@ class RegisterNewAnimalViewController: UIViewController {
     @IBOutlet weak var tf_nickname: UITextField!
     @IBOutlet weak var dp_datePicker: UIDatePicker!
     @IBOutlet weak var bo_datePicker: UIButton!
+    @IBOutlet weak var registerButtonOutlet: UIButton!
     @IBOutlet weak var v_view: UIView!
     @IBOutlet weak var sv_tran: UIStackView!
     
@@ -35,6 +36,10 @@ class RegisterNewAnimalViewController: UIViewController {
         
         fillViewDidLoad()
         activityIndicator.isHidden = true
+        
+        dismissKeyboard()
+        hideKeyboardWhenTappedAround()
+        setView.setRadius(elements: [bo_species, bo_datePicker, registerButtonOutlet])
     }
     
     override func viewWillAppear(_ animated: Bool) {

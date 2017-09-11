@@ -31,7 +31,7 @@ extension AllPostsOfUserViewController: UITableViewDelegate, UITableViewDataSour
             cell.contentLabel.text = allPostsOfUserArray[index].content
 //        }
         cell.likesLabel.text = String(allPostsOfUserArray[index].countLikes)
-        cell.commentsLabel.text = String(allPostsOfUserArray[index].countCommentsPosts) + " comments"
+        cell.commentsLabel.text = String(allPostsOfUserArray[index].countCommentsPosts) + " "
         cell.dateOfPostLabel.text = convertUnixToDate(timeStamp: allPostsOfUserArray[index].createdAt)
         
         if allPostsOfUserArray[index].statusOfPost == 1 {

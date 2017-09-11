@@ -15,6 +15,9 @@ class UserDetailInformationOfAnimalViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var backBarButton: UIBarButtonItem!
+    
+    let setView = SetView()
     var userContent = UserContent()
     var postsArray = [UserContent]()
     
@@ -26,6 +29,7 @@ class UserDetailInformationOfAnimalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setView.setBarButtonTintColor(buttons: [backBarButton])
 //        self.automaticallyAdjustsScrollViewInsets = false
         activityIndicator.isHidden = true
         NotificationCenter.default.addObserver(self, selector: #selector(UserDetailInformationOfAnimalViewController.deleteOnePost), name: NSNotification.Name(rawValue: "deleteOnePost"), object: nil)
@@ -34,6 +38,11 @@ class UserDetailInformationOfAnimalViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         apiNewsFeedOfChoosenAnimal()
     }
+    
+    @IBAction func backDismissButton(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     
     func deleteOnePost() {
         //This function will be called when you post the notification

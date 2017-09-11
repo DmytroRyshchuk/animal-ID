@@ -29,9 +29,12 @@ class RegisterNewUserVC: UIViewController, ValidationDelegate {
     @IBOutlet weak var zipcodeWrongLabel: UILabel!
     @IBOutlet weak var addressWrongLabel: UILabel!
     
+    @IBOutlet var makeButtonRounded: [UIButton]!
+    
     var getCountryISO = [GetCountryISO]()
     var langOnPhone: String? = ""
     let validator = Validator()
+    let setView = SetView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +45,8 @@ class RegisterNewUserVC: UIViewController, ValidationDelegate {
     
         activityIndicator.isHidden = true
         self.navigationController?.isNavigationBarHidden = true
+        
+        setView.setRadius(elements: makeButtonRounded)
     }
 
     override func viewWillAppear(_ animated: Bool) {

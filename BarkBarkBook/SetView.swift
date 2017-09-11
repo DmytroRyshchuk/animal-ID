@@ -22,6 +22,11 @@ class SetView {
     func naviColor(navi: UINavigationController?) {
         navi?.navigationBar.barTintColor = UIColor(colorLiteralRed: 0.367, green: 0.342, blue: 0.341, alpha: 1)
     }
+    func setBarButtonTintColor(buttons: [UIBarButtonItem]) {
+        for i in buttons {
+            i.tintColor = UIColor(colorLiteralRed: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+        }
+    }
     func setTitleForButton(button: UIButton, title: String, forState: UIControlState) {
         button.setTitle(title, for: forState)
     }

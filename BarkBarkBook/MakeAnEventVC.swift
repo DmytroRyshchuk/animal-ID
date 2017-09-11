@@ -24,6 +24,7 @@ class MakeAnEventVC: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet var addViewPop: UIView!
+    @IBOutlet weak var cancelBarButtonOutlet: UIBarButtonItem!
     
     var fetchedResultsController: NSFetchedResultsController<Event>!
     var managedContext:NSManagedObjectContext!
@@ -65,7 +66,19 @@ class MakeAnEventVC: UIViewController {
         managedContext = appDelegate.persistentContainer.viewContext
         
         eventModelWithData()
+        
+        notation.delegate = self
+        hideKeyboardWhenTappedAround()
+        dismissKeyboard()
+        
+        repeatOutlet.tintColor = UIColor(colorLiteralRed: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+        setView.setBarButtonTintColor(buttons: [cancelBarButtonOutlet])
     }
+    
+    @IBAction func cancelDismissButton(_ sender: Any) {
+        dismiss(animated: false, completion: nil)
+    }
+    
     
     @IBAction func changeAnimalAction(_ sender: Any) {
         apiClass.allAnimalsOfUserAPI(del: self)
@@ -223,6 +236,16 @@ class MakeAnEventVC: UIViewController {
     
     func choosenAnimalFromApi() {
         setView.showDataOfAnimal(avatar: animalAvatar, element: animalNickname)
+    }
+}
+
+extension MakeAnEventVC: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
 }
 
