@@ -76,6 +76,7 @@
 		66CE5E901F4C2D8900FE6166 /* EventsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CE5E8F1F4C2D8900FE6166 /* EventsTVCell.swift */; };
 		66E6EF341F190AC000E82BE0 /* OpenProfileOfUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E6EF331F190AC000E82BE0 /* OpenProfileOfUser.swift */; };
 		66E978DC1F31F4210003EF24 /* AnimationLikeButtonOnTV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E978DB1F31F4210003EF24 /* AnimationLikeButtonOnTV.swift */; };
+		66F381321F66CC7D00E0F68D /* Roboto in Resources */ = {isa = PBXBuildFile; fileRef = 66F381311F66CC7D00E0F68D /* Roboto */; };
 		66FB342A1F4584D40077CB2B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FB34291F4584D40077CB2B /* Reachability.swift */; };
 		BADE90065531E216745392A4 /* Pods_BarkBarkBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD5330C12D5F5770009F114F /* Pods_BarkBarkBook.framework */; };
 /* End PBXBuildFile section */
@@ -153,6 +154,7 @@
 		66CE5E8F1F4C2D8900FE6166 /* EventsTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsTVCell.swift; sourceTree = "<group>"; };
 		66E6EF331F190AC000E82BE0 /* OpenProfileOfUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenProfileOfUser.swift; sourceTree = "<group>"; };
 		66E978DB1F31F4210003EF24 /* AnimationLikeButtonOnTV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationLikeButtonOnTV.swift; sourceTree = "<group>"; };
+		66F381311F66CC7D00E0F68D /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
 		66FB34291F4584D40077CB2B /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		7C50D1AD07BDC0E815B0913D /* Pods-BarkBarkBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BarkBarkBook.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BarkBarkBook/Pods-BarkBarkBook.debug.xcconfig"; sourceTree = "<group>"; };
 		AD5330C12D5F5770009F114F /* Pods_BarkBarkBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BarkBarkBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -552,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				660342281F5FEDB500D6AB20 /* Assets.xcassets */,
+				66F381311F66CC7D00E0F68D /* Roboto */,
 				663269A61F13A3FC00A64D5A /* 146897792919975145.jpg */,
 				6631A2C21EFA9B0A00C71872 /* AppDelegate.swift */,
 				6631A2CB1EFA9B0A00C71872 /* LaunchScreen.storyboard */,
@@ -746,6 +749,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F381321F66CC7D00E0F68D /* Roboto in Resources */,
 				6631A2CD1EFA9B0A00C71872 /* LaunchScreen.storyboard in Resources */,
 				663269A71F13A3FC00A64D5A /* 146897792919975145.jpg in Resources */,
 				660342291F5FEDB500D6AB20 /* Assets.xcassets in Resources */,
