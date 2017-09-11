@@ -150,14 +150,27 @@ class RegisterNewAnimalViewController: UIViewController {
     }
     
     @IBAction func ba_addAvatar(_ sender: Any) {
-        let image = UIImagePickerController()
-        image.delegate = self
-        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        let alert = UIAlertController(title: "Mode", message: "Choose some mode", preferredStyle: .actionSheet)
         
-        image.allowsEditing = true
-        image.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (action) in
+            let image = UIImagePickerController()
+            image.delegate = self
+            image.sourceType = UIImagePickerControllerSourceType.camera
+            image.allowsEditing = false
+            self.present(image, animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Photo", style: .default, handler: { (action) in
+            let image = UIImagePickerController()
+            image.delegate = self
+            image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            
+            image.allowsEditing = true
+            image.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+            
+            self.present(image, animated: true, completion: nil)
+        }))
         
-        self.present(image, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func ba_ChooseSpecies(_ sender: Any) {
